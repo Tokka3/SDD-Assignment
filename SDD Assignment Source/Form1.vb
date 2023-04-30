@@ -12,8 +12,8 @@
             iconEye.IconChar = iconEye.IconChar.Eye
             iconEye.IconSize = 32
             Dim pPos As Point
-            pPos.X = 471
-            pPos.Y = 291
+            pPos.X = 929
+            pPos.Y = 396
 
             iconEye.Location = pPos
         Else
@@ -23,15 +23,19 @@
             iconEye.IconChar = iconEye.IconChar.EyeSlash
             iconEye.IconSize = 34
             Dim pPos As Point
-            pPos.X = 470
-            pPos.Y = 291
+            pPos.X = 928
+            pPos.Y = 396
             iconEye.Location = pPos
         End If
     End Sub
 
 
 
-    Private Sub txtPassword_TextChanged(sender As Object, e As EventArgs) Handles txtPassword.TextChanged
+    Private Sub txtPassword_TextChanged(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
 End Class

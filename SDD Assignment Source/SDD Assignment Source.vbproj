@@ -188,6 +188,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Edit Bookings\EditBookings.Designer.vb">
+      <DependentUpon>EditBookings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Edit Bookings\EditBookings.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -218,6 +224,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Edit Bookings\EditBookings.resx">
+      <DependentUpon>EditBookings.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
@@ -245,7 +254,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Edit Bookings\" />
+    <Folder Include="Tutorial\" />
+    <Folder Include="View Bookings\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
