@@ -216,6 +216,18 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Tutorial\Tutorial.Designer.vb">
+      <DependentUpon>Tutorial.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorial\Tutorial.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View Bookings\ViewBookings.Designer.vb">
+      <DependentUpon>ViewBookings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View Bookings\ViewBookings.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="WelcomeScreen\WelcomeScreen.Designer.vb">
       <DependentUpon>WelcomeScreen.vb</DependentUpon>
     </Compile>
@@ -236,6 +248,12 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Tutorial\Tutorial.resx">
+      <DependentUpon>Tutorial.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View Bookings\ViewBookings.resx">
+      <DependentUpon>ViewBookings.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="WelcomeScreen\WelcomeScreen.resx">
       <DependentUpon>WelcomeScreen.vb</DependentUpon>
     </EmbeddedResource>
@@ -253,9 +271,6 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Tutorial\" />
-    <Folder Include="View Bookings\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

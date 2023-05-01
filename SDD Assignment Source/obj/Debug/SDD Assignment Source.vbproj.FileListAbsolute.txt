@@ -115,3 +115,6 @@ C:\Users\admin\Desktop\SDD Major Work\SDD Assignment Source\SDD Assignment Sourc
 C:\Users\admin\Desktop\SDD Major Work\SDD Assignment Source\SDD Assignment Source\bin\Debug\MahApps.Metro.IconPacks.WeatherIcons.xml
 C:\Users\admin\Desktop\SDD Major Work\SDD Assignment Source\SDD Assignment Source\bin\Debug\MahApps.Metro.IconPacks.Zondicons.pdb
 C:\Users\admin\Desktop\SDD Major Work\SDD Assignment Source\SDD Assignment Source\bin\Debug\MahApps.Metro.IconPacks.Zondicons.xml
+C:\Users\admin\Desktop\SDD Major Work\SDD Assignment Source\SDD Assignment Source\obj\Debug\SDD_Assignment_Source.EditBookings.resources
+C:\Users\admin\Desktop\SDD Major Work\SDD Assignment Source\SDD Assignment Source\obj\Debug\SDD_Assignment_Source.Tutorial.resources
+C:\Users\admin\Desktop\SDD Major Work\SDD Assignment Source\SDD Assignment Source\obj\Debug\SDD_Assignment_Source.ViewBookings.resources

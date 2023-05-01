@@ -32,6 +32,16 @@ SDD Assignment Source
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:SDD_Assignment_Source.My.Resources.Resources.seat">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SDD_Assignment_Source.My.Resources.Resources.seating_schematic">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:SDD_Assignment_Source.My.Resources.Resources.tutorial">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.

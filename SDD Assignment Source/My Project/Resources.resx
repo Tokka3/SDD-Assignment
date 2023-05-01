@@ -251,8 +251,8 @@
         Xl5en5+fMDAwSkpKSEhILy8vh4eHUFBQhoaGLS0twcHB0dHRLCwsQEBAGhoakZGRFBQU6urqfHx8YmJi
         MzMzOTk5IyMjwsLCpqambW1tQ0NDKCgonJyco6Ojt7e329vbiIiIZ2dn5+fnw8PDgICAVFRUZGRkNjY2
         S0tLubm5QUFBnZ2dbm5udXV1WVlZMjIyNTU1m5ubPT09YGBggYGB4+PjtbW1U1NTqqqqjIyMoqKi4eHh
-        Pz8/qKioy8vLurq60tLSxsbGg4ODY2NjT09Penp6sbGxXFxcTk5OJE8VvgAAAAlwSFlzAAAOwQAADsEB
-        uJFr7QAADylJREFUeF7tnQl4FEUWxytAOLojR4CEQ8wQB8jFEcKREZIgEiJ3RK4gxOFIIBwSkFtAQCTc
+        Pz8/qKioy8vLurq60tLSxsbGg4ODY2NjT09Penp6sbGxXFxcTk5OJE8VvgAAAAlwSFlzAAAOwAAADsAB
+        ataJCQAADylJREFUeF7tnQl4FEUWxytAOLojR4CEQ8wQB8jFEcKREZIgEiJ3RK4gxOFIIBwSkFtAQCTc
         CARFF0TCLcqpcigqAhHwABWNIIeKB96gwrq77vfte69rJjPDxEwSzNSw7/d90q9e1/Sm/tNd9V5V9axg
         GIZhGIZhGIZhGIZhGIZhGIZhGIZhGIZhGIZhGIZhGIZhGIZhmJuDX5my5YqOf3n58VuEChUraXrRCbit
         srzArUGVqrJhRUSrFiivcEtQvTj3AlKjpnGBoOBatevUvb3eHSFG2TepDi0y1bcTKv+z494BH7qznDA3
@@ -320,6 +320,13 @@
         AElFTkSuQmCC
 </value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="seat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\Downloads\seat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="seating_schematic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\Downloads\seating-schematic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="tutorial" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAQYAAAD2CAMAAAADDtmjAAAABGdBTUEAALGPC/xhBQAAAmdQTFRF////
@@ -333,7 +340,7 @@
         sbGxnp6eODg4oaGhMzMzy8vLUFBQSUlJ9fX18fHxQ0NDnJycDw8PTU1Nfn5+7u7ukJCQgYGBaGhoXV1d
         DQ0Nz8/PeXl5T09Pi4uL2traXFxcGxsbvr6+jIyMcHBwfX19W1tbtbW1lJSUJiYms7Ozt7e3qampn5+f
         MDAwoKCgo6Ojd3d3WFhYOTk5kpKSgoKCwsLCQUFBurq6tLS0enp6r6+vnZ2dPz8/iIiIcXFxS0tLh4eH
-        ubm51NTUNDQ0lZWVNp7S6wAAAAlwSFlzAAAOwgAADsIBFShKgAAAB7RJREFUeF7t3fd/U1UYBvDDKQVS
+        ubm51NTUNDQ0lZWVNp7S6wAAAAlwSFlzAAAOwQAADsEBuJFr7QAAB7RJREFUeF7t3fd/U1UYBvDDKQVS
         2TILMgWhlGEVgcoSRUTAYkUFGQW1sh3IcqKiqLgHOHDh3nvj3uuP8rzveW6SpmnTNqG5PXm+PyTv+97b
         9Jz3k6T39t7cGCIiIiIiIiIiIiIiIiIiIiIiIqKTqJuFsu6olKRydMHaHqiUJPTA6YlKSUIPnJJvgzG9
         2IbSbEOiwp6CUGRtQ6K37YMwUAmZd18kTtY2SLEf4iD1lxlaO8BnA0/VzLfB2kGDtTqkTLOhmgRJnwti
