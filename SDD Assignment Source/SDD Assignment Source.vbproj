@@ -188,16 +188,18 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Edit Bookings\BookingManager.vb" />
     <Compile Include="Edit Bookings\EditBookings.Designer.vb">
       <DependentUpon>EditBookings.vb</DependentUpon>
     </Compile>
     <Compile Include="Edit Bookings\EditBookings.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.vb">
+    <Compile Include="GlobalVariables\GVars.vb" />
+    <Compile Include="Login\Form1.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
+    <Compile Include="Login\Form1.Designer.vb">
       <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
@@ -216,11 +218,23 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Edit Bookings\PaymentScreen.Designer.vb">
+      <DependentUpon>PaymentScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Edit Bookings\PaymentScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Tutorial\Tutorial.Designer.vb">
       <DependentUpon>Tutorial.vb</DependentUpon>
     </Compile>
     <Compile Include="Tutorial\Tutorial.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Components\ExitButton.Designer.vb">
+      <DependentUpon>ExitButton.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Components\ExitButton.vb">
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="View Bookings\ViewBookings.Designer.vb">
       <DependentUpon>ViewBookings.vb</DependentUpon>
@@ -236,10 +250,16 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Components\ExitButton.resx">
+      <DependentUpon>ExitButton.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Edit Bookings\EditBookings.resx">
       <DependentUpon>EditBookings.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
+    <EmbeddedResource Include="Edit Bookings\PaymentScreen.resx">
+      <DependentUpon>PaymentScreen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">

@@ -1,0 +1,3 @@
+﻿Module GVars
+
+End Module

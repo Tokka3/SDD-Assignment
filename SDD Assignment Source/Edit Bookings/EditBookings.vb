@@ -18,7 +18,7 @@
 
         dynamicLabel.Location = New Point(x_position + 13, y_position + 50)
         dynamicLabel.Text = label
-        dynamicLabel.ForeColor = Color.FromArgb(255, 30, 30, 30)
+        dynamicLabel.ForeColor = Color.FromArgb(255, 45, 45, 45)
         dynamicLabel.Width = 30
         dynamicLabel.Height = 15
         dynamicLabel.Font = New Font("Segoe UI", 8.5)
@@ -28,7 +28,7 @@
         dynamicButton.Size = New Drawing.Point(50, 63)
         dynamicButton.IconSize = 50
         dynamicButton.SizeMode = PictureBoxSizeMode.StretchImage
-        dynamicButton.Name = label + "id"
+        dynamicButton.Name = label
         dynamicButton.IconColor = SystemColors.Highlight
         dynamicButton.IconChar = dynamicButton.IconChar.Couch
         dynamicButton.Cursor = Cursors.Hand
@@ -44,6 +44,23 @@
 
         Dim btn As FontAwesome.Sharp.IconPictureBox = DirectCast(sender, FontAwesome.Sharp.IconPictureBox)
 
+        If Array.IndexOf(selectedSeats, btn.Name) >= 0 Then
+            ' The string already exists in the array, so remove it
+            selectedSeats = RemoveElementFromArray(selectedSeats, btn.Name)
+        Else
+            ' The string doesn't exist in the array, so add it
+            ReDim Preserve selectedSeats(UBound(selectedSeats) + 1)
+            selectedSeats(UBound(selectedSeats)) = btn.Name
+        End If
+
+        ' Function to remove an element from an array
+
+        rtbSelectedSeats.Clear()
+        If selectedSeats.Length >= 1 Then
+            rtbSelectedSeats.AppendText(Strings.Join(selectedSeats, ","))
+        End If
+
+        'MessageBox.Show("seat: " & btn.Name)
         'if we click on a button, highlight it.
         Select Case (btn.IconColor)
             'Select/Deselect empty seat
@@ -54,6 +71,7 @@
 
         End Select
 
+        lblTotal.Text = "Total: " & "$" & (selectedSeats.Length * 20).ToString
 
 
     End Sub
@@ -91,6 +109,8 @@
     End Sub
 
     Private Sub EditBookings_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ReDim selectedSeats(0 To -1) ' Initialize with size 0
+        lblMessage.Visible = False
 
         'Dynamically Load Buttons Upon load
         'Specified dimensions
@@ -111,4 +131,8 @@
 
     End Sub
 
+    Private Sub btnPayment_Click(sender As Object, e As EventArgs) Handles btnPayment.Click
+        PaymentScreen.Show()
+        Me.Enabled = False
+    End Sub
 End Class
