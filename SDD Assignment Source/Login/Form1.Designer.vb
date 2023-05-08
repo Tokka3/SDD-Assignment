@@ -114,6 +114,7 @@ Partial Class Form1
         '
         'txtPassword
         '
+        Me.txtPassword.Animated = True
         Me.txtPassword.BorderRadius = 5
         Me.txtPassword.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtPassword.DefaultText = ""
@@ -135,6 +136,7 @@ Partial Class Form1
         '
         'txtUsername
         '
+        Me.txtUsername.Animated = True
         Me.txtUsername.BorderRadius = 5
         Me.txtUsername.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtUsername.DefaultText = ""
@@ -156,6 +158,7 @@ Partial Class Form1
         '
         'btnLogin
         '
+        Me.btnLogin.Animated = True
         Me.btnLogin.BorderRadius = 5
         Me.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnLogin.DisabledState.BorderColor = System.Drawing.Color.DarkGray

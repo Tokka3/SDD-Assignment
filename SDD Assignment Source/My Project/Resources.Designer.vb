@@ -83,26 +83,6 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property seat() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("seat", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Looks up a localized resource of type System.Drawing.Bitmap.
-        '''</summary>
-        Friend ReadOnly Property seating_schematic() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("seating_schematic", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Looks up a localized resource of type System.Drawing.Bitmap.
-        '''</summary>
         Friend ReadOnly Property tutorial() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("tutorial", resourceCulture)

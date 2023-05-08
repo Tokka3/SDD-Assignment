@@ -1,6 +1,10 @@
 ﻿Module BookingManager
     Public selectedSeats() As String
 
+    Structure Booking
+
+    End Structure
+
     Public Function RemoveElementFromArray(arr As String(), element As String) As String()
         Dim index As Integer
         index = Array.IndexOf(arr, element)

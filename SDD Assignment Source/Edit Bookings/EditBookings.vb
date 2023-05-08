@@ -132,6 +132,8 @@
     End Sub
 
     Private Sub btnPayment_Click(sender As Object, e As EventArgs) Handles btnPayment.Click
+        strFirstName = txtFirstName.Text
+        strLastName = txtLastName.Text
         PaymentScreen.Show()
         Me.Enabled = False
     End Sub

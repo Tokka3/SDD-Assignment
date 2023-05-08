@@ -30,9 +30,9 @@ Partial Class EditBookings
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Guna2DateTimePicker1 = New Guna.UI2.WinForms.Guna2DateTimePicker()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Guna2TextBox2 = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.txtLastName = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.Guna2TextBox1 = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.txtFirstName = New Guna.UI2.WinForms.Guna2TextBox()
         Me.lblTotal = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.btnPayment = New FontAwesome.Sharp.IconButton()
@@ -59,10 +59,9 @@ Partial Class EditBookings
         '
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(83, 9)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(62, 7)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(1200, 96)
+        Me.Label1.Size = New System.Drawing.Size(900, 78)
         Me.Label1.TabIndex = 15
         Me.Label1.Text = "Welcome"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -72,9 +71,9 @@ Partial Class EditBookings
         Me.Guna2GroupBox1.Controls.Add(Me.Label4)
         Me.Guna2GroupBox1.Controls.Add(Me.Guna2DateTimePicker1)
         Me.Guna2GroupBox1.Controls.Add(Me.Label2)
-        Me.Guna2GroupBox1.Controls.Add(Me.Guna2TextBox2)
+        Me.Guna2GroupBox1.Controls.Add(Me.txtLastName)
         Me.Guna2GroupBox1.Controls.Add(Me.Label5)
-        Me.Guna2GroupBox1.Controls.Add(Me.Guna2TextBox1)
+        Me.Guna2GroupBox1.Controls.Add(Me.txtFirstName)
         Me.Guna2GroupBox1.Controls.Add(Me.lblTotal)
         Me.Guna2GroupBox1.Controls.Add(Me.Label3)
         Me.Guna2GroupBox1.Controls.Add(Me.btnPayment)
@@ -82,10 +81,10 @@ Partial Class EditBookings
         Me.Guna2GroupBox1.CustomBorderColor = System.Drawing.SystemColors.Highlight
         Me.Guna2GroupBox1.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Guna2GroupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Guna2GroupBox1.Location = New System.Drawing.Point(861, 153)
-        Me.Guna2GroupBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Guna2GroupBox1.Location = New System.Drawing.Point(646, 124)
+        Me.Guna2GroupBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Guna2GroupBox1.Name = "Guna2GroupBox1"
-        Me.Guna2GroupBox1.Size = New System.Drawing.Size(468, 593)
+        Me.Guna2GroupBox1.Size = New System.Drawing.Size(351, 482)
         Me.Guna2GroupBox1.TabIndex = 16
         Me.Guna2GroupBox1.Text = "Edit Booking"
         '
@@ -93,10 +92,9 @@ Partial Class EditBookings
         '
         Me.Label4.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label4.Location = New System.Drawing.Point(12, 338)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Location = New System.Drawing.Point(9, 275)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(211, 34)
+        Me.Label4.Size = New System.Drawing.Size(158, 28)
         Me.Label4.TabIndex = 25
         Me.Label4.Text = "Date of Birth:"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -115,12 +113,11 @@ Partial Class EditBookings
         Me.Guna2DateTimePicker1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Guna2DateTimePicker1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Long]
-        Me.Guna2DateTimePicker1.Location = New System.Drawing.Point(19, 377)
-        Me.Guna2DateTimePicker1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Guna2DateTimePicker1.Location = New System.Drawing.Point(14, 306)
         Me.Guna2DateTimePicker1.MaxDate = New Date(9998, 12, 31, 0, 0, 0, 0)
         Me.Guna2DateTimePicker1.MinDate = New Date(1753, 1, 1, 0, 0, 0, 0)
         Me.Guna2DateTimePicker1.Name = "Guna2DateTimePicker1"
-        Me.Guna2DateTimePicker1.Size = New System.Drawing.Size(431, 47)
+        Me.Guna2DateTimePicker1.Size = New System.Drawing.Size(323, 38)
         Me.Guna2DateTimePicker1.TabIndex = 24
         Me.Guna2DateTimePicker1.Value = New Date(2023, 5, 2, 9, 51, 5, 949)
         '
@@ -128,80 +125,75 @@ Partial Class EditBookings
         '
         Me.Label2.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(12, 245)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Location = New System.Drawing.Point(9, 199)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(211, 34)
+        Me.Label2.Size = New System.Drawing.Size(158, 28)
         Me.Label2.TabIndex = 23
         Me.Label2.Text = "Last Name:"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Guna2TextBox2
+        'txtLastName
         '
-        Me.Guna2TextBox2.Animated = True
-        Me.Guna2TextBox2.BorderRadius = 3
-        Me.Guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.Guna2TextBox2.DefaultText = ""
-        Me.Guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.Guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.Guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox2.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox2.Location = New System.Drawing.Point(19, 283)
-        Me.Guna2TextBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.Guna2TextBox2.Name = "Guna2TextBox2"
-        Me.Guna2TextBox2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.Guna2TextBox2.PlaceholderText = ""
-        Me.Guna2TextBox2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.Guna2TextBox2.SelectedText = ""
-        Me.Guna2TextBox2.Size = New System.Drawing.Size(431, 47)
-        Me.Guna2TextBox2.TabIndex = 22
+        Me.txtLastName.Animated = True
+        Me.txtLastName.BorderRadius = 3
+        Me.txtLastName.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtLastName.DefaultText = ""
+        Me.txtLastName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtLastName.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtLastName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtLastName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtLastName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtLastName.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.txtLastName.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtLastName.Location = New System.Drawing.Point(14, 230)
+        Me.txtLastName.Name = "txtLastName"
+        Me.txtLastName.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtLastName.PlaceholderText = ""
+        Me.txtLastName.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.txtLastName.SelectedText = ""
+        Me.txtLastName.Size = New System.Drawing.Size(323, 38)
+        Me.txtLastName.TabIndex = 22
         '
         'Label5
         '
         Me.Label5.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(12, 153)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label5.Location = New System.Drawing.Point(9, 124)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(211, 34)
+        Me.Label5.Size = New System.Drawing.Size(158, 28)
         Me.Label5.TabIndex = 21
         Me.Label5.Text = "First Name:"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Guna2TextBox1
+        'txtFirstName
         '
-        Me.Guna2TextBox1.Animated = True
-        Me.Guna2TextBox1.BorderRadius = 3
-        Me.Guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.Guna2TextBox1.DefaultText = ""
-        Me.Guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.Guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.Guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox1.Location = New System.Drawing.Point(19, 191)
-        Me.Guna2TextBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.Guna2TextBox1.Name = "Guna2TextBox1"
-        Me.Guna2TextBox1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.Guna2TextBox1.PlaceholderText = ""
-        Me.Guna2TextBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.Guna2TextBox1.SelectedText = ""
-        Me.Guna2TextBox1.Size = New System.Drawing.Size(431, 47)
-        Me.Guna2TextBox1.TabIndex = 20
+        Me.txtFirstName.Animated = True
+        Me.txtFirstName.BorderRadius = 3
+        Me.txtFirstName.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtFirstName.DefaultText = ""
+        Me.txtFirstName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtFirstName.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtFirstName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtFirstName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtFirstName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtFirstName.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.txtFirstName.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtFirstName.Location = New System.Drawing.Point(14, 155)
+        Me.txtFirstName.Name = "txtFirstName"
+        Me.txtFirstName.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtFirstName.PlaceholderText = ""
+        Me.txtFirstName.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.txtFirstName.SelectedText = ""
+        Me.txtFirstName.Size = New System.Drawing.Size(323, 38)
+        Me.txtFirstName.TabIndex = 20
         '
         'lblTotal
         '
         Me.lblTotal.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTotal.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.lblTotal.Location = New System.Drawing.Point(12, 495)
-        Me.lblTotal.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblTotal.Location = New System.Drawing.Point(9, 402)
         Me.lblTotal.Name = "lblTotal"
-        Me.lblTotal.Size = New System.Drawing.Size(188, 34)
+        Me.lblTotal.Size = New System.Drawing.Size(141, 28)
         Me.lblTotal.TabIndex = 19
         Me.lblTotal.Text = "Total:"
         Me.lblTotal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -210,10 +202,9 @@ Partial Class EditBookings
         '
         Me.Label3.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(12, 62)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Location = New System.Drawing.Point(9, 50)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(188, 34)
+        Me.Label3.Size = New System.Drawing.Size(141, 28)
         Me.Label3.TabIndex = 18
         Me.Label3.Text = "Selected Seats:"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -229,10 +220,10 @@ Partial Class EditBookings
         Me.btnPayment.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.btnPayment.IconSize = 34
         Me.btnPayment.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnPayment.Location = New System.Drawing.Point(19, 532)
-        Me.btnPayment.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnPayment.Location = New System.Drawing.Point(14, 432)
+        Me.btnPayment.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnPayment.Name = "btnPayment"
-        Me.btnPayment.Size = New System.Drawing.Size(431, 47)
+        Me.btnPayment.Size = New System.Drawing.Size(323, 38)
         Me.btnPayment.TabIndex = 5
         Me.btnPayment.Text = "Proceed To Payment"
         Me.btnPayment.UseVisualStyleBackColor = False
@@ -250,15 +241,14 @@ Partial Class EditBookings
         Me.rtbSelectedSeats.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.rtbSelectedSeats.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.rtbSelectedSeats.HoverState.BorderColor = System.Drawing.Color.Transparent
-        Me.rtbSelectedSeats.Location = New System.Drawing.Point(19, 100)
-        Me.rtbSelectedSeats.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.rtbSelectedSeats.Location = New System.Drawing.Point(14, 81)
         Me.rtbSelectedSeats.Name = "rtbSelectedSeats"
         Me.rtbSelectedSeats.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.rtbSelectedSeats.PlaceholderText = ""
         Me.rtbSelectedSeats.ReadOnly = True
         Me.rtbSelectedSeats.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.rtbSelectedSeats.SelectedText = ""
-        Me.rtbSelectedSeats.Size = New System.Drawing.Size(431, 44)
+        Me.rtbSelectedSeats.Size = New System.Drawing.Size(323, 36)
         Me.rtbSelectedSeats.TabIndex = 0
         '
         'lblMessage
@@ -266,8 +256,7 @@ Partial Class EditBookings
         Me.lblMessage.AutoSize = True
         Me.lblMessage.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblMessage.ForeColor = System.Drawing.Color.Tomato
-        Me.lblMessage.Location = New System.Drawing.Point(127, 394)
-        Me.lblMessage.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblMessage.Location = New System.Drawing.Point(95, 320)
         Me.lblMessage.Name = "lblMessage"
         Me.lblMessage.Size = New System.Drawing.Size(445, 25)
         Me.lblMessage.TabIndex = 17
@@ -294,10 +283,11 @@ Partial Class EditBookings
         Me.IconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.None
         Me.IconPictureBox1.IconColor = System.Drawing.SystemColors.ControlText
         Me.IconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconPictureBox1.Location = New System.Drawing.Point(-15, -15)
-        Me.IconPictureBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.IconPictureBox1.IconSize = 24
+        Me.IconPictureBox1.Location = New System.Drawing.Point(-11, -12)
+        Me.IconPictureBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.IconPictureBox1.Name = "IconPictureBox1"
-        Me.IconPictureBox1.Size = New System.Drawing.Size(32, 32)
+        Me.IconPictureBox1.Size = New System.Drawing.Size(24, 26)
         Me.IconPictureBox1.TabIndex = 14
         Me.IconPictureBox1.TabStop = False
         '
@@ -309,11 +299,10 @@ Partial Class EditBookings
         Me.btnBack.IconChar = FontAwesome.Sharp.IconChar.ArrowCircleLeft
         Me.btnBack.IconColor = System.Drawing.SystemColors.Highlight
         Me.btnBack.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.btnBack.IconSize = 50
-        Me.btnBack.Location = New System.Drawing.Point(13, 9)
-        Me.btnBack.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnBack.IconSize = 41
+        Me.btnBack.Location = New System.Drawing.Point(10, 7)
         Me.btnBack.Name = "btnBack"
-        Me.btnBack.Size = New System.Drawing.Size(61, 50)
+        Me.btnBack.Size = New System.Drawing.Size(46, 41)
         Me.btnBack.TabIndex = 13
         Me.btnBack.TabStop = False
         '
@@ -331,17 +320,17 @@ Partial Class EditBookings
         '
         'EditBookings
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.ClientSize = New System.Drawing.Size(1361, 804)
+        Me.ClientSize = New System.Drawing.Size(1021, 653)
         Me.Controls.Add(Me.lblMessage)
         Me.Controls.Add(Me.Guna2GroupBox1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.IconPictureBox1)
         Me.Controls.Add(Me.btnBack)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "EditBookings"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "EditBookings"
@@ -366,10 +355,10 @@ Partial Class EditBookings
     Friend WithEvents btnPayment As FontAwesome.Sharp.IconButton
     Friend WithEvents IconSplitButton1 As FontAwesome.Sharp.IconSplitButton
     Friend WithEvents Label5 As Label
-    Friend WithEvents Guna2TextBox1 As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents txtFirstName As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Guna2ContextMenuStrip1 As Guna.UI2.WinForms.Guna2ContextMenuStrip
     Friend WithEvents Label4 As Label
     Friend WithEvents Guna2DateTimePicker1 As Guna.UI2.WinForms.Guna2DateTimePicker
     Friend WithEvents Label2 As Label
-    Friend WithEvents Guna2TextBox2 As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents txtLastName As Guna.UI2.WinForms.Guna2TextBox
 End Class
