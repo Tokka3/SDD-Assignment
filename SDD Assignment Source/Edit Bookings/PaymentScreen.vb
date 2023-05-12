@@ -16,5 +16,6 @@
         Me.Hide()
         EditBookings.Enabled = True
         EditBookings.Activate()
+        EditBookings.PaymentSuccess()
     End Sub
 End Class

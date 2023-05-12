@@ -28,10 +28,12 @@ Partial Class WelcomeScreen
         Me.Guna2BorderlessForm1 = New Guna.UI2.WinForms.Guna2BorderlessForm(Me.components)
         Me.Login = New Guna.UI2.WinForms.Guna2GroupBox()
         Me.Guna2GradientPanel5 = New Guna.UI2.WinForms.Guna2GradientPanel()
+        Me.btnViewTutorial = New FontAwesome.Sharp.IconButton()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Guna2GradientPanel6 = New Guna.UI2.WinForms.Guna2GradientPanel()
         Me.Guna2GradientPanel3 = New Guna.UI2.WinForms.Guna2GradientPanel()
+        Me.btnViewBooking = New FontAwesome.Sharp.IconButton()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Guna2GradientPanel4 = New Guna.UI2.WinForms.Guna2GradientPanel()
@@ -43,8 +45,6 @@ Partial Class WelcomeScreen
         Me.Guna2ContextMenuStrip2 = New Guna.UI2.WinForms.Guna2ContextMenuStrip()
         Me.IconPictureBox1 = New FontAwesome.Sharp.IconPictureBox()
         Me.btnBack = New FontAwesome.Sharp.IconPictureBox()
-        Me.btnViewBooking = New FontAwesome.Sharp.IconButton()
-        Me.btnViewTutorial = New FontAwesome.Sharp.IconButton()
         Me.Login.SuspendLayout()
         Me.Guna2GradientPanel5.SuspendLayout()
         Me.Guna2GradientPanel3.SuspendLayout()
@@ -75,6 +75,7 @@ Partial Class WelcomeScreen
         'Login
         '
         Me.Login.BorderColor = System.Drawing.SystemColors.Highlight
+        Me.Login.BorderRadius = 10
         Me.Login.Controls.Add(Me.Guna2GradientPanel5)
         Me.Login.Controls.Add(Me.Guna2GradientPanel6)
         Me.Login.Controls.Add(Me.Guna2GradientPanel3)
@@ -93,15 +94,38 @@ Partial Class WelcomeScreen
         '
         'Guna2GradientPanel5
         '
-        Me.Guna2GradientPanel5.BackColor = System.Drawing.SystemColors.Highlight
-        Me.Guna2GradientPanel5.BorderRadius = 5
+        Me.Guna2GradientPanel5.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2GradientPanel5.BorderRadius = 7
         Me.Guna2GradientPanel5.Controls.Add(Me.btnViewTutorial)
         Me.Guna2GradientPanel5.Controls.Add(Me.Label6)
         Me.Guna2GradientPanel5.Controls.Add(Me.Label7)
+        Me.Guna2GradientPanel5.CustomizableEdges.TopLeft = False
+        Me.Guna2GradientPanel5.CustomizableEdges.TopRight = False
+        Me.Guna2GradientPanel5.FillColor = System.Drawing.SystemColors.Highlight
+        Me.Guna2GradientPanel5.FillColor2 = System.Drawing.SystemColors.Highlight
         Me.Guna2GradientPanel5.Location = New System.Drawing.Point(626, 288)
         Me.Guna2GradientPanel5.Name = "Guna2GradientPanel5"
         Me.Guna2GradientPanel5.Size = New System.Drawing.Size(262, 177)
         Me.Guna2GradientPanel5.TabIndex = 4
+        '
+        'btnViewTutorial
+        '
+        Me.btnViewTutorial.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnViewTutorial.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnViewTutorial.Font = New System.Drawing.Font("Segoe UI Semibold", 13.25!, System.Drawing.FontStyle.Bold)
+        Me.btnViewTutorial.ForeColor = System.Drawing.SystemColors.Highlight
+        Me.btnViewTutorial.IconChar = FontAwesome.Sharp.IconChar.ArrowRight
+        Me.btnViewTutorial.IconColor = System.Drawing.SystemColors.Highlight
+        Me.btnViewTutorial.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnViewTutorial.IconSize = 24
+        Me.btnViewTutorial.ImageAlign = System.Drawing.ContentAlignment.BottomRight
+        Me.btnViewTutorial.Location = New System.Drawing.Point(132, 124)
+        Me.btnViewTutorial.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnViewTutorial.Name = "btnViewTutorial"
+        Me.btnViewTutorial.Size = New System.Drawing.Size(112, 36)
+        Me.btnViewTutorial.TabIndex = 5
+        Me.btnViewTutorial.Text = "View"
+        Me.btnViewTutorial.UseVisualStyleBackColor = False
         '
         'Label6
         '
@@ -138,15 +162,38 @@ Partial Class WelcomeScreen
         '
         'Guna2GradientPanel3
         '
-        Me.Guna2GradientPanel3.BackColor = System.Drawing.SystemColors.Highlight
-        Me.Guna2GradientPanel3.BorderRadius = 5
+        Me.Guna2GradientPanel3.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2GradientPanel3.BorderRadius = 7
         Me.Guna2GradientPanel3.Controls.Add(Me.btnViewBooking)
         Me.Guna2GradientPanel3.Controls.Add(Me.Label4)
         Me.Guna2GradientPanel3.Controls.Add(Me.Label5)
+        Me.Guna2GradientPanel3.CustomizableEdges.TopLeft = False
+        Me.Guna2GradientPanel3.CustomizableEdges.TopRight = False
+        Me.Guna2GradientPanel3.FillColor = System.Drawing.SystemColors.Highlight
+        Me.Guna2GradientPanel3.FillColor2 = System.Drawing.SystemColors.Highlight
         Me.Guna2GradientPanel3.Location = New System.Drawing.Point(330, 288)
         Me.Guna2GradientPanel3.Name = "Guna2GradientPanel3"
         Me.Guna2GradientPanel3.Size = New System.Drawing.Size(262, 177)
         Me.Guna2GradientPanel3.TabIndex = 4
+        '
+        'btnViewBooking
+        '
+        Me.btnViewBooking.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnViewBooking.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnViewBooking.Font = New System.Drawing.Font("Segoe UI Semibold", 13.25!, System.Drawing.FontStyle.Bold)
+        Me.btnViewBooking.ForeColor = System.Drawing.SystemColors.Highlight
+        Me.btnViewBooking.IconChar = FontAwesome.Sharp.IconChar.ArrowRight
+        Me.btnViewBooking.IconColor = System.Drawing.SystemColors.Highlight
+        Me.btnViewBooking.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnViewBooking.IconSize = 24
+        Me.btnViewBooking.ImageAlign = System.Drawing.ContentAlignment.BottomRight
+        Me.btnViewBooking.Location = New System.Drawing.Point(132, 124)
+        Me.btnViewBooking.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnViewBooking.Name = "btnViewBooking"
+        Me.btnViewBooking.Size = New System.Drawing.Size(112, 36)
+        Me.btnViewBooking.TabIndex = 4
+        Me.btnViewBooking.Text = "View"
+        Me.btnViewBooking.UseVisualStyleBackColor = False
         '
         'Label4
         '
@@ -183,11 +230,15 @@ Partial Class WelcomeScreen
         '
         'Guna2GradientPanel2
         '
-        Me.Guna2GradientPanel2.BackColor = System.Drawing.SystemColors.Highlight
-        Me.Guna2GradientPanel2.BorderRadius = 5
+        Me.Guna2GradientPanel2.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2GradientPanel2.BorderRadius = 7
         Me.Guna2GradientPanel2.Controls.Add(Me.btnEditBookings)
         Me.Guna2GradientPanel2.Controls.Add(Me.Label3)
         Me.Guna2GradientPanel2.Controls.Add(Me.Label2)
+        Me.Guna2GradientPanel2.CustomizableEdges.TopLeft = False
+        Me.Guna2GradientPanel2.CustomizableEdges.TopRight = False
+        Me.Guna2GradientPanel2.FillColor = System.Drawing.SystemColors.Highlight
+        Me.Guna2GradientPanel2.FillColor2 = System.Drawing.SystemColors.Highlight
         Me.Guna2GradientPanel2.Location = New System.Drawing.Point(35, 288)
         Me.Guna2GradientPanel2.Name = "Guna2GradientPanel2"
         Me.Guna2GradientPanel2.Size = New System.Drawing.Size(262, 177)
@@ -205,7 +256,7 @@ Partial Class WelcomeScreen
         Me.btnEditBookings.IconSize = 24
         Me.btnEditBookings.ImageAlign = System.Drawing.ContentAlignment.BottomRight
         Me.btnEditBookings.Location = New System.Drawing.Point(131, 129)
-        Me.btnEditBookings.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnEditBookings.Margin = New System.Windows.Forms.Padding(2)
         Me.btnEditBookings.Name = "btnEditBookings"
         Me.btnEditBookings.Size = New System.Drawing.Size(112, 36)
         Me.btnEditBookings.TabIndex = 3
@@ -268,7 +319,7 @@ Partial Class WelcomeScreen
         Me.IconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconPictureBox1.IconSize = 41
         Me.IconPictureBox1.Location = New System.Drawing.Point(975, 15)
-        Me.IconPictureBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.IconPictureBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.IconPictureBox1.Name = "IconPictureBox1"
         Me.IconPictureBox1.Size = New System.Drawing.Size(46, 41)
         Me.IconPictureBox1.TabIndex = 3
@@ -288,44 +339,6 @@ Partial Class WelcomeScreen
         Me.btnBack.Size = New System.Drawing.Size(46, 41)
         Me.btnBack.TabIndex = 12
         Me.btnBack.TabStop = False
-        '
-        'btnViewBooking
-        '
-        Me.btnViewBooking.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnViewBooking.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnViewBooking.Font = New System.Drawing.Font("Segoe UI Semibold", 13.25!, System.Drawing.FontStyle.Bold)
-        Me.btnViewBooking.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.btnViewBooking.IconChar = FontAwesome.Sharp.IconChar.ArrowRight
-        Me.btnViewBooking.IconColor = System.Drawing.SystemColors.Highlight
-        Me.btnViewBooking.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.btnViewBooking.IconSize = 24
-        Me.btnViewBooking.ImageAlign = System.Drawing.ContentAlignment.BottomRight
-        Me.btnViewBooking.Location = New System.Drawing.Point(132, 124)
-        Me.btnViewBooking.Margin = New System.Windows.Forms.Padding(2)
-        Me.btnViewBooking.Name = "btnViewBooking"
-        Me.btnViewBooking.Size = New System.Drawing.Size(112, 36)
-        Me.btnViewBooking.TabIndex = 4
-        Me.btnViewBooking.Text = "View"
-        Me.btnViewBooking.UseVisualStyleBackColor = False
-        '
-        'btnViewTutorial
-        '
-        Me.btnViewTutorial.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnViewTutorial.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnViewTutorial.Font = New System.Drawing.Font("Segoe UI Semibold", 13.25!, System.Drawing.FontStyle.Bold)
-        Me.btnViewTutorial.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.btnViewTutorial.IconChar = FontAwesome.Sharp.IconChar.ArrowRight
-        Me.btnViewTutorial.IconColor = System.Drawing.SystemColors.Highlight
-        Me.btnViewTutorial.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.btnViewTutorial.IconSize = 24
-        Me.btnViewTutorial.ImageAlign = System.Drawing.ContentAlignment.BottomRight
-        Me.btnViewTutorial.Location = New System.Drawing.Point(132, 124)
-        Me.btnViewTutorial.Margin = New System.Windows.Forms.Padding(2)
-        Me.btnViewTutorial.Name = "btnViewTutorial"
-        Me.btnViewTutorial.Size = New System.Drawing.Size(112, 36)
-        Me.btnViewTutorial.TabIndex = 5
-        Me.btnViewTutorial.Text = "View"
-        Me.btnViewTutorial.UseVisualStyleBackColor = False
         '
         'WelcomeScreen
         '

@@ -68,6 +68,7 @@ Partial Class EditBookings
         '
         'Guna2GroupBox1
         '
+        Me.Guna2GroupBox1.BorderRadius = 7
         Me.Guna2GroupBox1.Controls.Add(Me.Label4)
         Me.Guna2GroupBox1.Controls.Add(Me.Guna2DateTimePicker1)
         Me.Guna2GroupBox1.Controls.Add(Me.Label2)
@@ -82,7 +83,7 @@ Partial Class EditBookings
         Me.Guna2GroupBox1.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Guna2GroupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Guna2GroupBox1.Location = New System.Drawing.Point(646, 124)
-        Me.Guna2GroupBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Guna2GroupBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.Guna2GroupBox1.Name = "Guna2GroupBox1"
         Me.Guna2GroupBox1.Size = New System.Drawing.Size(351, 482)
         Me.Guna2GroupBox1.TabIndex = 16
@@ -221,7 +222,7 @@ Partial Class EditBookings
         Me.btnPayment.IconSize = 34
         Me.btnPayment.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnPayment.Location = New System.Drawing.Point(14, 432)
-        Me.btnPayment.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnPayment.Margin = New System.Windows.Forms.Padding(2)
         Me.btnPayment.Name = "btnPayment"
         Me.btnPayment.Size = New System.Drawing.Size(323, 38)
         Me.btnPayment.TabIndex = 5
@@ -285,7 +286,7 @@ Partial Class EditBookings
         Me.IconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconPictureBox1.IconSize = 24
         Me.IconPictureBox1.Location = New System.Drawing.Point(-11, -12)
-        Me.IconPictureBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.IconPictureBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.IconPictureBox1.Name = "IconPictureBox1"
         Me.IconPictureBox1.Size = New System.Drawing.Size(24, 26)
         Me.IconPictureBox1.TabIndex = 14
@@ -330,7 +331,7 @@ Partial Class EditBookings
         Me.Controls.Add(Me.IconPictureBox1)
         Me.Controls.Add(Me.btnBack)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "EditBookings"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "EditBookings"

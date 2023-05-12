@@ -2,6 +2,8 @@
     Public selectedSeats() As String
 
     Structure Booking
+        Public strBookingFirstName As String
+        Public arrSeatsBooked() As String
 
     End Structure
 

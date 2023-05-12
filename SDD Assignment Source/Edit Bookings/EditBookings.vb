@@ -131,10 +131,19 @@
 
     End Sub
 
+    Public Sub PaymentSuccess()
+        For Each button As FontAwesome.Sharp.IconPictureBox In Controls.OfType(Of FontAwesome.Sharp.IconPictureBox)()
+            If button.IconColor = Color.LimeGreen Then
+                button.IconColor = Color.Red
+                button.Enabled = False
+            End If
+        Next
+    End Sub
     Private Sub btnPayment_Click(sender As Object, e As EventArgs) Handles btnPayment.Click
         strFirstName = txtFirstName.Text
         strLastName = txtLastName.Text
         PaymentScreen.Show()
+
         Me.Enabled = False
     End Sub
 End Class
