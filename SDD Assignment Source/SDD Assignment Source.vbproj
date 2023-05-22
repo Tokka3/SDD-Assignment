@@ -195,6 +195,7 @@
     <Compile Include="Edit Bookings\EditBookings.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FileManager\FileManager.vb" />
     <Compile Include="GlobalVariables\GVars.vb" />
     <Compile Include="Login\Form1.vb">
       <SubType>Form</SubType>

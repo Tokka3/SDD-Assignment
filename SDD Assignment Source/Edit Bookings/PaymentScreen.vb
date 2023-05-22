@@ -14,8 +14,34 @@
     Private Sub btnPayment_Click(sender As Object, e As EventArgs) Handles btnPayment.Click
         MessageBox.Show("Thanks " & strFirstName & ", you're booking is complete")
         Me.Hide()
+        Dim Booking As Object = BookingRecord(intBookingCount)
+        Booking.intTotal = selectedSeats.Length * 20
+        Booking.strBookingFirstName = txtFirstname.Text
+        Booking.strBookingLastName = txtLastName.Text
+        Booking.intBookingID = intBookingCount
+        Booking.arrSeatsBooked = selectedSeats
+
+        Dim strField As String = ""
+        strField &= (Booking.intBookingID.ToString() & "&")
+        strField &= (Booking.intTotal.ToString() & "&")
+        strField &= (Booking.strBookingFirstName & "&")
+        strField &= (Booking.strBookingLastName & "&")
+
+        strField &= (Join(Booking.arrSeatsBooked, ","))
+
+        MessageBox.Show(strField)
+        FileOpen(1, "Bookings.txt", OpenMode.Random, OpenAccess.Write, OpenShare.LockWrite)
+
+        FilePut(1, strField, intBookingCount)
+
+        intBookingCount += 1
+
+        FileClose(1)
+        Array.Clear(selectedSeats, 0, selectedSeats.Length)
+        ReDim selectedSeats(0)
         EditBookings.Enabled = True
         EditBookings.Activate()
         EditBookings.PaymentSuccess()
+
     End Sub
 End Class
