@@ -110,7 +110,7 @@
 
     Private Sub EditBookings_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ReDim selectedSeats(0 To -1) ' Initialize with size 0
-        lblMessage.Visible = False
+
 
         'Dynamically Load Buttons Upon load
         'Specified dimensions
@@ -119,13 +119,11 @@
 
         'Grid buttons
         Dim counter As Byte = 0
-        For idx = 0 To 8 - 1 Step 1
-            For idx_2 = 0 To 7 - 1 Step 1
 
-                button_names(counter) = (idx + 1).ToString + Chr(idx_2 + 65) + "Lid"
-                add_button(50 + idx * 70, 120 + idx_2 * 70, (idx + 1).ToString + Chr(idx_2 + 65))
-                counter += 1
-            Next
+        For Each button As FontAwesome.Sharp.IconPictureBox In Controls.OfType(Of FontAwesome.Sharp.IconPictureBox)()
+            AddHandler button.Click, AddressOf DynamicButton_Click
+            AddHandler button.MouseEnter, AddressOf DynamicButton_Hover
+            AddHandler button.MouseLeave, AddressOf DynamicButton_MouseLeave
         Next
 
 
