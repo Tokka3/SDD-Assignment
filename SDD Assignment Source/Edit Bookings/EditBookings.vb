@@ -96,6 +96,9 @@
         Dim counter As Byte = 0
 
         For Each button As FontAwesome.Sharp.IconPictureBox In Controls.OfType(Of FontAwesome.Sharp.IconPictureBox)()
+            If button.Name = "btnBack" Then
+                Continue For
+            End If
             AddHandler button.Click, AddressOf DynamicButton_Click
             AddHandler button.MouseEnter, AddressOf DynamicButton_Hover
             AddHandler button.MouseLeave, AddressOf DynamicButton_MouseLeave

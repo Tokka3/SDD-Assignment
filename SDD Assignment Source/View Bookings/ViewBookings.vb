@@ -7,19 +7,27 @@
     Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles grpBookings.Enter
 
     End Sub
+    Private Sub Delete_Record(ByVal sender As Object, ByVal e As System.EventArgs)
 
-    Private Sub ViewBookings_Load(sender As Object, e As EventArgs) Handles MyBase.VisibleChanged
-        Dim container As New Panel With {.Dock = DockStyle.Fill, .AutoScroll = True}
+    End Sub
+
+    Private Sub Edit_Record(ByVal sender As Object, ByVal e As System.EventArgs)
+
+    End Sub
+    Private Sub Booking_Refresh()
+        grpBookings.Controls.Clear()
+        Dim container As New Panel With {.Dock = DockStyle.Fill, .AutoScroll = True, .Name = "displayPanel"}
+
         grpBookings.Controls.Add(container) ' Assume grpBookings is your GroupBox
 
-        Dim yPos As Integer = 10 ' Initial vertical position for the first Panel
+        Dim yPos As Integer = 0 ' Initial vertical position for the first Panel
 
         For i As Integer = 0 To BookingRecord.Length - 1
             ' Create a new Panel for the record
             If String.IsNullOrEmpty(BookingRecord(i).strBookingFirstName) Then
                 Continue For
             End If
-            Dim recordPanel As New Panel With {.Width = 603, .Height = 40, .Top = yPos, .Left = 5, .BackColor = SystemColors.Highlight}
+            Dim recordPanel As New Panel With {.Width = 598, .Height = 40, .Top = yPos, .Left = 5, .BackColor = SystemColors.Highlight}
             container.Controls.Add(recordPanel)
 
             ' Create Labels and add them to the record's Panel
@@ -46,15 +54,20 @@
             Dim btnEdit As New Button With {.FlatStyle = FlatStyle.Flat, .Width = 50, .Height = 28, .Top = 6, .ForeColor = Color.White, .Left = 460, .Text = "Edit", .BackColor = SystemColors.HotTrack}
             btnEdit.Font = New Font("Segoe UI", 10, FontStyle.Regular)
             recordPanel.Controls.Add(btnEdit)
+            AddHandler btnEdit.Click, AddressOf Edit_Record
 
             Dim btnDelete As New Button With {.FlatStyle = FlatStyle.Flat, .Width = 70, .Height = 28, .Top = 6, .ForeColor = Color.White, .Left = 520, .Text = "Delete", .BackColor = Color.OrangeRed}
             btnDelete.Font = New Font("Segoe UI", 10, FontStyle.Regular)
+            AddHandler btnDelete.Click, AddressOf Delete_Record
             recordPanel.Controls.Add(btnDelete)
             ' ... create more Labels for the other pieces of data
 
             ' Increase the vertical position for the next Panel
             yPos += 50
         Next
+    End Sub
+    Private Sub ViewBookings_Load(sender As Object, e As EventArgs) Handles MyBase.VisibleChanged
+        Booking_Refresh()
     End Sub
 
     Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
@@ -63,5 +76,9 @@
 
     Private Sub ViewBookings_Load_1(sender As Object, e As EventArgs) Handles MyBase.Load
 
+    End Sub
+
+    Private Sub btnRefresh_Click(sender As Object, e As EventArgs) Handles btnRefresh.Click
+        Booking_Refresh()
     End Sub
 End Class
