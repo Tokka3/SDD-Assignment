@@ -455,7 +455,7 @@ Partial Class EditBookings
         Me.lblTotal.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.lblTotal.Location = New System.Drawing.Point(9, 402)
         Me.lblTotal.Name = "lblTotal"
-        Me.lblTotal.Size = New System.Drawing.Size(92, 28)
+        Me.lblTotal.Size = New System.Drawing.Size(213, 28)
         Me.lblTotal.TabIndex = 19
         Me.lblTotal.Text = "Total:"
         Me.lblTotal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft

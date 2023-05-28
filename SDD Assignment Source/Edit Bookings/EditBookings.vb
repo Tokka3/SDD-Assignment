@@ -11,34 +11,7 @@
         Me.Hide()
         WelcomeScreen.Show()
     End Sub
-    Sub add_button(ByVal x_position As Integer, ByVal y_position As Integer, ByVal label As String)
 
-        Dim dynamicButton As New FontAwesome.Sharp.IconPictureBox
-        Dim dynamicLabel As New Label
-
-        dynamicLabel.Location = New Point(x_position + 13, y_position + 50)
-        dynamicLabel.Text = label
-        dynamicLabel.ForeColor = Color.FromArgb(255, 45, 45, 45)
-        dynamicLabel.Width = 30
-        dynamicLabel.Height = 15
-        dynamicLabel.Font = New Font("Segoe UI", 8.5)
-
-
-        dynamicButton.Location = New Point(x_position, y_position)
-        dynamicButton.Size = New Drawing.Point(50, 63)
-        dynamicButton.IconSize = 50
-        dynamicButton.SizeMode = PictureBoxSizeMode.StretchImage
-        dynamicButton.Name = label
-        dynamicButton.IconColor = SystemColors.Highlight
-        dynamicButton.IconChar = dynamicButton.IconChar.Couch
-        dynamicButton.Cursor = Cursors.Hand
-        AddHandler dynamicButton.Click, AddressOf DynamicButton_Click
-        AddHandler dynamicButton.MouseEnter, AddressOf DynamicButton_Hover
-        AddHandler dynamicButton.MouseLeave, AddressOf DynamicButton_MouseLeave
-        Controls.Add(dynamicLabel)
-        Controls.Add(dynamicButton)
-
-    End Sub
 
     Private Sub DynamicButton_Click(ByVal sender As Object, ByVal e As System.EventArgs)
 
@@ -52,6 +25,7 @@
             ReDim Preserve selectedSeats(UBound(selectedSeats) + 1)
             selectedSeats(UBound(selectedSeats)) = btn.Name
         End If
+
 
         ' Function to remove an element from an array
 
@@ -71,7 +45,8 @@
 
         End Select
 
-        lblTotal.Text = "Total: " & "$" & (selectedSeats.Length * 20).ToString
+        lblTotal.Text = "Total: $" & (selectedSeats.Length * 20).ToString()
+
 
 
     End Sub

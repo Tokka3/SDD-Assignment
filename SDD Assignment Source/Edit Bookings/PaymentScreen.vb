@@ -22,23 +22,26 @@
         Booking.arrSeatsBooked = selectedSeats
 
         Dim strField As String = ""
-        strField &= (Booking.intBookingID.ToString() & "&")
-        strField &= (Booking.intTotal.ToString() & "&")
-        strField &= (Booking.strBookingFirstName & "&")
-        strField &= (Booking.strBookingLastName & "&")
+        strField &= (Booking.intBookingID.ToString() & "-")
+        strField &= (Booking.intTotal.ToString() & "-")
+        strField &= (Booking.strBookingFirstName & "-")
+        strField &= (Booking.strBookingLastName & "-")
 
         strField &= (Join(Booking.arrSeatsBooked, ","))
 
         MessageBox.Show(strField)
-        FileOpen(1, "Bookings.txt", OpenMode.Random, OpenAccess.Write, OpenShare.LockWrite)
 
-        FilePut(1, strField, intBookingCount)
+        Dim writeFile As System.IO.StreamWriter 'Open stream to file
+        writeFile = System.IO.File.AppendText("Bookings.txt")
+
+        writeFile.WriteLine(strField)
+
+        writeFile.Close()
 
         intBookingCount += 1
 
-        FileClose(1)
         Array.Clear(selectedSeats, 0, selectedSeats.Length)
-        ReDim selectedSeats(0)
+        ReDim selectedSeats(0 To -1)
         EditBookings.Enabled = True
         EditBookings.Activate()
         EditBookings.PaymentSuccess()
