@@ -1,5 +1,5 @@
 ﻿Public Class PaymentScreen
-    Private Sub btnExitButton_Click(sender As Object, e As EventArgs) Handles btnExitButton.Click
+    Private Sub btnExitButton_Click(sender As Object, e As EventArgs)
         Me.Hide()
         EditBookings.Enabled = True
         EditBookings.Activate()
@@ -19,6 +19,7 @@
         Booking.strBookingFirstName = txtFirstname.Text
         Booking.strBookingLastName = txtLastName.Text
         Booking.intBookingID = intBookingCount
+        Booking.strDOB = EditBookings.txtDOB.Text
         Booking.arrSeatsBooked = selectedSeats
 
         Dim strField As String = ""
@@ -26,7 +27,7 @@
         strField &= (Booking.intTotal.ToString() & "-")
         strField &= (Booking.strBookingFirstName & "-")
         strField &= (Booking.strBookingLastName & "-")
-
+        strField &= (Booking.strDOB & "-")
         strField &= (Join(Booking.arrSeatsBooked, ","))
 
         MessageBox.Show(strField)
@@ -43,8 +44,13 @@
         Array.Clear(selectedSeats, 0, selectedSeats.Length)
         ReDim selectedSeats(0 To -1)
         EditBookings.Enabled = True
+        EditBookings.txtFirstName.Clear()
+        EditBookings.txtLastName.Clear()
+        EditBookings.rtbSelectedSeats.Clear()
+        EditBookings.txtDOB.Clear()
         EditBookings.Activate()
         EditBookings.PaymentSuccess()
 
+        UpdateBookingRecord()
     End Sub
 End Class

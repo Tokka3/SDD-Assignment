@@ -101,6 +101,16 @@
             AddHandler button.MouseLeave, AddressOf DynamicButton_MouseLeave
         Next
 
+        For Each booking In BookingRecord
+            If booking.arrSeatsBooked IsNot Nothing Then
+                For Each seat In booking.arrSeatsBooked
+                    Dim btnSeat As FontAwesome.Sharp.IconPictureBox = DirectCast(Controls(seat), FontAwesome.Sharp.IconPictureBox)
+                    btnSeat.IconColor = Color.Red
+                Next
+            End If
+
+        Next
+
 
     End Sub
 
@@ -119,4 +129,6 @@
 
         Me.Enabled = False
     End Sub
+
+
 End Class

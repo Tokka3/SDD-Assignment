@@ -10,7 +10,7 @@
     End Sub
 
 
-    Private Sub btnViewBooking_Click(sender As Object, e As EventArgs) Handles btnViewBooking.Click
+    Private Sub btnViewBooking_Click(sender As Object, e As EventArgs) Handles btnViewInsights.Click
         Me.Hide()
         ViewBookings.Show()
     End Sub
@@ -18,5 +18,9 @@
     Private Sub btnViewTutorial_Click(sender As Object, e As EventArgs) Handles btnViewTutorial.Click
         Me.Hide()
         Tutorial.Show()
+    End Sub
+
+    Private Sub WelcomeScreen_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        UpdateBookingRecord()
     End Sub
 End Class

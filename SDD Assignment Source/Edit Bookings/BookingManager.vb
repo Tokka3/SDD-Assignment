@@ -5,6 +5,7 @@
         Public intBookingID As Integer
         Public strBookingFirstName As String
         Public strBookingLastName As String
+        Public strDOB As String
         Public arrSeatsBooked() As String
         Public intTotal As Integer 'Total cost of booking
     End Structure
