@@ -26,19 +26,19 @@ Partial Class Form1
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.iconEye = New FontAwesome.Sharp.IconPictureBox()
-        Me.IconPictureBox1 = New FontAwesome.Sharp.IconPictureBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.btnLogin = New System.Windows.Forms.Button()
         Me.txtUsername = New System.Windows.Forms.TextBox()
         Me.txtPassword = New System.Windows.Forms.TextBox()
+        Me.iconEye = New FontAwesome.Sharp.IconPictureBox()
+        Me.IconPictureBox1 = New FontAwesome.Sharp.IconPictureBox()
         CType(Me.iconEye, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.IconPictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
         '
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Open Sans Extrabold", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.Label1.Location = New System.Drawing.Point(492, 65)
         Me.Label1.Name = "Label1"
@@ -49,7 +49,7 @@ Partial Class Form1
         '
         'Label2
         '
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI Semibold", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Open Sans", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.Label2.Location = New System.Drawing.Point(489, 111)
         Me.Label2.Name = "Label2"
@@ -60,9 +60,9 @@ Partial Class Form1
         '
         'Label4
         '
-        Me.Label4.Font = New System.Drawing.Font("Segoe UI Semibold", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Font = New System.Drawing.Font("Open Sans", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label4.Location = New System.Drawing.Point(535, 321)
+        Me.Label4.Location = New System.Drawing.Point(535, 333)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(420, 53)
         Me.Label4.TabIndex = 15
@@ -71,43 +71,14 @@ Partial Class Form1
         '
         'Label3
         '
-        Me.Label3.Font = New System.Drawing.Font("Segoe UI Semibold", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Font = New System.Drawing.Font("Open Sans", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(535, 195)
+        Me.Label3.Location = New System.Drawing.Point(535, 203)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(454, 53)
         Me.Label3.TabIndex = 14
         Me.Label3.Text = "Username"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'iconEye
-        '
-        Me.iconEye.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.iconEye.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.iconEye.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.iconEye.IconChar = FontAwesome.Sharp.IconChar.EyeSlash
-        Me.iconEye.IconColor = System.Drawing.SystemColors.Highlight
-        Me.iconEye.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.iconEye.IconSize = 33
-        Me.iconEye.Location = New System.Drawing.Point(943, 344)
-        Me.iconEye.Name = "iconEye"
-        Me.iconEye.Size = New System.Drawing.Size(33, 33)
-        Me.iconEye.TabIndex = 18
-        Me.iconEye.TabStop = False
-        '
-        'IconPictureBox1
-        '
-        Me.IconPictureBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.IconPictureBox1.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.IconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.User
-        Me.IconPictureBox1.IconColor = System.Drawing.SystemColors.Highlight
-        Me.IconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconPictureBox1.IconSize = 30
-        Me.IconPictureBox1.Location = New System.Drawing.Point(946, 215)
-        Me.IconPictureBox1.Name = "IconPictureBox1"
-        Me.IconPictureBox1.Size = New System.Drawing.Size(30, 30)
-        Me.IconPictureBox1.TabIndex = 17
-        Me.IconPictureBox1.TabStop = False
         '
         'Panel1
         '
@@ -151,6 +122,35 @@ Partial Class Form1
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.Size = New System.Drawing.Size(436, 38)
         Me.txtPassword.TabIndex = 22
+        '
+        'iconEye
+        '
+        Me.iconEye.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.iconEye.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.iconEye.ForeColor = System.Drawing.SystemColors.Highlight
+        Me.iconEye.IconChar = FontAwesome.Sharp.IconChar.EyeSlash
+        Me.iconEye.IconColor = System.Drawing.SystemColors.Highlight
+        Me.iconEye.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.iconEye.IconSize = 33
+        Me.iconEye.Location = New System.Drawing.Point(943, 344)
+        Me.iconEye.Name = "iconEye"
+        Me.iconEye.Size = New System.Drawing.Size(33, 33)
+        Me.iconEye.TabIndex = 18
+        Me.iconEye.TabStop = False
+        '
+        'IconPictureBox1
+        '
+        Me.IconPictureBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.IconPictureBox1.ForeColor = System.Drawing.SystemColors.Highlight
+        Me.IconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.User
+        Me.IconPictureBox1.IconColor = System.Drawing.SystemColors.Highlight
+        Me.IconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconPictureBox1.IconSize = 30
+        Me.IconPictureBox1.Location = New System.Drawing.Point(946, 215)
+        Me.IconPictureBox1.Name = "IconPictureBox1"
+        Me.IconPictureBox1.Size = New System.Drawing.Size(30, 30)
+        Me.IconPictureBox1.TabIndex = 17
+        Me.IconPictureBox1.TabStop = False
         '
         'Form1
         '

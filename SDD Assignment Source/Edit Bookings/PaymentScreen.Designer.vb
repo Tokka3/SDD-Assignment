@@ -28,22 +28,22 @@ Partial Class PaymentScreen
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.lblTotal = New System.Windows.Forms.Label()
-        Me.btnPayment = New FontAwesome.Sharp.IconButton()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.btnExitButton = New FontAwesome.Sharp.IconPictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtFirstname = New System.Windows.Forms.TextBox()
         Me.txtLastname = New System.Windows.Forms.TextBox()
         Me.txtCCNo = New System.Windows.Forms.TextBox()
         Me.txtExpiryDate = New System.Windows.Forms.TextBox()
         Me.txtCCV = New System.Windows.Forms.TextBox()
+        Me.btnExitButton = New FontAwesome.Sharp.IconPictureBox()
+        Me.btnPayment = New FontAwesome.Sharp.IconButton()
         Me.Panel1.SuspendLayout()
         CType(Me.btnExitButton, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label2
         '
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Open Sans", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.Label2.Location = New System.Drawing.Point(7, 132)
         Me.Label2.Name = "Label2"
@@ -54,7 +54,7 @@ Partial Class PaymentScreen
         '
         'Label5
         '
-        Me.Label5.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Font = New System.Drawing.Font("Open Sans", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.Label5.Location = New System.Drawing.Point(7, 59)
         Me.Label5.Name = "Label5"
@@ -65,7 +65,7 @@ Partial Class PaymentScreen
         '
         'Label3
         '
-        Me.Label3.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Font = New System.Drawing.Font("Open Sans", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.Label3.Location = New System.Drawing.Point(7, 207)
         Me.Label3.Name = "Label3"
@@ -76,7 +76,7 @@ Partial Class PaymentScreen
         '
         'Label4
         '
-        Me.Label4.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Font = New System.Drawing.Font("Open Sans", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.Label4.Location = New System.Drawing.Point(9, 279)
         Me.Label4.Name = "Label4"
@@ -87,7 +87,7 @@ Partial Class PaymentScreen
         '
         'Label6
         '
-        Me.Label6.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Font = New System.Drawing.Font("Open Sans", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.Label6.Location = New System.Drawing.Point(225, 279)
         Me.Label6.Name = "Label6"
@@ -98,7 +98,7 @@ Partial Class PaymentScreen
         '
         'lblTotal
         '
-        Me.lblTotal.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTotal.Font = New System.Drawing.Font("Open Sans", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTotal.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.lblTotal.Location = New System.Drawing.Point(12, 361)
         Me.lblTotal.Name = "lblTotal"
@@ -106,25 +106,6 @@ Partial Class PaymentScreen
         Me.lblTotal.TabIndex = 34
         Me.lblTotal.Text = "Total:"
         Me.lblTotal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'btnPayment
-        '
-        Me.btnPayment.BackColor = System.Drawing.SystemColors.Highlight
-        Me.btnPayment.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnPayment.Font = New System.Drawing.Font("Segoe UI Semibold", 13.25!, System.Drawing.FontStyle.Bold)
-        Me.btnPayment.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnPayment.IconChar = FontAwesome.Sharp.IconChar.CcVisa
-        Me.btnPayment.IconColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnPayment.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.btnPayment.IconSize = 34
-        Me.btnPayment.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnPayment.Location = New System.Drawing.Point(14, 431)
-        Me.btnPayment.Margin = New System.Windows.Forms.Padding(2)
-        Me.btnPayment.Name = "btnPayment"
-        Me.btnPayment.Size = New System.Drawing.Size(323, 38)
-        Me.btnPayment.TabIndex = 35
-        Me.btnPayment.Text = "Complete Payment"
-        Me.btnPayment.UseVisualStyleBackColor = False
         '
         'Panel1
         '
@@ -136,21 +117,6 @@ Partial Class PaymentScreen
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(351, 45)
         Me.Panel1.TabIndex = 37
-        '
-        'btnExitButton
-        '
-        Me.btnExitButton.BackColor = System.Drawing.Color.Transparent
-        Me.btnExitButton.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnExitButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnExitButton.IconChar = FontAwesome.Sharp.IconChar.Xmark
-        Me.btnExitButton.IconColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnExitButton.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.btnExitButton.Location = New System.Drawing.Point(311, 9)
-        Me.btnExitButton.Margin = New System.Windows.Forms.Padding(2)
-        Me.btnExitButton.Name = "btnExitButton"
-        Me.btnExitButton.Size = New System.Drawing.Size(32, 34)
-        Me.btnExitButton.TabIndex = 17
-        Me.btnExitButton.TabStop = False
         '
         'Label1
         '
@@ -202,6 +168,40 @@ Partial Class PaymentScreen
         Me.txtCCV.Name = "txtCCV"
         Me.txtCCV.Size = New System.Drawing.Size(104, 33)
         Me.txtCCV.TabIndex = 43
+        '
+        'btnExitButton
+        '
+        Me.btnExitButton.BackColor = System.Drawing.Color.Transparent
+        Me.btnExitButton.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnExitButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnExitButton.IconChar = FontAwesome.Sharp.IconChar.Xmark
+        Me.btnExitButton.IconColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnExitButton.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnExitButton.Location = New System.Drawing.Point(311, 9)
+        Me.btnExitButton.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnExitButton.Name = "btnExitButton"
+        Me.btnExitButton.Size = New System.Drawing.Size(32, 34)
+        Me.btnExitButton.TabIndex = 17
+        Me.btnExitButton.TabStop = False
+        '
+        'btnPayment
+        '
+        Me.btnPayment.BackColor = System.Drawing.SystemColors.Highlight
+        Me.btnPayment.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnPayment.Font = New System.Drawing.Font("Segoe UI Semibold", 13.25!, System.Drawing.FontStyle.Bold)
+        Me.btnPayment.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnPayment.IconChar = FontAwesome.Sharp.IconChar.CcVisa
+        Me.btnPayment.IconColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnPayment.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnPayment.IconSize = 34
+        Me.btnPayment.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnPayment.Location = New System.Drawing.Point(14, 431)
+        Me.btnPayment.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnPayment.Name = "btnPayment"
+        Me.btnPayment.Size = New System.Drawing.Size(323, 38)
+        Me.btnPayment.TabIndex = 35
+        Me.btnPayment.Text = "Complete Payment"
+        Me.btnPayment.UseVisualStyleBackColor = False
         '
         'PaymentScreen
         '

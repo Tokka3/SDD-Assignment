@@ -27,7 +27,22 @@ SDD Assignment Source
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:SDD_Assignment_Source.My.Resources.Resources.ForrestGump">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SDD_Assignment_Source.My.Resources.Resources.GoodWillHunting">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:SDD_Assignment_Source.My.Resources.Resources.insight">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SDD_Assignment_Source.My.Resources.Resources.LionKing">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

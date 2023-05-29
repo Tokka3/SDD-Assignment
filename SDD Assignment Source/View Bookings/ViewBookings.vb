@@ -8,7 +8,47 @@
 
     End Sub
     Private Sub Delete_Record(ByVal sender As Object, ByVal e As System.EventArgs)
+        Dim btn As Button = DirectCast(sender, Button)
+        Dim booking_to_delete As Booking = BookingRecord(GetBookingIdxByID(btn.AccessibleDescription))
+        Dim result As DialogResult = MessageBox.Show("Are you sure you want to delete " & booking_to_delete.strBookingFirstName & "'s booking?", "Warning", MessageBoxButtons.YesNoCancel)
 
+        If result = DialogResult.Yes Then
+
+            ClearBookingFile()
+            Dim writeFile As System.IO.StreamWriter 'Open stream to file
+            writeFile = System.IO.File.AppendText("Bookings.txt")
+
+            For Each booking In BookingRecord
+
+                If booking.intBookingID = booking_to_delete.intBookingID Then
+                    Continue For
+                End If
+
+                Dim strField As String = ""
+                strField &= (booking.intBookingID.ToString() & "-")
+                strField &= (booking.intTotal.ToString() & "-")
+                strField &= (booking.strBookingFirstName & "-")
+                strField &= (booking.strBookingLastName & "-")
+                strField &= (booking.strDOB & "-")
+                strField &= (Join(booking.arrSeatsBooked, ",") & "-")
+                strField &= (booking.strFilm)
+                If strField = "0-0-----" Then
+                    Continue For
+                End If
+                writeFile.WriteLine(strField)
+
+
+
+
+            Next
+
+            writeFile.Close()
+
+            UpdateBookingRecordArray()
+
+            Booking_Refresh()
+
+        End If
     End Sub
 
     Private Sub Edit_Record(ByVal sender As Object, ByVal e As System.EventArgs)
@@ -27,11 +67,11 @@
             If String.IsNullOrEmpty(BookingRecord(i).strBookingFirstName) Then
                 Continue For
             End If
-            Dim recordPanel As New Panel With {.Width = 598, .Height = 40, .Top = yPos, .Left = 5, .BackColor = SystemColors.Highlight}
+            Dim recordPanel As New Panel With {.Width = 705, .Height = 40, .Top = yPos, .Left = 5, .BackColor = SystemColors.Highlight}
             container.Controls.Add(recordPanel)
 
             ' Create Labels and add them to the record's Panel
-            Dim lblID As New Label With {.Text = i.ToString(), .Top = 10, .Width = 30, .Left = 5, .ForeColor = Color.White}
+            Dim lblID As New Label With {.Text = BookingRecord(i).intBookingID.ToString(), .Top = 10, .Width = 30, .Left = 5, .ForeColor = Color.White}
             lblID.Font = New Font("Segoe UI", 10, FontStyle.Regular)
             recordPanel.Controls.Add(lblID)
 
@@ -39,25 +79,31 @@
             lblFirstName.Font = New Font("Segoe UI", 10, FontStyle.Regular)
             recordPanel.Controls.Add(lblFirstName)
 
-            Dim lblLastName As New Label With {.Text = BookingRecord(i).strBookingLastName, .Top = 10, .Left = 140, .Width = 135, .ForeColor = Color.White}
+            Dim lblLastName As New Label With {.Text = BookingRecord(i).strBookingLastName, .Top = 10, .Left = 140, .Width = 100, .ForeColor = Color.White}
             lblLastName.Font = New Font("Segoe UI", 10, FontStyle.Regular)
             recordPanel.Controls.Add(lblLastName)
 
-            Dim txtSeats As New TextBox With {.Text = String.Join(",", BookingRecord(i).arrSeatsBooked), .Top = 8, .Left = 275, .Width = 100}
+            Dim lblFilm As New Label With {.Text = BookingRecord(i).strFilm, .Top = 10, .Left = 235, .Width = 106, .ForeColor = Color.White}
+            lblFilm.Font = New Font("Segoe UI", 10, FontStyle.Regular)
+            recordPanel.Controls.Add(lblFilm)
+
+            Dim txtSeats As New TextBox With {.Text = String.Join(",", BookingRecord(i).arrSeatsBooked), .Top = 8, .Left = 342, .Width = 140, .ForeColor = SystemColors.HotTrack}
             txtSeats.Font = New Font("Segoe UI", 10, FontStyle.Regular)
             recordPanel.Controls.Add(txtSeats)
 
-            Dim lblPrice As New Label With {.Text = "$" & BookingRecord(i).intTotal.ToString(), .Top = 10, .Left = 405, .Width = 55, .ForeColor = Color.White}
+            Dim lblPrice As New Label With {.Text = "$" & BookingRecord(i).intTotal.ToString(), .Top = 10, .Left = 512, .Width = 55, .ForeColor = Color.White}
             lblPrice.Font = New Font("Segoe UI", 10, FontStyle.Regular)
             recordPanel.Controls.Add(lblPrice)
 
-            Dim btnEdit As New Button With {.FlatStyle = FlatStyle.Flat, .Width = 50, .Height = 28, .Top = 6, .ForeColor = Color.White, .Left = 460, .Text = "Edit", .BackColor = SystemColors.HotTrack}
+            Dim btnEdit As New Button With {.FlatStyle = FlatStyle.Flat, .Width = 50, .Height = 28, .Top = 6, .ForeColor = Color.White, .Left = 567, .Text = "Edit", .BackColor = SystemColors.HotTrack}
             btnEdit.Font = New Font("Segoe UI", 10, FontStyle.Regular)
+            btnEdit.AccessibleDescription = BookingRecord(i).intBookingID.ToString()
             recordPanel.Controls.Add(btnEdit)
             AddHandler btnEdit.Click, AddressOf Edit_Record
 
-            Dim btnDelete As New Button With {.FlatStyle = FlatStyle.Flat, .Width = 70, .Height = 28, .Top = 6, .ForeColor = Color.White, .Left = 520, .Text = "Delete", .BackColor = Color.OrangeRed}
+            Dim btnDelete As New Button With {.FlatStyle = FlatStyle.Flat, .Width = 70, .Height = 28, .Top = 6, .ForeColor = Color.White, .Left = 627, .Text = "Delete", .BackColor = Color.OrangeRed}
             btnDelete.Font = New Font("Segoe UI", 10, FontStyle.Regular)
+            btnDelete.AccessibleDescription = BookingRecord(i).intBookingID.ToString()
             AddHandler btnDelete.Click, AddressOf Delete_Record
             recordPanel.Controls.Add(btnDelete)
             ' ... create more Labels for the other pieces of data
@@ -80,5 +126,6 @@
 
     Private Sub btnRefresh_Click(sender As Object, e As EventArgs) Handles btnRefresh.Click
         Booking_Refresh()
+
     End Sub
 End Class

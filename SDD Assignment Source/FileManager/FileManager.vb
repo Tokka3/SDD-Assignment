@@ -1,7 +1,29 @@
 ﻿Module FileManager
 
-    Public Sub UpdateBookingRecord()
+    Function GetBookingIdxByID(ByVal intBookingID As Integer) As Integer
+        Dim idx As Integer = 0
 
+        For idx = 0 To 100 Step 1 'Loop through all customer records
+
+            If BookingRecord(idx).intBookingID = Nothing Then
+                Continue For
+            End If
+
+            If (BookingRecord(idx).intBookingID = intBookingID) Then 'If BookingID is found, return index in array
+                Return idx
+            End If
+        Next
+        Return -1
+    End Function
+
+    Public Sub ClearBookingFile()
+        System.IO.File.WriteAllText("Bookings.Txt", String.Empty)
+    End Sub
+    Public Sub UpdateBookingRecordArray() 'Populates the BookingRecord array by reading Bookings.txt file
+
+
+        Array.Clear(BookingRecord, 0, BookingRecord.Length)
+        intBookingCount = 0
         Dim filePath As String = "Bookings.txt"
 
         Dim counter As Integer = 0
@@ -19,7 +41,7 @@
             If parts.Length >= 6 Then
 
                 BookingRecord(counter).intBookingID = Integer.Parse(parts(0))
-
+                'Debug.WriteLine(BookingRecord(counter).intBookingID.ToString & " uoueo")
                 BookingRecord(counter).intTotal = Integer.Parse(parts(1))
 
                 BookingRecord(counter).strBookingFirstName = parts(2)
@@ -30,10 +52,16 @@
 
                 BookingRecord(counter).arrSeatsBooked = parts(5).Split(","c)
 
+                BookingRecord(counter).strFilm = parts(6)
+                If BookingRecord(counter).intBookingID > intBookingCount Then
+                    intBookingCount = BookingRecord(counter).intBookingID 'Gets the latest booking ID
+                End If
+
             End If
 
             counter += 1
         End While
+        Debug.WriteLine("Booking count: " & intBookingCount)
         readFile.Close()
     End Sub
 End Module

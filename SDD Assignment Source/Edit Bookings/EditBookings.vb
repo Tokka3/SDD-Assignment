@@ -83,6 +83,28 @@
         End Select
     End Sub
 
+    Sub ColourBookedSeats()
+
+        For Each button As FontAwesome.Sharp.IconPictureBox In Controls.OfType(Of FontAwesome.Sharp.IconPictureBox)()
+            If button.Name = "btnBack" Then
+                Continue For
+            End If
+            button.IconColor = SystemColors.Highlight
+            button.Enabled = True
+        Next
+
+        For Each booking In BookingRecord
+            If booking.arrSeatsBooked IsNot Nothing And booking.strFilm = strSelectedFilm Then
+                For Each seat In booking.arrSeatsBooked
+                    Dim btnSeat As FontAwesome.Sharp.IconPictureBox = DirectCast(Controls(seat), FontAwesome.Sharp.IconPictureBox)
+                    If btnSeat IsNot Nothing Then
+                        btnSeat.IconColor = Color.Red
+                    End If
+                Next
+            End If
+
+        Next
+    End Sub
     Private Sub EditBookings_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ReDim selectedSeats(0 To -1) ' Initialize with size 0
 
@@ -104,16 +126,8 @@
             AddHandler button.MouseLeave, AddressOf DynamicButton_MouseLeave
         Next
 
-        For Each booking In BookingRecord
-            If booking.arrSeatsBooked IsNot Nothing Then
-                For Each seat In booking.arrSeatsBooked
-                    Dim btnSeat As FontAwesome.Sharp.IconPictureBox = DirectCast(Controls(seat), FontAwesome.Sharp.IconPictureBox)
-                    btnSeat.IconColor = Color.Red
-                Next
-            End If
 
-        Next
-
+        ColourBookedSeats()
 
     End Sub
 
@@ -129,9 +143,30 @@
         strFirstName = txtFirstName.Text
         strLastName = txtLastName.Text
         PaymentScreen.Show()
-
+        PaymentScreen.InitialiseTextBoxes()
         Me.Enabled = False
     End Sub
 
+    Private Sub E15_Click(sender As Object, e As EventArgs) Handles E15.Click
 
+    End Sub
+
+    Private Sub cbxMovieSelection_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbxMovieSelection.SelectedIndexChanged
+        Select Case cbxMovieSelection.Text
+            Case "The Lion King"
+                pbMovie.Image = My.Resources.LionKing
+            Case "Forrest Gump"
+                pbMovie.Image = My.Resources.ForrestGump
+            Case "Good Will Hunting"
+                pbMovie.Image = My.Resources.GoodWillHunting
+        End Select
+
+        strSelectedFilm = cbxMovieSelection.Text
+
+
+    End Sub
+
+    Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
+        ColourBookedSeats()
+    End Sub
 End Class

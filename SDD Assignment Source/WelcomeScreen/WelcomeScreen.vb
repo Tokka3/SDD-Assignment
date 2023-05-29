@@ -7,6 +7,7 @@
     Private Sub btnEditBookings_Click(sender As Object, e As EventArgs) Handles btnEditBookings.Click
         Me.Hide()
         EditBookings.Show()
+        EditBookings.ColourBookedSeats()
     End Sub
 
 
@@ -21,6 +22,6 @@
     End Sub
 
     Private Sub WelcomeScreen_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        UpdateBookingRecord()
+        UpdateBookingRecordArray()
     End Sub
 End Class
