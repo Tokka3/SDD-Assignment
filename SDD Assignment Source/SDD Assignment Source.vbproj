@@ -228,12 +228,6 @@
     <Compile Include="Tutorial\Tutorial.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Components\ExitButton.Designer.vb">
-      <DependentUpon>ExitButton.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Components\ExitButton.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Compile Include="View Bookings\ViewBookings.Designer.vb">
       <DependentUpon>ViewBookings.vb</DependentUpon>
     </Compile>
@@ -248,9 +242,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Components\ExitButton.resx">
-      <DependentUpon>ExitButton.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Edit Bookings\EditBookings.resx">
       <DependentUpon>EditBookings.vb</DependentUpon>
     </EmbeddedResource>
