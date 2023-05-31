@@ -53,13 +53,17 @@
 
     Private Sub Edit_Record(ByVal sender As Object, ByVal e As System.EventArgs)
         Dim btn As Button = DirectCast(sender, Button)
-        Dim booking_to_edit As Booking = BookingRecord(GetBookingIdxByID(btn.AccessibleDescription))
+
+        BookingToEdit = BookingRecord(GetBookingIdxByID(btn.AccessibleDescription))
+        idxBookingToEdit = GetBookingIdxByID(btn.AccessibleDescription)
         EditBooking.Show()
-        EditBooking.txtFirstName.Text = booking_to_edit.strBookingFirstName
-        EditBooking.txtLastName.Text = booking_to_edit.strBookingLastName
-        EditBooking.txtDOB.Text = booking_to_edit.strDOB
-        EditBooking.txtSeats.Text = String.Join(",", booking_to_edit.arrSeatsBooked)
-        EditBooking.cbxMovieSelection.Text = booking_to_edit.strFilm
+
+        EditBooking.txtFirstName.Text = BookingToEdit.strBookingFirstName
+        EditBooking.txtLastName.Text = BookingToEdit.strBookingLastName
+        EditBooking.txtDOB.Text = BookingToEdit.strDOB
+        EditBooking.txtSeats.Text = String.Join(",", BookingToEdit.arrSeatsBooked)
+        EditBooking.cbxMovieSelection.Text = BookingToEdit.strFilm
+
     End Sub
 
 
@@ -95,7 +99,7 @@
 
         '   If cbxMovieSelection.Text = booking.
     End Function
-    Private Sub Booking_Refresh()
+    Public Sub Booking_Refresh()
         grpBookings.Controls.Clear()
         Dim container As New Panel With {.Dock = DockStyle.Fill, .AutoScroll = True, .Name = "displayPanel"}
 

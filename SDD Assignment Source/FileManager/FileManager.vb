@@ -13,7 +13,7 @@
                 Return idx
             End If
         Next
-        Return -1
+        Return -1 'Booking ID Could not be found
     End Function
 
     Public Sub ClearBookingFile()
@@ -53,15 +53,55 @@
                 BookingRecord(counter).arrSeatsBooked = parts(5).Split(","c)
 
                 BookingRecord(counter).strFilm = parts(6)
+
                 If BookingRecord(counter).intBookingID > intBookingCount Then
+
                     intBookingCount = BookingRecord(counter).intBookingID 'Gets the latest booking ID
+
                 End If
 
             End If
 
             counter += 1
         End While
-        Debug.WriteLine("Booking count: " & intBookingCount)
+        'Debug.WriteLine("Booking count: " & intBookingCount)
         readFile.Close()
+    End Sub
+
+
+    Public Sub WriteBookingRecordArrayToFile()
+
+        ClearBookingFile()
+        Dim writeFile As System.IO.StreamWriter 'Open stream to file
+        writeFile = System.IO.File.AppendText("Bookings.txt")
+
+        For Each booking In BookingRecord
+
+            Dim strField As String = ""
+
+            strField &= (booking.intBookingID.ToString() & "-")
+
+            strField &= (booking.intTotal.ToString() & "-")
+
+            strField &= (booking.strBookingFirstName & "-")
+
+            strField &= (booking.strBookingLastName & "-")
+
+            strField &= (booking.strDOB & "-")
+
+            strField &= (Join(booking.arrSeatsBooked, ",") & "-")
+
+            strField &= (booking.strFilm)
+
+            If strField = "0-0-----" Then
+                Continue For
+            End If
+            writeFile.WriteLine(strField)
+        Next
+
+        writeFile.Close()
+
+        UpdateBookingRecordArray()
+
     End Sub
 End Module

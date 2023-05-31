@@ -12,10 +12,20 @@
         WelcomeScreen.Show()
     End Sub
 
+    Public Sub EditBookingRequest()
+        selectedSeats = BookingToEdit.arrSeatsBooked
+        For Each seat In selectedSeats
+            Dim btnSeat As FontAwesome.Sharp.IconPictureBox = DirectCast(Controls(seat), FontAwesome.Sharp.IconPictureBox)
+            If btnSeat IsNot Nothing Then
+                btnSeat.IconColor = Color.LimeGreen
+            End If
+        Next
+    End Sub
 
     Private Sub DynamicButton_Click(ByVal sender As Object, ByVal e As System.EventArgs)
 
         Dim btn As FontAwesome.Sharp.IconPictureBox = DirectCast(sender, FontAwesome.Sharp.IconPictureBox)
+
 
         If Array.IndexOf(selectedSeats, btn.Name) >= 0 Then
             ' The string already exists in the array, so remove it
@@ -24,6 +34,9 @@
             ' The string doesn't exist in the array, so add it
             ReDim Preserve selectedSeats(UBound(selectedSeats) + 1)
             selectedSeats(UBound(selectedSeats)) = btn.Name
+        End If
+        If bEditMode = True Then
+            EditBooking.txtSeats.Text = Join(selectedSeats, ",")
         End If
 
 
@@ -105,7 +118,7 @@
 
         Next
     End Sub
-    Private Sub EditBookings_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub CreateBookings_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ReDim selectedSeats(0 To -1) ' Initialize with size 0
 
 
@@ -147,9 +160,6 @@
         Me.Enabled = False
     End Sub
 
-    Private Sub E15_Click(sender As Object, e As EventArgs) Handles E15.Click
-
-    End Sub
 
     Private Sub cbxMovieSelection_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbxMovieSelection.SelectedIndexChanged
         Select Case cbxMovieSelection.Text

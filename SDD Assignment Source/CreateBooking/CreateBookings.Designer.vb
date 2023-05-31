@@ -25,7 +25,7 @@ Partial Class CreateBookings
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.gbCreateBooking = New System.Windows.Forms.GroupBox()
         Me.txtDOB = New System.Windows.Forms.TextBox()
         Me.txtLastName = New System.Windows.Forms.TextBox()
         Me.txtFirstName = New System.Windows.Forms.TextBox()
@@ -35,12 +35,12 @@ Partial Class CreateBookings
         Me.Label9 = New System.Windows.Forms.Label()
         Me.lblTotal = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
+        Me.btnPayment = New FontAwesome.Sharp.IconButton()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.cbxMovieSelection = New System.Windows.Forms.ComboBox()
         Me.btnUpdate = New FontAwesome.Sharp.IconButton()
         Me.pbMovie = New System.Windows.Forms.PictureBox()
-        Me.btnPayment = New FontAwesome.Sharp.IconButton()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.cbxMovieSelection = New System.Windows.Forms.ComboBox()
         Me.A1 = New FontAwesome.Sharp.IconPictureBox()
         Me.A16 = New FontAwesome.Sharp.IconPictureBox()
         Me.A15 = New FontAwesome.Sharp.IconPictureBox()
@@ -172,8 +172,9 @@ Partial Class CreateBookings
         Me.D2 = New FontAwesome.Sharp.IconPictureBox()
         Me.btnBack = New FontAwesome.Sharp.IconPictureBox()
         Me.IconSplitButton1 = New FontAwesome.Sharp.IconSplitButton()
+        Me.lblEditMode = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
-        Me.GroupBox1.SuspendLayout()
+        Me.gbCreateBooking.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.pbMovie, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.A1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -339,26 +340,26 @@ Partial Class CreateBookings
         Me.Label6.Text = "SCREEN"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'GroupBox1
+        'gbCreateBooking
         '
-        Me.GroupBox1.Controls.Add(Me.txtDOB)
-        Me.GroupBox1.Controls.Add(Me.txtLastName)
-        Me.GroupBox1.Controls.Add(Me.txtFirstName)
-        Me.GroupBox1.Controls.Add(Me.rtbSelectedSeats)
-        Me.GroupBox1.Controls.Add(Me.Label7)
-        Me.GroupBox1.Controls.Add(Me.Label8)
-        Me.GroupBox1.Controls.Add(Me.Label9)
-        Me.GroupBox1.Controls.Add(Me.lblTotal)
-        Me.GroupBox1.Controls.Add(Me.Label11)
-        Me.GroupBox1.Controls.Add(Me.btnPayment)
-        Me.GroupBox1.Font = New System.Drawing.Font("Nirmala UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.GroupBox1.Location = New System.Drawing.Point(931, 348)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(299, 359)
-        Me.GroupBox1.TabIndex = 154
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Create Booking"
+        Me.gbCreateBooking.Controls.Add(Me.txtDOB)
+        Me.gbCreateBooking.Controls.Add(Me.txtLastName)
+        Me.gbCreateBooking.Controls.Add(Me.txtFirstName)
+        Me.gbCreateBooking.Controls.Add(Me.rtbSelectedSeats)
+        Me.gbCreateBooking.Controls.Add(Me.Label7)
+        Me.gbCreateBooking.Controls.Add(Me.Label8)
+        Me.gbCreateBooking.Controls.Add(Me.Label9)
+        Me.gbCreateBooking.Controls.Add(Me.lblTotal)
+        Me.gbCreateBooking.Controls.Add(Me.Label11)
+        Me.gbCreateBooking.Controls.Add(Me.btnPayment)
+        Me.gbCreateBooking.Font = New System.Drawing.Font("Nirmala UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.gbCreateBooking.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.gbCreateBooking.Location = New System.Drawing.Point(931, 348)
+        Me.gbCreateBooking.Name = "gbCreateBooking"
+        Me.gbCreateBooking.Size = New System.Drawing.Size(299, 359)
+        Me.gbCreateBooking.TabIndex = 154
+        Me.gbCreateBooking.TabStop = False
+        Me.gbCreateBooking.Text = "Create Booking"
         '
         'txtDOB
         '
@@ -455,6 +456,25 @@ Partial Class CreateBookings
         Me.Label11.Text = "Selected Seats:"
         Me.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
+        'btnPayment
+        '
+        Me.btnPayment.BackColor = System.Drawing.SystemColors.Highlight
+        Me.btnPayment.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnPayment.Font = New System.Drawing.Font("Segoe UI Semibold", 13.25!, System.Drawing.FontStyle.Bold)
+        Me.btnPayment.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnPayment.IconChar = FontAwesome.Sharp.IconChar.CcVisa
+        Me.btnPayment.IconColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnPayment.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnPayment.IconSize = 34
+        Me.btnPayment.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnPayment.Location = New System.Drawing.Point(11, 307)
+        Me.btnPayment.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnPayment.Name = "btnPayment"
+        Me.btnPayment.Size = New System.Drawing.Size(274, 38)
+        Me.btnPayment.TabIndex = 154
+        Me.btnPayment.Text = "Proceed To Payment"
+        Me.btnPayment.UseVisualStyleBackColor = False
+        '
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.btnUpdate)
@@ -469,25 +489,6 @@ Partial Class CreateBookings
         Me.GroupBox2.TabIndex = 155
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Film Selection"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Open Sans", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(8, 26)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(50, 26)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Film"
-        '
-        'cbxMovieSelection
-        '
-        Me.cbxMovieSelection.FormattingEnabled = True
-        Me.cbxMovieSelection.Items.AddRange(New Object() {"Good Will Hunting", "The Lion King", "Forrest Gump"})
-        Me.cbxMovieSelection.Location = New System.Drawing.Point(12, 54)
-        Me.cbxMovieSelection.Name = "cbxMovieSelection"
-        Me.cbxMovieSelection.Size = New System.Drawing.Size(138, 33)
-        Me.cbxMovieSelection.TabIndex = 0
         '
         'btnUpdate
         '
@@ -518,24 +519,24 @@ Partial Class CreateBookings
         Me.pbMovie.TabIndex = 2
         Me.pbMovie.TabStop = False
         '
-        'btnPayment
+        'Label2
         '
-        Me.btnPayment.BackColor = System.Drawing.SystemColors.Highlight
-        Me.btnPayment.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnPayment.Font = New System.Drawing.Font("Segoe UI Semibold", 13.25!, System.Drawing.FontStyle.Bold)
-        Me.btnPayment.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnPayment.IconChar = FontAwesome.Sharp.IconChar.CcVisa
-        Me.btnPayment.IconColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnPayment.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.btnPayment.IconSize = 34
-        Me.btnPayment.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnPayment.Location = New System.Drawing.Point(11, 307)
-        Me.btnPayment.Margin = New System.Windows.Forms.Padding(2)
-        Me.btnPayment.Name = "btnPayment"
-        Me.btnPayment.Size = New System.Drawing.Size(274, 38)
-        Me.btnPayment.TabIndex = 154
-        Me.btnPayment.Text = "Proceed To Payment"
-        Me.btnPayment.UseVisualStyleBackColor = False
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Open Sans", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(8, 26)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(50, 26)
+        Me.Label2.TabIndex = 1
+        Me.Label2.Text = "Film"
+        '
+        'cbxMovieSelection
+        '
+        Me.cbxMovieSelection.FormattingEnabled = True
+        Me.cbxMovieSelection.Items.AddRange(New Object() {"Good Will Hunting", "The Lion King", "Forrest Gump"})
+        Me.cbxMovieSelection.Location = New System.Drawing.Point(12, 54)
+        Me.cbxMovieSelection.Name = "cbxMovieSelection"
+        Me.cbxMovieSelection.Size = New System.Drawing.Size(138, 33)
+        Me.cbxMovieSelection.TabIndex = 0
         '
         'A1
         '
@@ -2499,14 +2500,27 @@ Partial Class CreateBookings
         Me.IconSplitButton1.Size = New System.Drawing.Size(23, 23)
         Me.IconSplitButton1.Text = "IconSplitButton1"
         '
-        'EditBookings
+        'lblEditMode
+        '
+        Me.lblEditMode.Enabled = False
+        Me.lblEditMode.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblEditMode.ForeColor = System.Drawing.Color.DodgerBlue
+        Me.lblEditMode.Location = New System.Drawing.Point(65, 48)
+        Me.lblEditMode.Name = "lblEditMode"
+        Me.lblEditMode.Size = New System.Drawing.Size(821, 41)
+        Me.lblEditMode.TabIndex = 156
+        Me.lblEditMode.Text = "EDIT MODE"
+        Me.lblEditMode.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'CreateBookings
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.ClientSize = New System.Drawing.Size(1242, 768)
+        Me.Controls.Add(Me.lblEditMode)
         Me.Controls.Add(Me.GroupBox2)
-        Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.gbCreateBooking)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.A1)
         Me.Controls.Add(Me.A16)
@@ -2641,12 +2655,12 @@ Partial Class CreateBookings
         Me.Controls.Add(Me.btnBack)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Margin = New System.Windows.Forms.Padding(2)
-        Me.Name = "EditBookings"
+        Me.Name = "CreateBookings"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "EditBookings"
         Me.Panel1.ResumeLayout(False)
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
+        Me.gbCreateBooking.ResumeLayout(False)
+        Me.gbCreateBooking.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         CType(Me.pbMovie, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2920,7 +2934,7 @@ Partial Class CreateBookings
     Friend WithEvents F14 As FontAwesome.Sharp.IconPictureBox
     Friend WithEvents E15 As FontAwesome.Sharp.IconPictureBox
     Friend WithEvents D16 As FontAwesome.Sharp.IconPictureBox
-    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents gbCreateBooking As GroupBox
     Friend WithEvents txtDOB As TextBox
     Friend WithEvents txtLastName As TextBox
     Friend WithEvents txtFirstName As TextBox
@@ -2936,4 +2950,5 @@ Partial Class CreateBookings
     Friend WithEvents pbMovie As PictureBox
     Friend WithEvents Label2 As Label
     Friend WithEvents cbxMovieSelection As ComboBox
+    Friend WithEvents lblEditMode As Label
 End Class

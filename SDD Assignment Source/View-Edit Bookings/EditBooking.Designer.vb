@@ -31,10 +31,14 @@ Partial Class EditBooking
         Me.cbxMovieSelection = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnConfirmEdit = New FontAwesome.Sharp.IconButton()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.txtSeats = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.btnEdit = New FontAwesome.Sharp.IconButton()
+        Me.btnExitButton = New FontAwesome.Sharp.IconPictureBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        CType(Me.btnExitButton, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'txtDOB
@@ -44,7 +48,7 @@ Partial Class EditBooking
         Me.txtDOB.Location = New System.Drawing.Point(12, 203)
         Me.txtDOB.Multiline = True
         Me.txtDOB.Name = "txtDOB"
-        Me.txtDOB.Size = New System.Drawing.Size(274, 32)
+        Me.txtDOB.Size = New System.Drawing.Size(326, 32)
         Me.txtDOB.TabIndex = 169
         '
         'txtLastName
@@ -54,7 +58,7 @@ Partial Class EditBooking
         Me.txtLastName.Location = New System.Drawing.Point(13, 141)
         Me.txtLastName.Multiline = True
         Me.txtLastName.Name = "txtLastName"
-        Me.txtLastName.Size = New System.Drawing.Size(274, 32)
+        Me.txtLastName.Size = New System.Drawing.Size(326, 32)
         Me.txtLastName.TabIndex = 168
         '
         'txtFirstName
@@ -64,7 +68,7 @@ Partial Class EditBooking
         Me.txtFirstName.Location = New System.Drawing.Point(12, 79)
         Me.txtFirstName.Multiline = True
         Me.txtFirstName.Name = "txtFirstName"
-        Me.txtFirstName.Size = New System.Drawing.Size(274, 32)
+        Me.txtFirstName.Size = New System.Drawing.Size(326, 32)
         Me.txtFirstName.TabIndex = 167
         '
         'Label7
@@ -108,7 +112,7 @@ Partial Class EditBooking
         Me.cbxMovieSelection.Items.AddRange(New Object() {"Good Will Hunting", "The Lion King", "Forrest Gump"})
         Me.cbxMovieSelection.Location = New System.Drawing.Point(14, 333)
         Me.cbxMovieSelection.Name = "cbxMovieSelection"
-        Me.cbxMovieSelection.Size = New System.Drawing.Size(273, 33)
+        Me.cbxMovieSelection.Size = New System.Drawing.Size(325, 33)
         Me.cbxMovieSelection.TabIndex = 170
         '
         'Label1
@@ -133,7 +137,7 @@ Partial Class EditBooking
         Me.btnConfirmEdit.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.btnConfirmEdit.IconSize = 34
         Me.btnConfirmEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnConfirmEdit.Location = New System.Drawing.Point(60, 371)
+        Me.btnConfirmEdit.Location = New System.Drawing.Point(88, 382)
         Me.btnConfirmEdit.Margin = New System.Windows.Forms.Padding(2)
         Me.btnConfirmEdit.Name = "btnConfirmEdit"
         Me.btnConfirmEdit.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
@@ -143,17 +147,6 @@ Partial Class EditBooking
         Me.btnConfirmEdit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnConfirmEdit.UseVisualStyleBackColor = False
         '
-        'Label2
-        '
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(11, 11)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(275, 41)
-        Me.Label2.TabIndex = 173
-        Me.Label2.Text = "Edit Booking"
-        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
         'txtSeats
         '
         Me.txtSeats.Font = New System.Drawing.Font("Segoe UI", 14.0!)
@@ -161,7 +154,7 @@ Partial Class EditBooking
         Me.txtSeats.Location = New System.Drawing.Point(12, 268)
         Me.txtSeats.Multiline = True
         Me.txtSeats.Name = "txtSeats"
-        Me.txtSeats.Size = New System.Drawing.Size(178, 32)
+        Me.txtSeats.Size = New System.Drawing.Size(225, 32)
         Me.txtSeats.TabIndex = 175
         '
         'Label3
@@ -186,7 +179,7 @@ Partial Class EditBooking
         Me.btnEdit.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.btnEdit.IconSize = 30
         Me.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnEdit.Location = New System.Drawing.Point(196, 268)
+        Me.btnEdit.Location = New System.Drawing.Point(244, 267)
         Me.btnEdit.Margin = New System.Windows.Forms.Padding(2)
         Me.btnEdit.Name = "btnEdit"
         Me.btnEdit.Padding = New System.Windows.Forms.Padding(5, 0, 0, 0)
@@ -196,16 +189,54 @@ Partial Class EditBooking
         Me.btnEdit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnEdit.UseVisualStyleBackColor = False
         '
+        'btnExitButton
+        '
+        Me.btnExitButton.BackColor = System.Drawing.Color.Transparent
+        Me.btnExitButton.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnExitButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnExitButton.IconChar = FontAwesome.Sharp.IconChar.Xmark
+        Me.btnExitButton.IconColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnExitButton.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnExitButton.Location = New System.Drawing.Point(311, 9)
+        Me.btnExitButton.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnExitButton.Name = "btnExitButton"
+        Me.btnExitButton.Size = New System.Drawing.Size(32, 34)
+        Me.btnExitButton.TabIndex = 17
+        Me.btnExitButton.TabStop = False
+        '
+        'Label2
+        '
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 16.0!, System.Drawing.FontStyle.Bold)
+        Me.Label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label2.Location = New System.Drawing.Point(7, 2)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(327, 39)
+        Me.Label2.TabIndex = 18
+        Me.Label2.Text = "Payment"
+        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.SystemColors.Highlight
+        Me.Panel1.Controls.Add(Me.btnExitButton)
+        Me.Panel1.Controls.Add(Me.Label2)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(350, 45)
+        Me.Panel1.TabIndex = 177
+        '
         'EditBooking
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.ClientSize = New System.Drawing.Size(304, 422)
+        Me.ClientSize = New System.Drawing.Size(350, 443)
+        Me.ControlBox = False
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.btnEdit)
         Me.Controls.Add(Me.txtSeats)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.btnConfirmEdit)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.cbxMovieSelection)
@@ -217,6 +248,8 @@ Partial Class EditBooking
         Me.Controls.Add(Me.Label9)
         Me.Name = "EditBooking"
         Me.Text = "EditBooking"
+        CType(Me.btnExitButton, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -231,8 +264,10 @@ Partial Class EditBooking
     Friend WithEvents cbxMovieSelection As ComboBox
     Friend WithEvents Label1 As Label
     Friend WithEvents btnConfirmEdit As FontAwesome.Sharp.IconButton
-    Friend WithEvents Label2 As Label
     Friend WithEvents txtSeats As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents btnEdit As FontAwesome.Sharp.IconButton
+    Friend WithEvents btnExitButton As FontAwesome.Sharp.IconPictureBox
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Panel1 As Panel
 End Class
