@@ -35,11 +35,8 @@
                 If strField = "0-0-----" Then
                     Continue For
                 End If
+
                 writeFile.WriteLine(strField)
-
-
-
-
             Next
 
             writeFile.Close()
@@ -63,7 +60,7 @@
         EditBooking.txtDOB.Text = BookingToEdit.strDOB
         EditBooking.txtSeats.Text = String.Join(",", BookingToEdit.arrSeatsBooked)
         EditBooking.cbxMovieSelection.Text = BookingToEdit.strFilm
-
+        Me.Enabled = False
     End Sub
 
 

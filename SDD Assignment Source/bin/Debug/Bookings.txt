@@ -1,6 +1,6 @@
 1-80-Philip-Tok-01/03/2005-D9,D10,D11,D12-Good Will Hunting
 2-60-Marvin-Kelly-05/02/2005-C6,C7,C8-Good Will Hunting
-3-60-Frank-Rob-25/05/2031-G7,G8,G9-Good Will Hunting
+3-60-Frank-Rob-25/05/2031-G9,G8,G7-Good Will Hunting
 5-100-Tim-Riley-25/25/2005-F4,F3,F2,F1,G1-The Lion King
 6-60-Michael-Shoe-22/12/25-C9,C10,C11-The Lion King
 7-60-Nick-Tok-25/52/2023-F5,F6,F7-Forrest Gump

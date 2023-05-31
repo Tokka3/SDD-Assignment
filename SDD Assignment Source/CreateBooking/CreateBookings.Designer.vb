@@ -2511,6 +2511,7 @@ Partial Class CreateBookings
         Me.lblEditMode.TabIndex = 156
         Me.lblEditMode.Text = "EDIT MODE"
         Me.lblEditMode.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lblEditMode.Visible = False
         '
         'CreateBookings
         '

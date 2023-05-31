@@ -49,6 +49,8 @@
 
         MessageBox.Show("Booking has been successfully edited")
 
+        ViewBookings.Enabled = True
+
         Me.Hide()
         CreateBookings.Hide()
         ViewBookings.Booking_Refresh()
@@ -70,6 +72,8 @@
         CreateBookings.lblEditMode.Visible = False
 
         Me.Hide()
+
+        ViewBookings.Enabled = True
 
         CreateBookings.Hide()
 
