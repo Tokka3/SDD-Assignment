@@ -1,8 +1,8 @@
 ﻿Public Class PaymentScreen
-    Private Sub btnExitButton_Click(sender As Object, e As EventArgs)
+    Private Sub btnExitButton_Click(sender As Object, e As EventArgs) Handles btnExitButton.Click
         Me.Hide()
-        EditBookings.Enabled = True
-        EditBookings.Activate()
+        CreateBookings.Enabled = True
+        CreateBookings.Activate()
     End Sub
 
     Sub InitialiseTextBoxes()
@@ -24,7 +24,7 @@
         Booking.strBookingFirstName = txtFirstname.Text
         Booking.strBookingLastName = txtLastName.Text
         Booking.intBookingID = intBookingCount
-        Booking.strDOB = EditBookings.txtDOB.Text
+        Booking.strDOB = CreateBookings.txtDOB.Text
         Booking.arrSeatsBooked = selectedSeats
         Booking.strFilm = strSelectedFilm
 
@@ -50,14 +50,18 @@
 
         Array.Clear(selectedSeats, 0, selectedSeats.Length)
         ReDim selectedSeats(0 To -1)
-        EditBookings.Enabled = True
-        EditBookings.txtFirstName.Clear()
-        EditBookings.txtLastName.Clear()
-        EditBookings.rtbSelectedSeats.Clear()
-        EditBookings.txtDOB.Clear()
-        EditBookings.Activate()
-        EditBookings.PaymentSuccess()
+        CreateBookings.Enabled = True
+        CreateBookings.txtFirstName.Clear()
+        CreateBookings.txtLastName.Clear()
+        CreateBookings.rtbSelectedSeats.Clear()
+        CreateBookings.txtDOB.Clear()
+        CreateBookings.Activate()
+        CreateBookings.PaymentSuccess()
 
         UpdateBookingRecordArray()
+    End Sub
+
+    Private Sub btnExitButton_Click_1(sender As Object, e As EventArgs)
+
     End Sub
 End Class

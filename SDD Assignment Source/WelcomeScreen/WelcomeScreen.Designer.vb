@@ -27,7 +27,6 @@ Partial Class WelcomeScreen
         Me.btnBack = New FontAwesome.Sharp.IconPictureBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Label5 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.btnEditBookings = New FontAwesome.Sharp.IconButton()
         Me.Panel3 = New System.Windows.Forms.Panel()
@@ -40,6 +39,7 @@ Partial Class WelcomeScreen
         Me.Label4 = New System.Windows.Forms.Label()
         Me.btnViewTutorial = New FontAwesome.Sharp.IconButton()
         Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.Label5 = New System.Windows.Forms.Label()
         CType(Me.IconPictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnBack, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
@@ -110,16 +110,6 @@ Partial Class WelcomeScreen
         Me.Panel2.Size = New System.Drawing.Size(248, 408)
         Me.Panel2.TabIndex = 14
         '
-        'Label5
-        '
-        Me.Label5.Font = New System.Drawing.Font("Segoe UI Semibold", 10.75!, System.Drawing.FontStyle.Bold)
-        Me.Label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label5.Location = New System.Drawing.Point(3, 268)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(225, 91)
-        Me.Label5.TabIndex = 20
-        Me.Label5.Text = "Create, update and delete bookings."
-        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -127,9 +117,9 @@ Partial Class WelcomeScreen
         Me.Label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Label2.Location = New System.Drawing.Point(3, 234)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(145, 30)
+        Me.Label2.Size = New System.Drawing.Size(170, 30)
         Me.Label2.TabIndex = 19
-        Me.Label2.Text = "Edit Bookings"
+        Me.Label2.Text = "Create Bookings"
         '
         'btnEditBookings
         '
@@ -179,9 +169,9 @@ Partial Class WelcomeScreen
         Me.Label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Label3.Location = New System.Drawing.Point(3, 235)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(138, 30)
+        Me.Label3.Size = New System.Drawing.Size(199, 30)
         Me.Label3.TabIndex = 20
-        Me.Label3.Text = "View Insights"
+        Me.Label3.Text = "View/Edit Bookings"
         '
         'btnViewInsights
         '
@@ -274,6 +264,16 @@ Partial Class WelcomeScreen
         Me.Panel6.Size = New System.Drawing.Size(246, 232)
         Me.Panel6.TabIndex = 13
         '
+        'Label5
+        '
+        Me.Label5.Font = New System.Drawing.Font("Segoe UI Semibold", 10.75!, System.Drawing.FontStyle.Bold)
+        Me.Label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label5.Location = New System.Drawing.Point(4, 265)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(225, 91)
+        Me.Label5.TabIndex = 22
+        Me.Label5.Text = "Create, update and delete bookings."
+        '
         'WelcomeScreen
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -320,6 +320,6 @@ Partial Class WelcomeScreen
     Friend WithEvents Label4 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents Label5 As Label
     Friend WithEvents Label2 As Label
+    Friend WithEvents Label5 As Label
 End Class

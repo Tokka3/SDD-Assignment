@@ -1,4 +1,4 @@
-﻿Public Class EditBookings
+﻿Public Class CreateBookings
 
     Dim button_row_num As Integer = 3
     Dim button_column_num As Integer = 7

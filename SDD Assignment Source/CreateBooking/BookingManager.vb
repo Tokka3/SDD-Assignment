@@ -1,7 +1,7 @@
-﻿Module BookingManager
+﻿Public Module BookingManager
     Public selectedSeats() As String
 
-    Structure Booking
+    Public Structure Booking
         Public intBookingID As Integer
         Public strBookingFirstName As String
         Public strBookingLastName As String

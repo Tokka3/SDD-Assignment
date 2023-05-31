@@ -6,8 +6,8 @@
 
     Private Sub btnEditBookings_Click(sender As Object, e As EventArgs) Handles btnEditBookings.Click
         Me.Hide()
-        EditBookings.Show()
-        EditBookings.ColourBookedSeats()
+        CreateBookings.Show()
+        CreateBookings.ColourBookedSeats()
     End Sub
 
 

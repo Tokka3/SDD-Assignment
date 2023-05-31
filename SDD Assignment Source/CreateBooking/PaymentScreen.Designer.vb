@@ -29,13 +29,13 @@ Partial Class PaymentScreen
         Me.Label6 = New System.Windows.Forms.Label()
         Me.lblTotal = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.btnExitButton = New FontAwesome.Sharp.IconPictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtFirstname = New System.Windows.Forms.TextBox()
         Me.txtLastname = New System.Windows.Forms.TextBox()
         Me.txtCCNo = New System.Windows.Forms.TextBox()
         Me.txtExpiryDate = New System.Windows.Forms.TextBox()
         Me.txtCCV = New System.Windows.Forms.TextBox()
-        Me.btnExitButton = New FontAwesome.Sharp.IconPictureBox()
         Me.btnPayment = New FontAwesome.Sharp.IconButton()
         Me.Panel1.SuspendLayout()
         CType(Me.btnExitButton, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -118,6 +118,21 @@ Partial Class PaymentScreen
         Me.Panel1.Size = New System.Drawing.Size(351, 45)
         Me.Panel1.TabIndex = 37
         '
+        'btnExitButton
+        '
+        Me.btnExitButton.BackColor = System.Drawing.Color.Transparent
+        Me.btnExitButton.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnExitButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnExitButton.IconChar = FontAwesome.Sharp.IconChar.Xmark
+        Me.btnExitButton.IconColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnExitButton.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnExitButton.Location = New System.Drawing.Point(311, 9)
+        Me.btnExitButton.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnExitButton.Name = "btnExitButton"
+        Me.btnExitButton.Size = New System.Drawing.Size(32, 34)
+        Me.btnExitButton.TabIndex = 17
+        Me.btnExitButton.TabStop = False
+        '
         'Label1
         '
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 16.0!, System.Drawing.FontStyle.Bold)
@@ -168,21 +183,6 @@ Partial Class PaymentScreen
         Me.txtCCV.Name = "txtCCV"
         Me.txtCCV.Size = New System.Drawing.Size(104, 33)
         Me.txtCCV.TabIndex = 43
-        '
-        'btnExitButton
-        '
-        Me.btnExitButton.BackColor = System.Drawing.Color.Transparent
-        Me.btnExitButton.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnExitButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnExitButton.IconChar = FontAwesome.Sharp.IconChar.Xmark
-        Me.btnExitButton.IconColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnExitButton.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.btnExitButton.Location = New System.Drawing.Point(311, 9)
-        Me.btnExitButton.Margin = New System.Windows.Forms.Padding(2)
-        Me.btnExitButton.Name = "btnExitButton"
-        Me.btnExitButton.Size = New System.Drawing.Size(32, 34)
-        Me.btnExitButton.TabIndex = 17
-        Me.btnExitButton.TabStop = False
         '
         'btnPayment
         '

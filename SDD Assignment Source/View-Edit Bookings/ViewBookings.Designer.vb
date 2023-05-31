@@ -30,23 +30,30 @@ Partial Class ViewBookings
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.btnClearSearch = New FontAwesome.Sharp.IconButton()
         Me.Label7 = New System.Windows.Forms.Label()
+        Me.cbxSearchCategory = New System.Windows.Forms.ComboBox()
+        Me.btnSearch = New FontAwesome.Sharp.IconButton()
+        Me.txtSearch = New System.Windows.Forms.TextBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.btnClearSort = New FontAwesome.Sharp.IconButton()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.IconButton2 = New FontAwesome.Sharp.IconButton()
-        Me.IconButton1 = New FontAwesome.Sharp.IconButton()
+        Me.cbxSort = New System.Windows.Forms.ComboBox()
+        Me.btnSort = New FontAwesome.Sharp.IconButton()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.cbxMovieSelection = New System.Windows.Forms.ComboBox()
         Me.btnRefresh = New FontAwesome.Sharp.IconButton()
         Me.btnBack = New FontAwesome.Sharp.IconPictureBox()
         Me.IconMenuItem1 = New FontAwesome.Sharp.IconMenuItem()
-        Me.cbxMovieSelection = New System.Windows.Forms.ComboBox()
-        Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.btnFilter = New FontAwesome.Sharp.IconButton()
+        Me.btnClearFilters = New FontAwesome.Sharp.IconButton()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.btnBack, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox3.SuspendLayout()
         Me.SuspendLayout()
         '
         'grpBookings
@@ -135,34 +142,47 @@ Partial Class ViewBookings
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.Label11)
+        Me.GroupBox1.Controls.Add(Me.btnClearSearch)
         Me.GroupBox1.Controls.Add(Me.Label7)
-        Me.GroupBox1.Controls.Add(Me.ComboBox1)
-        Me.GroupBox1.Controls.Add(Me.IconButton1)
-        Me.GroupBox1.Controls.Add(Me.TextBox1)
+        Me.GroupBox1.Controls.Add(Me.cbxSearchCategory)
+        Me.GroupBox1.Controls.Add(Me.btnSearch)
+        Me.GroupBox1.Controls.Add(Me.txtSearch)
         Me.GroupBox1.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(780, 128)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(236, 117)
+        Me.GroupBox1.Size = New System.Drawing.Size(236, 176)
         Me.GroupBox1.TabIndex = 15
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Search"
         '
-        'TextBox1
+        'Label11
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.TextBox1.Location = New System.Drawing.Point(6, 82)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(174, 29)
-        Me.TextBox1.TabIndex = 17
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(6, 79)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(191, 21)
+        Me.Label11.TabIndex = 25
+        Me.Label11.Text = "Enter Search Keyword(s):"
         '
-        'ComboBox1
+        'btnClearSearch
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"ID", "First Name", "Last Name"})
-        Me.ComboBox1.Location = New System.Drawing.Point(6, 47)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(221, 29)
-        Me.ComboBox1.TabIndex = 19
+        Me.btnClearSearch.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(56, Byte), Integer))
+        Me.btnClearSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnClearSearch.Font = New System.Drawing.Font("Segoe UI Semibold", 11.0!, System.Drawing.FontStyle.Bold)
+        Me.btnClearSearch.ForeColor = System.Drawing.Color.White
+        Me.btnClearSearch.IconChar = FontAwesome.Sharp.IconChar.Xmark
+        Me.btnClearSearch.IconColor = System.Drawing.Color.White
+        Me.btnClearSearch.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnClearSearch.IconSize = 22
+        Me.btnClearSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnClearSearch.Location = New System.Drawing.Point(105, 137)
+        Me.btnClearSearch.Name = "btnClearSearch"
+        Me.btnClearSearch.Size = New System.Drawing.Size(125, 30)
+        Me.btnClearSearch.TabIndex = 24
+        Me.btnClearSearch.Text = "Clear Search"
+        Me.btnClearSearch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnClearSearch.UseVisualStyleBackColor = False
         '
         'Label7
         '
@@ -173,20 +193,73 @@ Partial Class ViewBookings
         Me.Label7.TabIndex = 20
         Me.Label7.Text = "Search Category:"
         '
+        'cbxSearchCategory
+        '
+        Me.cbxSearchCategory.FormattingEnabled = True
+        Me.cbxSearchCategory.Items.AddRange(New Object() {"All", "ID", "First Name", "Last Name"})
+        Me.cbxSearchCategory.Location = New System.Drawing.Point(6, 47)
+        Me.cbxSearchCategory.Name = "cbxSearchCategory"
+        Me.cbxSearchCategory.Size = New System.Drawing.Size(221, 29)
+        Me.cbxSearchCategory.TabIndex = 19
+        '
+        'btnSearch
+        '
+        Me.btnSearch.BackColor = System.Drawing.SystemColors.Highlight
+        Me.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnSearch.ForeColor = System.Drawing.Color.White
+        Me.btnSearch.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass
+        Me.btnSearch.IconColor = System.Drawing.Color.White
+        Me.btnSearch.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnSearch.IconSize = 22
+        Me.btnSearch.ImageAlign = System.Drawing.ContentAlignment.TopRight
+        Me.btnSearch.Location = New System.Drawing.Point(10, 138)
+        Me.btnSearch.Name = "btnSearch"
+        Me.btnSearch.Size = New System.Drawing.Size(89, 29)
+        Me.btnSearch.TabIndex = 18
+        Me.btnSearch.Text = "Search"
+        Me.btnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnSearch.UseVisualStyleBackColor = False
+        '
+        'txtSearch
+        '
+        Me.txtSearch.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.txtSearch.Location = New System.Drawing.Point(6, 102)
+        Me.txtSearch.Name = "txtSearch"
+        Me.txtSearch.Size = New System.Drawing.Size(221, 29)
+        Me.txtSearch.TabIndex = 17
+        '
         'GroupBox2
         '
-        Me.GroupBox2.Controls.Add(Me.Label9)
-        Me.GroupBox2.Controls.Add(Me.cbxMovieSelection)
-        Me.GroupBox2.Controls.Add(Me.IconButton2)
+        Me.GroupBox2.Controls.Add(Me.btnClearSort)
         Me.GroupBox2.Controls.Add(Me.Label8)
-        Me.GroupBox2.Controls.Add(Me.ComboBox2)
+        Me.GroupBox2.Controls.Add(Me.cbxSort)
+        Me.GroupBox2.Controls.Add(Me.btnSort)
         Me.GroupBox2.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox2.Location = New System.Drawing.Point(780, 261)
+        Me.GroupBox2.Location = New System.Drawing.Point(780, 310)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(236, 187)
+        Me.GroupBox2.Size = New System.Drawing.Size(236, 124)
         Me.GroupBox2.TabIndex = 21
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Sort"
+        '
+        'btnClearSort
+        '
+        Me.btnClearSort.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(56, Byte), Integer))
+        Me.btnClearSort.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnClearSort.Font = New System.Drawing.Font("Segoe UI Semibold", 11.0!, System.Drawing.FontStyle.Bold)
+        Me.btnClearSort.ForeColor = System.Drawing.Color.White
+        Me.btnClearSort.IconChar = FontAwesome.Sharp.IconChar.Xmark
+        Me.btnClearSort.IconColor = System.Drawing.Color.White
+        Me.btnClearSort.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnClearSort.IconSize = 22
+        Me.btnClearSort.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnClearSort.Location = New System.Drawing.Point(105, 80)
+        Me.btnClearSort.Name = "btnClearSort"
+        Me.btnClearSort.Size = New System.Drawing.Size(122, 30)
+        Me.btnClearSort.TabIndex = 26
+        Me.btnClearSort.Text = "Default Sort"
+        Me.btnClearSort.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnClearSort.UseVisualStyleBackColor = False
         '
         'Label8
         '
@@ -197,46 +270,50 @@ Partial Class ViewBookings
         Me.Label8.TabIndex = 20
         Me.Label8.Text = "Sort By:"
         '
-        'ComboBox2
+        'cbxSort
         '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Items.AddRange(New Object() {"First Name (A-Z)", "First Name (Z-A)", "Last Name (A-Z)", "Last Name (Z-A)", "Price (Ascending)", "Price (Descending)", "ID (Ascending)", "ID (Descending)"})
-        Me.ComboBox2.Location = New System.Drawing.Point(6, 44)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(221, 29)
-        Me.ComboBox2.TabIndex = 19
+        Me.cbxSort.FormattingEnabled = True
+        Me.cbxSort.Items.AddRange(New Object() {"ID (Ascending) [Default]", "ID (Descending)", "First Name (A-Z)", "First Name (Z-A)", "Last Name (A-Z)", "Last Name (Z-A)", "Price (Ascending)", "Price (Descending)"})
+        Me.cbxSort.Location = New System.Drawing.Point(6, 45)
+        Me.cbxSort.Name = "cbxSort"
+        Me.cbxSort.Size = New System.Drawing.Size(221, 29)
+        Me.cbxSort.TabIndex = 19
         '
-        'IconButton2
+        'btnSort
         '
-        Me.IconButton2.BackColor = System.Drawing.SystemColors.Highlight
-        Me.IconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.IconButton2.ForeColor = System.Drawing.Color.White
-        Me.IconButton2.IconChar = FontAwesome.Sharp.IconChar.Filter
-        Me.IconButton2.IconColor = System.Drawing.Color.White
-        Me.IconButton2.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton2.IconSize = 25
-        Me.IconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.IconButton2.Location = New System.Drawing.Point(154, 139)
-        Me.IconButton2.Name = "IconButton2"
-        Me.IconButton2.Size = New System.Drawing.Size(73, 37)
-        Me.IconButton2.TabIndex = 21
-        Me.IconButton2.Text = "Sort"
-        Me.IconButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.IconButton2.UseVisualStyleBackColor = False
+        Me.btnSort.BackColor = System.Drawing.SystemColors.Highlight
+        Me.btnSort.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnSort.ForeColor = System.Drawing.Color.White
+        Me.btnSort.IconChar = FontAwesome.Sharp.IconChar.SortAmountDown
+        Me.btnSort.IconColor = System.Drawing.Color.White
+        Me.btnSort.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnSort.IconSize = 25
+        Me.btnSort.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnSort.Location = New System.Drawing.Point(10, 80)
+        Me.btnSort.Name = "btnSort"
+        Me.btnSort.Size = New System.Drawing.Size(89, 29)
+        Me.btnSort.TabIndex = 21
+        Me.btnSort.Text = "Sort"
+        Me.btnSort.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnSort.UseVisualStyleBackColor = False
         '
-        'IconButton1
+        'Label9
         '
-        Me.IconButton1.BackColor = System.Drawing.SystemColors.Highlight
-        Me.IconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass
-        Me.IconButton1.IconColor = System.Drawing.Color.White
-        Me.IconButton1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton1.IconSize = 25
-        Me.IconButton1.Location = New System.Drawing.Point(186, 82)
-        Me.IconButton1.Name = "IconButton1"
-        Me.IconButton1.Size = New System.Drawing.Size(41, 29)
-        Me.IconButton1.TabIndex = 18
-        Me.IconButton1.UseVisualStyleBackColor = False
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(6, 20)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(44, 21)
+        Me.Label9.TabIndex = 23
+        Me.Label9.Text = "Film:"
+        '
+        'cbxMovieSelection
+        '
+        Me.cbxMovieSelection.FormattingEnabled = True
+        Me.cbxMovieSelection.Items.AddRange(New Object() {"All", "Good Will Hunting", "The Lion King", "Forrest Gump"})
+        Me.cbxMovieSelection.Location = New System.Drawing.Point(6, 44)
+        Me.cbxMovieSelection.Name = "cbxMovieSelection"
+        Me.cbxMovieSelection.Size = New System.Drawing.Size(221, 29)
+        Me.cbxMovieSelection.TabIndex = 22
         '
         'btnRefresh
         '
@@ -281,24 +358,6 @@ Partial Class ViewBookings
         Me.IconMenuItem1.Size = New System.Drawing.Size(32, 19)
         Me.IconMenuItem1.Text = "IconMenuItem1"
         '
-        'cbxMovieSelection
-        '
-        Me.cbxMovieSelection.FormattingEnabled = True
-        Me.cbxMovieSelection.Items.AddRange(New Object() {"Good Will Hunting", "The Lion King", "Forrest Gump"})
-        Me.cbxMovieSelection.Location = New System.Drawing.Point(6, 104)
-        Me.cbxMovieSelection.Name = "cbxMovieSelection"
-        Me.cbxMovieSelection.Size = New System.Drawing.Size(221, 29)
-        Me.cbxMovieSelection.TabIndex = 22
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(6, 80)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(44, 21)
-        Me.Label9.TabIndex = 23
-        Me.Label9.Text = "Film:"
-        '
         'Label10
         '
         Me.Label10.AutoSize = True
@@ -312,12 +371,64 @@ Partial Class ViewBookings
         Me.Label10.TabIndex = 22
         Me.Label10.Text = "Film:"
         '
+        'GroupBox3
+        '
+        Me.GroupBox3.Controls.Add(Me.btnFilter)
+        Me.GroupBox3.Controls.Add(Me.btnClearFilters)
+        Me.GroupBox3.Controls.Add(Me.Label9)
+        Me.GroupBox3.Controls.Add(Me.cbxMovieSelection)
+        Me.GroupBox3.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox3.Location = New System.Drawing.Point(780, 440)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Size = New System.Drawing.Size(236, 116)
+        Me.GroupBox3.TabIndex = 27
+        Me.GroupBox3.TabStop = False
+        Me.GroupBox3.Text = "Filter"
+        '
+        'btnFilter
+        '
+        Me.btnFilter.BackColor = System.Drawing.SystemColors.Highlight
+        Me.btnFilter.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnFilter.ForeColor = System.Drawing.Color.White
+        Me.btnFilter.IconChar = FontAwesome.Sharp.IconChar.Filter
+        Me.btnFilter.IconColor = System.Drawing.Color.White
+        Me.btnFilter.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnFilter.IconSize = 25
+        Me.btnFilter.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnFilter.Location = New System.Drawing.Point(6, 79)
+        Me.btnFilter.Name = "btnFilter"
+        Me.btnFilter.Size = New System.Drawing.Size(93, 29)
+        Me.btnFilter.TabIndex = 27
+        Me.btnFilter.Text = "Filter"
+        Me.btnFilter.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnFilter.UseVisualStyleBackColor = False
+        '
+        'btnClearFilters
+        '
+        Me.btnClearFilters.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(56, Byte), Integer))
+        Me.btnClearFilters.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnClearFilters.Font = New System.Drawing.Font("Segoe UI Semibold", 11.0!, System.Drawing.FontStyle.Bold)
+        Me.btnClearFilters.ForeColor = System.Drawing.Color.White
+        Me.btnClearFilters.IconChar = FontAwesome.Sharp.IconChar.Xmark
+        Me.btnClearFilters.IconColor = System.Drawing.Color.White
+        Me.btnClearFilters.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnClearFilters.IconSize = 22
+        Me.btnClearFilters.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnClearFilters.Location = New System.Drawing.Point(105, 79)
+        Me.btnClearFilters.Name = "btnClearFilters"
+        Me.btnClearFilters.Size = New System.Drawing.Size(125, 30)
+        Me.btnClearFilters.TabIndex = 26
+        Me.btnClearFilters.Text = "Clear Filters"
+        Me.btnClearFilters.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnClearFilters.UseVisualStyleBackColor = False
+        '
         'ViewBookings
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.ClientSize = New System.Drawing.Size(1021, 653)
+        Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
@@ -340,6 +451,8 @@ Partial Class ViewBookings
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         CType(Me.btnBack, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox3.ResumeLayout(False)
+        Me.GroupBox3.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -357,15 +470,21 @@ Partial Class ViewBookings
     Friend WithEvents btnRefresh As FontAwesome.Sharp.IconButton
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents Label7 As Label
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents IconButton1 As FontAwesome.Sharp.IconButton
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents cbxSearchCategory As ComboBox
+    Friend WithEvents btnSearch As FontAwesome.Sharp.IconButton
+    Friend WithEvents txtSearch As TextBox
     Friend WithEvents IconMenuItem1 As FontAwesome.Sharp.IconMenuItem
     Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents IconButton2 As FontAwesome.Sharp.IconButton
+    Friend WithEvents btnSort As FontAwesome.Sharp.IconButton
     Friend WithEvents Label8 As Label
-    Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents cbxSort As ComboBox
     Friend WithEvents Label9 As Label
     Friend WithEvents cbxMovieSelection As ComboBox
     Friend WithEvents Label10 As Label
+    Friend WithEvents Label11 As Label
+    Friend WithEvents btnClearSearch As FontAwesome.Sharp.IconButton
+    Friend WithEvents btnClearSort As FontAwesome.Sharp.IconButton
+    Friend WithEvents GroupBox3 As GroupBox
+    Friend WithEvents btnFilter As FontAwesome.Sharp.IconButton
+    Friend WithEvents btnClearFilters As FontAwesome.Sharp.IconButton
 End Class
