@@ -35,12 +35,13 @@ Partial Class CreateBookings
         Me.Label9 = New System.Windows.Forms.Label()
         Me.lblTotal = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.btnPayment = New FontAwesome.Sharp.IconButton()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.btnUpdate = New FontAwesome.Sharp.IconButton()
-        Me.pbMovie = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.cbxMovieSelection = New System.Windows.Forms.ComboBox()
+        Me.lblEditMode = New System.Windows.Forms.Label()
+        Me.btnUpdate = New FontAwesome.Sharp.IconButton()
+        Me.pbMovie = New System.Windows.Forms.PictureBox()
+        Me.btnPayment = New FontAwesome.Sharp.IconButton()
         Me.A1 = New FontAwesome.Sharp.IconPictureBox()
         Me.A16 = New FontAwesome.Sharp.IconPictureBox()
         Me.A15 = New FontAwesome.Sharp.IconPictureBox()
@@ -172,7 +173,6 @@ Partial Class CreateBookings
         Me.D2 = New FontAwesome.Sharp.IconPictureBox()
         Me.btnBack = New FontAwesome.Sharp.IconPictureBox()
         Me.IconSplitButton1 = New FontAwesome.Sharp.IconSplitButton()
-        Me.lblEditMode = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.gbCreateBooking.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -315,9 +315,9 @@ Partial Class CreateBookings
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.Label1.Location = New System.Drawing.Point(62, 7)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(821, 41)
+        Me.Label1.Size = New System.Drawing.Size(1103, 41)
         Me.Label1.TabIndex = 15
-        Me.Label1.Text = "Welcome"
+        Me.Label1.Text = "Create/Edit Bookings"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Panel1
@@ -456,25 +456,6 @@ Partial Class CreateBookings
         Me.Label11.Text = "Selected Seats:"
         Me.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'btnPayment
-        '
-        Me.btnPayment.BackColor = System.Drawing.SystemColors.Highlight
-        Me.btnPayment.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnPayment.Font = New System.Drawing.Font("Segoe UI Semibold", 13.25!, System.Drawing.FontStyle.Bold)
-        Me.btnPayment.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnPayment.IconChar = FontAwesome.Sharp.IconChar.CcVisa
-        Me.btnPayment.IconColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnPayment.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.btnPayment.IconSize = 34
-        Me.btnPayment.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnPayment.Location = New System.Drawing.Point(11, 307)
-        Me.btnPayment.Margin = New System.Windows.Forms.Padding(2)
-        Me.btnPayment.Name = "btnPayment"
-        Me.btnPayment.Size = New System.Drawing.Size(274, 38)
-        Me.btnPayment.TabIndex = 154
-        Me.btnPayment.Text = "Proceed To Payment"
-        Me.btnPayment.UseVisualStyleBackColor = False
-        '
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.btnUpdate)
@@ -489,6 +470,37 @@ Partial Class CreateBookings
         Me.GroupBox2.TabIndex = 155
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Film Selection"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Open Sans", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(8, 26)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(50, 26)
+        Me.Label2.TabIndex = 1
+        Me.Label2.Text = "Film"
+        '
+        'cbxMovieSelection
+        '
+        Me.cbxMovieSelection.FormattingEnabled = True
+        Me.cbxMovieSelection.Items.AddRange(New Object() {"Good Will Hunting", "The Lion King", "Forrest Gump"})
+        Me.cbxMovieSelection.Location = New System.Drawing.Point(12, 54)
+        Me.cbxMovieSelection.Name = "cbxMovieSelection"
+        Me.cbxMovieSelection.Size = New System.Drawing.Size(138, 33)
+        Me.cbxMovieSelection.TabIndex = 0
+        '
+        'lblEditMode
+        '
+        Me.lblEditMode.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblEditMode.ForeColor = System.Drawing.Color.DodgerBlue
+        Me.lblEditMode.Location = New System.Drawing.Point(79, 76)
+        Me.lblEditMode.Name = "lblEditMode"
+        Me.lblEditMode.Size = New System.Drawing.Size(792, 41)
+        Me.lblEditMode.TabIndex = 156
+        Me.lblEditMode.Text = "EDIT MODE"
+        Me.lblEditMode.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lblEditMode.Visible = False
         '
         'btnUpdate
         '
@@ -519,24 +531,24 @@ Partial Class CreateBookings
         Me.pbMovie.TabIndex = 2
         Me.pbMovie.TabStop = False
         '
-        'Label2
+        'btnPayment
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Open Sans", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(8, 26)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(50, 26)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Film"
-        '
-        'cbxMovieSelection
-        '
-        Me.cbxMovieSelection.FormattingEnabled = True
-        Me.cbxMovieSelection.Items.AddRange(New Object() {"Good Will Hunting", "The Lion King", "Forrest Gump"})
-        Me.cbxMovieSelection.Location = New System.Drawing.Point(12, 54)
-        Me.cbxMovieSelection.Name = "cbxMovieSelection"
-        Me.cbxMovieSelection.Size = New System.Drawing.Size(138, 33)
-        Me.cbxMovieSelection.TabIndex = 0
+        Me.btnPayment.BackColor = System.Drawing.SystemColors.Highlight
+        Me.btnPayment.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnPayment.Font = New System.Drawing.Font("Segoe UI Semibold", 13.25!, System.Drawing.FontStyle.Bold)
+        Me.btnPayment.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnPayment.IconChar = FontAwesome.Sharp.IconChar.CcVisa
+        Me.btnPayment.IconColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnPayment.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnPayment.IconSize = 34
+        Me.btnPayment.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnPayment.Location = New System.Drawing.Point(11, 307)
+        Me.btnPayment.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnPayment.Name = "btnPayment"
+        Me.btnPayment.Size = New System.Drawing.Size(274, 38)
+        Me.btnPayment.TabIndex = 154
+        Me.btnPayment.Text = "Proceed To Payment"
+        Me.btnPayment.UseVisualStyleBackColor = False
         '
         'A1
         '
@@ -2500,19 +2512,6 @@ Partial Class CreateBookings
         Me.IconSplitButton1.Size = New System.Drawing.Size(23, 23)
         Me.IconSplitButton1.Text = "IconSplitButton1"
         '
-        'lblEditMode
-        '
-        Me.lblEditMode.Enabled = False
-        Me.lblEditMode.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblEditMode.ForeColor = System.Drawing.Color.DodgerBlue
-        Me.lblEditMode.Location = New System.Drawing.Point(65, 48)
-        Me.lblEditMode.Name = "lblEditMode"
-        Me.lblEditMode.Size = New System.Drawing.Size(821, 41)
-        Me.lblEditMode.TabIndex = 156
-        Me.lblEditMode.Text = "EDIT MODE"
-        Me.lblEditMode.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.lblEditMode.Visible = False
-        '
         'CreateBookings
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -2654,7 +2653,7 @@ Partial Class CreateBookings
         Me.Controls.Add(Me.D2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnBack)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "CreateBookings"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

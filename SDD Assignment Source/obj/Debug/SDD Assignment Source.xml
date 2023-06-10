@@ -27,6 +27,36 @@ SDD Assignment Source
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:SDD_Assignment_Source.My.Resources.Resources.CreateBookingInfo">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SDD_Assignment_Source.My.Resources.Resources.EditBookingWindow">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SDD_Assignment_Source.My.Resources.Resources.EditMode">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SDD_Assignment_Source.My.Resources.Resources.EditRecord">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SDD_Assignment_Source.My.Resources.Resources.EditViewBookings">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SDD_Assignment_Source.My.Resources.Resources.FilmSelection">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:SDD_Assignment_Source.My.Resources.Resources.ForrestGump">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -43,6 +73,16 @@ SDD Assignment Source
 </summary>
 </member>
 <member name="P:SDD_Assignment_Source.My.Resources.Resources.LionKing">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SDD_Assignment_Source.My.Resources.Resources.PaymentScreen">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SDD_Assignment_Source.My.Resources.Resources.SeatSelection">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

@@ -93,7 +93,7 @@ Partial Class PaymentScreen
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(75, 28)
         Me.Label6.TabIndex = 33
-        Me.Label6.Text = "CCV"
+        Me.Label6.Text = "CVV"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'lblTotal
@@ -222,7 +222,7 @@ Partial Class PaymentScreen
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label5)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "PaymentScreen"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "PaymentScreen"

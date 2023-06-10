@@ -30,15 +30,15 @@ Partial Class EditBooking
         Me.Label9 = New System.Windows.Forms.Label()
         Me.cbxMovieSelection = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.btnConfirmEdit = New FontAwesome.Sharp.IconButton()
         Me.txtSeats = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.btnEdit = New FontAwesome.Sharp.IconButton()
-        Me.btnExitButton = New FontAwesome.Sharp.IconPictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        CType(Me.btnExitButton, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.btnExitButton = New FontAwesome.Sharp.IconPictureBox()
+        Me.btnEdit = New FontAwesome.Sharp.IconButton()
+        Me.btnConfirmEdit = New FontAwesome.Sharp.IconButton()
         Me.Panel1.SuspendLayout()
+        CType(Me.btnExitButton, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'txtDOB
@@ -126,27 +126,6 @@ Partial Class EditBooking
         Me.Label1.Text = "Film:"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'btnConfirmEdit
-        '
-        Me.btnConfirmEdit.BackColor = System.Drawing.SystemColors.Highlight
-        Me.btnConfirmEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnConfirmEdit.Font = New System.Drawing.Font("Segoe UI Semibold", 13.25!, System.Drawing.FontStyle.Bold)
-        Me.btnConfirmEdit.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnConfirmEdit.IconChar = FontAwesome.Sharp.IconChar.Upload
-        Me.btnConfirmEdit.IconColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnConfirmEdit.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.btnConfirmEdit.IconSize = 34
-        Me.btnConfirmEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnConfirmEdit.Location = New System.Drawing.Point(88, 382)
-        Me.btnConfirmEdit.Margin = New System.Windows.Forms.Padding(2)
-        Me.btnConfirmEdit.Name = "btnConfirmEdit"
-        Me.btnConfirmEdit.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
-        Me.btnConfirmEdit.Size = New System.Drawing.Size(177, 38)
-        Me.btnConfirmEdit.TabIndex = 172
-        Me.btnConfirmEdit.Text = "Confirm Edit"
-        Me.btnConfirmEdit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnConfirmEdit.UseVisualStyleBackColor = False
-        '
         'txtSeats
         '
         Me.txtSeats.Font = New System.Drawing.Font("Segoe UI", 14.0!)
@@ -167,42 +146,6 @@ Partial Class EditBooking
         Me.Label3.TabIndex = 174
         Me.Label3.Text = "Seats"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'btnEdit
-        '
-        Me.btnEdit.BackColor = System.Drawing.SystemColors.Highlight
-        Me.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnEdit.Font = New System.Drawing.Font("Segoe UI Semibold", 13.25!, System.Drawing.FontStyle.Bold)
-        Me.btnEdit.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnEdit.IconChar = FontAwesome.Sharp.IconChar.PenToSquare
-        Me.btnEdit.IconColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnEdit.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.btnEdit.IconSize = 30
-        Me.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnEdit.Location = New System.Drawing.Point(244, 267)
-        Me.btnEdit.Margin = New System.Windows.Forms.Padding(2)
-        Me.btnEdit.Name = "btnEdit"
-        Me.btnEdit.Padding = New System.Windows.Forms.Padding(5, 0, 0, 0)
-        Me.btnEdit.Size = New System.Drawing.Size(90, 32)
-        Me.btnEdit.TabIndex = 176
-        Me.btnEdit.Text = "Edit"
-        Me.btnEdit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnEdit.UseVisualStyleBackColor = False
-        '
-        'btnExitButton
-        '
-        Me.btnExitButton.BackColor = System.Drawing.Color.Transparent
-        Me.btnExitButton.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnExitButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnExitButton.IconChar = FontAwesome.Sharp.IconChar.Xmark
-        Me.btnExitButton.IconColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnExitButton.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.btnExitButton.Location = New System.Drawing.Point(311, 9)
-        Me.btnExitButton.Margin = New System.Windows.Forms.Padding(2)
-        Me.btnExitButton.Name = "btnExitButton"
-        Me.btnExitButton.Size = New System.Drawing.Size(32, 34)
-        Me.btnExitButton.TabIndex = 17
-        Me.btnExitButton.TabStop = False
         '
         'Label2
         '
@@ -226,6 +169,63 @@ Partial Class EditBooking
         Me.Panel1.Size = New System.Drawing.Size(350, 45)
         Me.Panel1.TabIndex = 177
         '
+        'btnExitButton
+        '
+        Me.btnExitButton.BackColor = System.Drawing.Color.Transparent
+        Me.btnExitButton.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnExitButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnExitButton.IconChar = FontAwesome.Sharp.IconChar.Xmark
+        Me.btnExitButton.IconColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnExitButton.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnExitButton.Location = New System.Drawing.Point(311, 9)
+        Me.btnExitButton.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnExitButton.Name = "btnExitButton"
+        Me.btnExitButton.Size = New System.Drawing.Size(32, 34)
+        Me.btnExitButton.TabIndex = 17
+        Me.btnExitButton.TabStop = False
+        '
+        'btnEdit
+        '
+        Me.btnEdit.BackColor = System.Drawing.SystemColors.Highlight
+        Me.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnEdit.Font = New System.Drawing.Font("Segoe UI Semibold", 13.25!, System.Drawing.FontStyle.Bold)
+        Me.btnEdit.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnEdit.IconChar = FontAwesome.Sharp.IconChar.PenToSquare
+        Me.btnEdit.IconColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnEdit.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnEdit.IconSize = 30
+        Me.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnEdit.Location = New System.Drawing.Point(244, 267)
+        Me.btnEdit.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnEdit.Name = "btnEdit"
+        Me.btnEdit.Padding = New System.Windows.Forms.Padding(5, 0, 0, 0)
+        Me.btnEdit.Size = New System.Drawing.Size(90, 32)
+        Me.btnEdit.TabIndex = 176
+        Me.btnEdit.Text = "Edit"
+        Me.btnEdit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnEdit.UseVisualStyleBackColor = False
+        '
+        'btnConfirmEdit
+        '
+        Me.btnConfirmEdit.BackColor = System.Drawing.SystemColors.Highlight
+        Me.btnConfirmEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnConfirmEdit.Font = New System.Drawing.Font("Segoe UI Semibold", 13.25!, System.Drawing.FontStyle.Bold)
+        Me.btnConfirmEdit.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnConfirmEdit.IconChar = FontAwesome.Sharp.IconChar.Upload
+        Me.btnConfirmEdit.IconColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnConfirmEdit.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnConfirmEdit.IconSize = 34
+        Me.btnConfirmEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnConfirmEdit.Location = New System.Drawing.Point(88, 382)
+        Me.btnConfirmEdit.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnConfirmEdit.Name = "btnConfirmEdit"
+        Me.btnConfirmEdit.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
+        Me.btnConfirmEdit.Size = New System.Drawing.Size(177, 38)
+        Me.btnConfirmEdit.TabIndex = 172
+        Me.btnConfirmEdit.Text = "Confirm Edit"
+        Me.btnConfirmEdit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnConfirmEdit.UseVisualStyleBackColor = False
+        '
         'EditBooking
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -248,8 +248,9 @@ Partial Class EditBooking
         Me.Controls.Add(Me.Label9)
         Me.Name = "EditBooking"
         Me.Text = "EditBooking"
-        CType(Me.btnExitButton, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TopMost = True
         Me.Panel1.ResumeLayout(False)
+        CType(Me.btnExitButton, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

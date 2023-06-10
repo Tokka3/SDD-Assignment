@@ -14,18 +14,22 @@
 
     End Sub
 
+
+
     Private Sub btnPayment_Click(sender As Object, e As EventArgs) Handles btnPayment.Click
         MessageBox.Show("Thanks " & strFirstName & ", you're booking is complete")
         Me.Hide()
         intBookingCount += 1
         Dim Booking As Object = BookingRecord(intBookingCount)
 
-        Booking.intTotal = selectedSeats.Length * 20
+
+        MessageBox.Show("Seat Cost: " & Booking.intTotal.ToString())
         Booking.strBookingFirstName = txtFirstname.Text
         Booking.strBookingLastName = txtLastName.Text
         Booking.intBookingID = intBookingCount
         Booking.strDOB = CreateBookings.txtDOB.Text
         Booking.arrSeatsBooked = selectedSeats
+        Booking.intTotal = CalculateTotalSeatCost(Booking.arrSeatsBooked)
         Booking.strFilm = strSelectedFilm
 
         Dim strField As String = "" 'Prepare string so we can write to file

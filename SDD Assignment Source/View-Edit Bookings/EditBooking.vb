@@ -31,7 +31,9 @@
 
         BookingRecord(idxBookingToEdit).strFilm = cbxMovieSelection.Text
 
-        Array.Clear(selectedSeats, 0, selectedSeats.Length)
+        If IsNothing(selectedSeats) = False Then
+            Array.Clear(selectedSeats, 0, selectedSeats.Length)
+        End If
 
         ReDim selectedSeats(0 To -1)
 
@@ -58,8 +60,10 @@
     End Sub
 
     Private Sub btnExitButton_Click(sender As Object, e As EventArgs) Handles btnExitButton.Click
+        If IsNothing(selectedSeats) = False Then
+            Array.Clear(selectedSeats, 0, selectedSeats.Length)
+        End If
 
-        Array.Clear(selectedSeats, 0, selectedSeats.Length)
 
         ReDim selectedSeats(0 To -1)
 

@@ -31,22 +31,22 @@ Partial Class ViewBookings
         Me.Label6 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label11 = New System.Windows.Forms.Label()
+        Me.btnClearSearch = New FontAwesome.Sharp.IconButton()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.cbxSearchCategory = New System.Windows.Forms.ComboBox()
+        Me.btnSearch = New FontAwesome.Sharp.IconButton()
         Me.txtSearch = New System.Windows.Forms.TextBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.btnClearSort = New FontAwesome.Sharp.IconButton()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.cbxSort = New System.Windows.Forms.ComboBox()
+        Me.btnSort = New FontAwesome.Sharp.IconButton()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.cbxMovieSelection = New System.Windows.Forms.ComboBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.btnFilter = New FontAwesome.Sharp.IconButton()
         Me.btnClearFilters = New FontAwesome.Sharp.IconButton()
-        Me.btnClearSort = New FontAwesome.Sharp.IconButton()
-        Me.btnSort = New FontAwesome.Sharp.IconButton()
-        Me.btnClearSearch = New FontAwesome.Sharp.IconButton()
-        Me.btnSearch = New FontAwesome.Sharp.IconButton()
         Me.btnRefresh = New FontAwesome.Sharp.IconButton()
         Me.btnBack = New FontAwesome.Sharp.IconPictureBox()
         Me.IconMenuItem1 = New FontAwesome.Sharp.IconMenuItem()
@@ -165,6 +165,25 @@ Partial Class ViewBookings
         Me.Label11.TabIndex = 25
         Me.Label11.Text = "Enter Search Keyword(s):"
         '
+        'btnClearSearch
+        '
+        Me.btnClearSearch.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(56, Byte), Integer))
+        Me.btnClearSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnClearSearch.Font = New System.Drawing.Font("Segoe UI Semibold", 11.0!, System.Drawing.FontStyle.Bold)
+        Me.btnClearSearch.ForeColor = System.Drawing.Color.White
+        Me.btnClearSearch.IconChar = FontAwesome.Sharp.IconChar.Xmark
+        Me.btnClearSearch.IconColor = System.Drawing.Color.White
+        Me.btnClearSearch.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnClearSearch.IconSize = 22
+        Me.btnClearSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnClearSearch.Location = New System.Drawing.Point(105, 137)
+        Me.btnClearSearch.Name = "btnClearSearch"
+        Me.btnClearSearch.Size = New System.Drawing.Size(125, 30)
+        Me.btnClearSearch.TabIndex = 24
+        Me.btnClearSearch.Text = "Clear Search"
+        Me.btnClearSearch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnClearSearch.UseVisualStyleBackColor = False
+        '
         'Label7
         '
         Me.Label7.AutoSize = True
@@ -182,6 +201,24 @@ Partial Class ViewBookings
         Me.cbxSearchCategory.Name = "cbxSearchCategory"
         Me.cbxSearchCategory.Size = New System.Drawing.Size(221, 29)
         Me.cbxSearchCategory.TabIndex = 19
+        '
+        'btnSearch
+        '
+        Me.btnSearch.BackColor = System.Drawing.SystemColors.Highlight
+        Me.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnSearch.ForeColor = System.Drawing.Color.White
+        Me.btnSearch.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass
+        Me.btnSearch.IconColor = System.Drawing.Color.White
+        Me.btnSearch.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnSearch.IconSize = 22
+        Me.btnSearch.ImageAlign = System.Drawing.ContentAlignment.TopRight
+        Me.btnSearch.Location = New System.Drawing.Point(10, 138)
+        Me.btnSearch.Name = "btnSearch"
+        Me.btnSearch.Size = New System.Drawing.Size(89, 29)
+        Me.btnSearch.TabIndex = 18
+        Me.btnSearch.Text = "Search"
+        Me.btnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnSearch.UseVisualStyleBackColor = False
         '
         'txtSearch
         '
@@ -205,6 +242,25 @@ Partial Class ViewBookings
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Sort"
         '
+        'btnClearSort
+        '
+        Me.btnClearSort.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(56, Byte), Integer))
+        Me.btnClearSort.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnClearSort.Font = New System.Drawing.Font("Segoe UI Semibold", 11.0!, System.Drawing.FontStyle.Bold)
+        Me.btnClearSort.ForeColor = System.Drawing.Color.White
+        Me.btnClearSort.IconChar = FontAwesome.Sharp.IconChar.Xmark
+        Me.btnClearSort.IconColor = System.Drawing.Color.White
+        Me.btnClearSort.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnClearSort.IconSize = 22
+        Me.btnClearSort.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnClearSort.Location = New System.Drawing.Point(105, 80)
+        Me.btnClearSort.Name = "btnClearSort"
+        Me.btnClearSort.Size = New System.Drawing.Size(122, 30)
+        Me.btnClearSort.TabIndex = 26
+        Me.btnClearSort.Text = "Default Sort"
+        Me.btnClearSort.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnClearSort.UseVisualStyleBackColor = False
+        '
         'Label8
         '
         Me.Label8.AutoSize = True
@@ -222,6 +278,24 @@ Partial Class ViewBookings
         Me.cbxSort.Name = "cbxSort"
         Me.cbxSort.Size = New System.Drawing.Size(221, 29)
         Me.cbxSort.TabIndex = 19
+        '
+        'btnSort
+        '
+        Me.btnSort.BackColor = System.Drawing.SystemColors.Highlight
+        Me.btnSort.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnSort.ForeColor = System.Drawing.Color.White
+        Me.btnSort.IconChar = FontAwesome.Sharp.IconChar.SortAmountDown
+        Me.btnSort.IconColor = System.Drawing.Color.White
+        Me.btnSort.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnSort.IconSize = 25
+        Me.btnSort.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnSort.Location = New System.Drawing.Point(10, 80)
+        Me.btnSort.Name = "btnSort"
+        Me.btnSort.Size = New System.Drawing.Size(89, 29)
+        Me.btnSort.TabIndex = 21
+        Me.btnSort.Text = "Sort"
+        Me.btnSort.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnSort.UseVisualStyleBackColor = False
         '
         'Label9
         '
@@ -305,80 +379,6 @@ Partial Class ViewBookings
         Me.btnClearFilters.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnClearFilters.UseVisualStyleBackColor = False
         '
-        'btnClearSort
-        '
-        Me.btnClearSort.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(56, Byte), Integer))
-        Me.btnClearSort.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnClearSort.Font = New System.Drawing.Font("Segoe UI Semibold", 11.0!, System.Drawing.FontStyle.Bold)
-        Me.btnClearSort.ForeColor = System.Drawing.Color.White
-        Me.btnClearSort.IconChar = FontAwesome.Sharp.IconChar.Xmark
-        Me.btnClearSort.IconColor = System.Drawing.Color.White
-        Me.btnClearSort.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.btnClearSort.IconSize = 22
-        Me.btnClearSort.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnClearSort.Location = New System.Drawing.Point(105, 80)
-        Me.btnClearSort.Name = "btnClearSort"
-        Me.btnClearSort.Size = New System.Drawing.Size(122, 30)
-        Me.btnClearSort.TabIndex = 26
-        Me.btnClearSort.Text = "Default Sort"
-        Me.btnClearSort.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnClearSort.UseVisualStyleBackColor = False
-        '
-        'btnSort
-        '
-        Me.btnSort.BackColor = System.Drawing.SystemColors.Highlight
-        Me.btnSort.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnSort.ForeColor = System.Drawing.Color.White
-        Me.btnSort.IconChar = FontAwesome.Sharp.IconChar.SortAmountDown
-        Me.btnSort.IconColor = System.Drawing.Color.White
-        Me.btnSort.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.btnSort.IconSize = 25
-        Me.btnSort.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnSort.Location = New System.Drawing.Point(10, 80)
-        Me.btnSort.Name = "btnSort"
-        Me.btnSort.Size = New System.Drawing.Size(89, 29)
-        Me.btnSort.TabIndex = 21
-        Me.btnSort.Text = "Sort"
-        Me.btnSort.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnSort.UseVisualStyleBackColor = False
-        '
-        'btnClearSearch
-        '
-        Me.btnClearSearch.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(56, Byte), Integer))
-        Me.btnClearSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnClearSearch.Font = New System.Drawing.Font("Segoe UI Semibold", 11.0!, System.Drawing.FontStyle.Bold)
-        Me.btnClearSearch.ForeColor = System.Drawing.Color.White
-        Me.btnClearSearch.IconChar = FontAwesome.Sharp.IconChar.Xmark
-        Me.btnClearSearch.IconColor = System.Drawing.Color.White
-        Me.btnClearSearch.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.btnClearSearch.IconSize = 22
-        Me.btnClearSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnClearSearch.Location = New System.Drawing.Point(105, 137)
-        Me.btnClearSearch.Name = "btnClearSearch"
-        Me.btnClearSearch.Size = New System.Drawing.Size(125, 30)
-        Me.btnClearSearch.TabIndex = 24
-        Me.btnClearSearch.Text = "Clear Search"
-        Me.btnClearSearch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnClearSearch.UseVisualStyleBackColor = False
-        '
-        'btnSearch
-        '
-        Me.btnSearch.BackColor = System.Drawing.SystemColors.Highlight
-        Me.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnSearch.ForeColor = System.Drawing.Color.White
-        Me.btnSearch.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass
-        Me.btnSearch.IconColor = System.Drawing.Color.White
-        Me.btnSearch.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.btnSearch.IconSize = 22
-        Me.btnSearch.ImageAlign = System.Drawing.ContentAlignment.TopRight
-        Me.btnSearch.Location = New System.Drawing.Point(10, 138)
-        Me.btnSearch.Name = "btnSearch"
-        Me.btnSearch.Size = New System.Drawing.Size(89, 29)
-        Me.btnSearch.TabIndex = 18
-        Me.btnSearch.Text = "Search"
-        Me.btnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnSearch.UseVisualStyleBackColor = False
-        '
         'btnRefresh
         '
         Me.btnRefresh.BackColor = System.Drawing.SystemColors.Highlight
@@ -441,7 +441,7 @@ Partial Class ViewBookings
         Me.Controls.Add(Me.btnBack)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "ViewBookings"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

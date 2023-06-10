@@ -222,10 +222,34 @@
     <Compile Include="CreateBooking\PaymentScreen.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Tutorial\CreateBookingTutorial.Designer.vb">
+      <DependentUpon>CreateBookingTutorial.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorial\CreateBookingTutorial.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tutorial\EditBookingTutorial.Designer.vb">
+      <DependentUpon>EditBookingTutorial.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorial\EditBookingTutorial.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tutorial\EditBookingTutorial2.Designer.vb">
+      <DependentUpon>EditBookingTutorial2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorial\EditBookingTutorial2.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Tutorial\Tutorial.Designer.vb">
       <DependentUpon>Tutorial.vb</DependentUpon>
     </Compile>
     <Compile Include="Tutorial\Tutorial.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tutorial\ViewBookingsTutorial.Designer.vb">
+      <DependentUpon>ViewBookingsTutorial.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorial\ViewBookingsTutorial.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View-Edit Bookings\EditBooking.Designer.vb">
@@ -264,8 +288,20 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Tutorial\CreateBookingTutorial.resx">
+      <DependentUpon>CreateBookingTutorial.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tutorial\EditBookingTutorial.resx">
+      <DependentUpon>EditBookingTutorial.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tutorial\EditBookingTutorial2.resx">
+      <DependentUpon>EditBookingTutorial2.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Tutorial\Tutorial.resx">
       <DependentUpon>Tutorial.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tutorial\ViewBookingsTutorial.resx">
+      <DependentUpon>ViewBookingsTutorial.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View-Edit Bookings\EditBooking.resx">
       <DependentUpon>EditBooking.vb</DependentUpon>

@@ -13,6 +13,7 @@
     End Sub
 
     Public Sub EditBookingRequest()
+        ColourBookedSeats()
         selectedSeats = BookingToEdit.arrSeatsBooked
         For Each seat In selectedSeats
             Dim btnSeat As FontAwesome.Sharp.IconPictureBox = DirectCast(Controls(seat), FontAwesome.Sharp.IconPictureBox)
@@ -58,7 +59,7 @@
 
         End Select
 
-        lblTotal.Text = "Total: $" & (selectedSeats.Length * 20).ToString()
+        lblTotal.Text = "Total: $" & CalculateTotalSeatCost(selectedSeats).ToString()
 
 
 

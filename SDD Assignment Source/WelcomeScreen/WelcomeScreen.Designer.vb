@@ -27,6 +27,7 @@ Partial Class WelcomeScreen
         Me.btnBack = New FontAwesome.Sharp.IconPictureBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.btnEditBookings = New FontAwesome.Sharp.IconButton()
         Me.Panel3 = New System.Windows.Forms.Panel()
@@ -39,7 +40,6 @@ Partial Class WelcomeScreen
         Me.Label4 = New System.Windows.Forms.Label()
         Me.btnViewTutorial = New FontAwesome.Sharp.IconButton()
         Me.Panel6 = New System.Windows.Forms.Panel()
-        Me.Label5 = New System.Windows.Forms.Label()
         CType(Me.IconPictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnBack, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
@@ -109,6 +109,16 @@ Partial Class WelcomeScreen
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(248, 408)
         Me.Panel2.TabIndex = 14
+        '
+        'Label5
+        '
+        Me.Label5.Font = New System.Drawing.Font("Segoe UI Semibold", 10.75!, System.Drawing.FontStyle.Bold)
+        Me.Label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label5.Location = New System.Drawing.Point(4, 265)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(225, 91)
+        Me.Label5.TabIndex = 22
+        Me.Label5.Text = "Create, update and delete bookings."
         '
         'Label2
         '
@@ -264,16 +274,6 @@ Partial Class WelcomeScreen
         Me.Panel6.Size = New System.Drawing.Size(246, 232)
         Me.Panel6.TabIndex = 13
         '
-        'Label5
-        '
-        Me.Label5.Font = New System.Drawing.Font("Segoe UI Semibold", 10.75!, System.Drawing.FontStyle.Bold)
-        Me.Label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label5.Location = New System.Drawing.Point(4, 265)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(225, 91)
-        Me.Label5.TabIndex = 22
-        Me.Label5.Text = "Create, update and delete bookings."
-        '
         'WelcomeScreen
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -286,7 +286,7 @@ Partial Class WelcomeScreen
         Me.Controls.Add(Me.IconPictureBox1)
         Me.Controls.Add(Me.btnBack)
         Me.Controls.Add(Me.Label1)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "WelcomeScreen"
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
