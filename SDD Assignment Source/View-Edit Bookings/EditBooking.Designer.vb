@@ -155,7 +155,7 @@ Partial Class EditBooking
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(327, 39)
         Me.Label2.TabIndex = 18
-        Me.Label2.Text = "Payment"
+        Me.Label2.Text = "Edit Booking"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Panel1

@@ -6,8 +6,9 @@
         CreateBookings.Show()
         CreateBookings.Refresh()
         CreateBookings.EditBookingRequest()
+        CreateBookings.gbFilmSelection.Enabled = False
         CreateBookings.lblEditMode.Visible = True
-        CreateBookings.gbCreateBooking.Visible = False
+        CreateBookings.gbCreateBooking.Enabled = False
         bEditMode = True
     End Sub
 
@@ -41,7 +42,9 @@
 
         CreateBookings.PaymentSuccess()
 
-        CreateBookings.gbCreateBooking.Visible = True
+        CreateBookings.gbCreateBooking.Enabled = True
+
+        CreateBookings.gbFilmSelection.Enabled = True
 
         CreateBookings.rtbSelectedSeats.Clear()
 
@@ -67,7 +70,9 @@
 
         ReDim selectedSeats(0 To -1)
 
-        CreateBookings.gbCreateBooking.Visible = True
+        CreateBookings.gbCreateBooking.Enabled = True
+
+        CreateBookings.gbFilmSelection.Enabled = True
 
         CreateBookings.rtbSelectedSeats.Clear()
 

@@ -32,8 +32,11 @@ Partial Class Form1
         Me.txtPassword = New System.Windows.Forms.TextBox()
         Me.iconEye = New FontAwesome.Sharp.IconPictureBox()
         Me.IconPictureBox1 = New FontAwesome.Sharp.IconPictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Panel1.SuspendLayout()
         CType(Me.iconEye, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.IconPictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -83,6 +86,7 @@ Partial Class Form1
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.SystemColors.Highlight
+        Me.Panel1.Controls.Add(Me.PictureBox1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
@@ -152,6 +156,16 @@ Partial Class Form1
         Me.IconPictureBox1.TabIndex = 17
         Me.IconPictureBox1.TabStop = False
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.SDD_Assignment_Source.My.Resources.Resources.LogoFinal
+        Me.PictureBox1.Location = New System.Drawing.Point(42, 141)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(429, 408)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 21.0!)
@@ -174,8 +188,10 @@ Partial Class Form1
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form1"
+        Me.Panel1.ResumeLayout(False)
         CType(Me.iconEye, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.IconPictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -190,4 +206,5 @@ Partial Class Form1
     Friend WithEvents btnLogin As Button
     Friend WithEvents txtUsername As TextBox
     Friend WithEvents txtPassword As TextBox
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

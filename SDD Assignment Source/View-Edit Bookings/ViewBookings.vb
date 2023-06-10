@@ -202,4 +202,8 @@
         cbxSort.SelectedIndex = 0
         Booking_Refresh()
     End Sub
+
+    Private Sub btnHelp_Click(sender As Object, e As EventArgs) Handles btnHelp.Click
+        EditBookingTutorial.Show()
+    End Sub
 End Class

@@ -25,6 +25,10 @@
 
     Private Sub DynamicButton_Click(ByVal sender As Object, ByVal e As System.EventArgs)
 
+        If String.IsNullOrEmpty(cbxMovieSelection.Text) Then
+            MessageBox.Show("Please select a film before selecting a seat.")
+            Return
+        End If
         Dim btn As FontAwesome.Sharp.IconPictureBox = DirectCast(sender, FontAwesome.Sharp.IconPictureBox)
 
 
@@ -178,6 +182,14 @@
     End Sub
 
     Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
+        If IsNothing(selectedSeats) = False Then 'Clear the seats array if it's not empty
+            Array.Clear(selectedSeats, 0, selectedSeats.Length)
+        End If
+        rtbSelectedSeats.Clear()
         ColourBookedSeats()
+    End Sub
+
+    Private Sub btnHelp_Click(sender As Object, e As EventArgs) Handles btnHelp.Click
+        CreateBookingTutorial.Show()
     End Sub
 End Class

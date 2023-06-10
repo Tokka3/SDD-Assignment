@@ -1,5 +1,5 @@
 ﻿Public Class WelcomeScreen
-    Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
+    Private Sub btnBack_Click(sender As Object, e As EventArgs)
         Me.Hide()
         Form1.Show()
     End Sub
@@ -17,11 +17,15 @@
     End Sub
 
     Private Sub btnViewTutorial_Click(sender As Object, e As EventArgs) Handles btnViewTutorial.Click
-        Me.Hide()
+
         Tutorial.Show()
     End Sub
 
     Private Sub WelcomeScreen_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         UpdateBookingRecordArray()
+    End Sub
+
+    Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs) Handles Panel2.Paint
+
     End Sub
 End Class

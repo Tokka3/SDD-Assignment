@@ -32,12 +32,12 @@ Partial Class CreateBookingTutorial
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.btnTryNow = New FontAwesome.Sharp.IconButton()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.btnBack = New FontAwesome.Sharp.IconPictureBox()
-        Me.btnTryNow = New FontAwesome.Sharp.IconButton()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -52,7 +52,7 @@ Partial Class CreateBookingTutorial
         'Label1
         '
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(75, Byte), Integer), CType(CType(75, Byte), Integer), CType(CType(75, Byte), Integer))
         Me.Label1.Location = New System.Drawing.Point(69, 9)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(918, 78)
@@ -65,6 +65,7 @@ Partial Class CreateBookingTutorial
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.PictureBox1)
         Me.GroupBox1.Font = New System.Drawing.Font("Open Sans", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.GroupBox1.Location = New System.Drawing.Point(17, 90)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(478, 239)
@@ -77,6 +78,7 @@ Partial Class CreateBookingTutorial
         Me.GroupBox2.Controls.Add(Me.Label4)
         Me.GroupBox2.Controls.Add(Me.PictureBox3)
         Me.GroupBox2.Font = New System.Drawing.Font("Open Sans", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.GroupBox2.Location = New System.Drawing.Point(17, 335)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(478, 259)
@@ -89,6 +91,7 @@ Partial Class CreateBookingTutorial
         Me.GroupBox3.Controls.Add(Me.Label3)
         Me.GroupBox3.Controls.Add(Me.PictureBox2)
         Me.GroupBox3.Font = New System.Drawing.Font("Open Sans", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.GroupBox3.Location = New System.Drawing.Point(521, 90)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(478, 239)
@@ -101,6 +104,7 @@ Partial Class CreateBookingTutorial
         Me.GroupBox4.Controls.Add(Me.Label5)
         Me.GroupBox4.Controls.Add(Me.PictureBox4)
         Me.GroupBox4.Font = New System.Drawing.Font("Open Sans", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.GroupBox4.Location = New System.Drawing.Point(521, 335)
         Me.GroupBox4.Name = "GroupBox4"
         Me.GroupBox4.Size = New System.Drawing.Size(478, 259)
@@ -110,7 +114,8 @@ Partial Class CreateBookingTutorial
         '
         'Label2
         '
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Open Sans", 12.0!)
+        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.Label2.Location = New System.Drawing.Point(7, 30)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(218, 188)
@@ -120,17 +125,19 @@ Partial Class CreateBookingTutorial
         '
         'Label3
         '
-        Me.Label3.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Font = New System.Drawing.Font("Open Sans", 12.0!)
+        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.Label3.Location = New System.Drawing.Point(7, 25)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(218, 188)
         Me.Label3.TabIndex = 3
         Me.Label3.Text = "Enter the customers first name, last name, and date of birth. Once all fields hav" &
-    "e been selected, you may proceed to payment. "
+    "e been filled in, you may proceed to payment. "
         '
         'Label4
         '
-        Me.Label4.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Font = New System.Drawing.Font("Open Sans", 12.0!)
+        Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.Label4.Location = New System.Drawing.Point(7, 35)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(218, 221)
@@ -139,14 +146,34 @@ Partial Class CreateBookingTutorial
         '
         'Label5
         '
-        Me.Label5.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Font = New System.Drawing.Font("Open Sans", 12.0!)
+        Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.Label5.Location = New System.Drawing.Point(6, 35)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(218, 188)
         Me.Label5.TabIndex = 3
         Me.Label5.Text = "Lastly, enter the customers payment information. Upon success, a message box will" &
-    " appear confirming the booking. The booking can then be viewed in the Edit Booki" &
+    " appear confirming the booking. The booking can then be viewed in the View Booki" &
     "ngs page."
+        '
+        'btnTryNow
+        '
+        Me.btnTryNow.BackColor = System.Drawing.SystemColors.Highlight
+        Me.btnTryNow.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnTryNow.Font = New System.Drawing.Font("Segoe UI Semibold", 13.25!, System.Drawing.FontStyle.Bold)
+        Me.btnTryNow.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnTryNow.IconChar = FontAwesome.Sharp.IconChar.Eye
+        Me.btnTryNow.IconColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnTryNow.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnTryNow.IconSize = 34
+        Me.btnTryNow.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnTryNow.Location = New System.Drawing.Point(349, 604)
+        Me.btnTryNow.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnTryNow.Name = "btnTryNow"
+        Me.btnTryNow.Size = New System.Drawing.Size(313, 38)
+        Me.btnTryNow.TabIndex = 37
+        Me.btnTryNow.Text = "Try Now"
+        Me.btnTryNow.UseVisualStyleBackColor = False
         '
         'PictureBox4
         '
@@ -202,25 +229,6 @@ Partial Class CreateBookingTutorial
         Me.btnBack.Size = New System.Drawing.Size(46, 41)
         Me.btnBack.TabIndex = 15
         Me.btnBack.TabStop = False
-        '
-        'btnTryNow
-        '
-        Me.btnTryNow.BackColor = System.Drawing.SystemColors.Highlight
-        Me.btnTryNow.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnTryNow.Font = New System.Drawing.Font("Segoe UI Semibold", 13.25!, System.Drawing.FontStyle.Bold)
-        Me.btnTryNow.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnTryNow.IconChar = FontAwesome.Sharp.IconChar.Eye
-        Me.btnTryNow.IconColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnTryNow.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.btnTryNow.IconSize = 34
-        Me.btnTryNow.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnTryNow.Location = New System.Drawing.Point(349, 604)
-        Me.btnTryNow.Margin = New System.Windows.Forms.Padding(2)
-        Me.btnTryNow.Name = "btnTryNow"
-        Me.btnTryNow.Size = New System.Drawing.Size(313, 38)
-        Me.btnTryNow.TabIndex = 37
-        Me.btnTryNow.Text = "Try Now"
-        Me.btnTryNow.UseVisualStyleBackColor = False
         '
         'CreateBookingTutorial
         '

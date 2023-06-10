@@ -24,12 +24,13 @@ Partial Class EditBookingTutorial
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.btnTryDelete = New FontAwesome.Sharp.IconButton()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.btnEditTutorial = New FontAwesome.Sharp.IconButton()
         Me.btnDeleteTutorial = New FontAwesome.Sharp.IconButton()
-        Me.btnTryDelete = New FontAwesome.Sharp.IconButton()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.btnBack = New FontAwesome.Sharp.IconPictureBox()
+        Me.btnNavigateTutorial = New FontAwesome.Sharp.IconButton()
         Me.GroupBox1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnBack, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -51,52 +52,11 @@ Partial Class EditBookingTutorial
         Me.GroupBox1.Controls.Add(Me.btnTryDelete)
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.PictureBox1)
-        Me.GroupBox1.Location = New System.Drawing.Point(33, 116)
+        Me.GroupBox1.Location = New System.Drawing.Point(33, 119)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(964, 510)
         Me.GroupBox1.TabIndex = 17
         Me.GroupBox1.TabStop = False
-        '
-        'Label3
-        '
-        Me.Label3.Font = New System.Drawing.Font("Open Sans", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(656, 28)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(277, 264)
-        Me.Label3.TabIndex = 18
-        Me.Label3.Text = "Deleting an existing booking is very quick and straight forward. Simply press the" &
-    " red ""Delete"" button, and if you are sure you want to delete the record, confirm" &
-    " the request on the warning box."
-        '
-        'btnEditTutorial
-        '
-        Me.btnEditTutorial.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnEditTutorial.Font = New System.Drawing.Font("Segoe UI Semibold", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnEditTutorial.IconChar = FontAwesome.Sharp.IconChar.None
-        Me.btnEditTutorial.IconColor = System.Drawing.Color.Black
-        Me.btnEditTutorial.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.btnEditTutorial.Location = New System.Drawing.Point(515, 85)
-        Me.btnEditTutorial.Name = "btnEditTutorial"
-        Me.btnEditTutorial.Size = New System.Drawing.Size(482, 37)
-        Me.btnEditTutorial.TabIndex = 19
-        Me.btnEditTutorial.Text = "How to edit a booking"
-        Me.btnEditTutorial.UseVisualStyleBackColor = True
-        '
-        'btnDeleteTutorial
-        '
-        Me.btnDeleteTutorial.BackColor = System.Drawing.SystemColors.Highlight
-        Me.btnDeleteTutorial.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnDeleteTutorial.Font = New System.Drawing.Font("Segoe UI Semibold", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnDeleteTutorial.ForeColor = System.Drawing.Color.White
-        Me.btnDeleteTutorial.IconChar = FontAwesome.Sharp.IconChar.None
-        Me.btnDeleteTutorial.IconColor = System.Drawing.Color.Black
-        Me.btnDeleteTutorial.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.btnDeleteTutorial.Location = New System.Drawing.Point(33, 85)
-        Me.btnDeleteTutorial.Name = "btnDeleteTutorial"
-        Me.btnDeleteTutorial.Size = New System.Drawing.Size(482, 37)
-        Me.btnDeleteTutorial.TabIndex = 18
-        Me.btnDeleteTutorial.Text = "How to delete a booking"
-        Me.btnDeleteTutorial.UseVisualStyleBackColor = False
         '
         'btnTryDelete
         '
@@ -117,6 +77,18 @@ Partial Class EditBookingTutorial
         Me.btnTryDelete.Text = "Try Now"
         Me.btnTryDelete.UseVisualStyleBackColor = False
         '
+        'Label3
+        '
+        Me.Label3.Font = New System.Drawing.Font("Open Sans", 13.75!)
+        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label3.Location = New System.Drawing.Point(657, 28)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(277, 264)
+        Me.Label3.TabIndex = 18
+        Me.Label3.Text = "Deleting an existing booking is very quick and straight forward. Simply press the" &
+    " red ""Delete"" button, and if you are sure you want to delete the record, confirm" &
+    " the request on the warning box."
+        '
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.SDD_Assignment_Source.My.Resources.Resources.EditViewBookings
@@ -126,6 +98,36 @@ Partial Class EditBookingTutorial
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
+        '
+        'btnEditTutorial
+        '
+        Me.btnEditTutorial.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnEditTutorial.Font = New System.Drawing.Font("Segoe UI Semibold", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEditTutorial.IconChar = FontAwesome.Sharp.IconChar.None
+        Me.btnEditTutorial.IconColor = System.Drawing.Color.Black
+        Me.btnEditTutorial.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnEditTutorial.Location = New System.Drawing.Point(354, 88)
+        Me.btnEditTutorial.Name = "btnEditTutorial"
+        Me.btnEditTutorial.Size = New System.Drawing.Size(321, 37)
+        Me.btnEditTutorial.TabIndex = 19
+        Me.btnEditTutorial.Text = "How to edit a booking"
+        Me.btnEditTutorial.UseVisualStyleBackColor = True
+        '
+        'btnDeleteTutorial
+        '
+        Me.btnDeleteTutorial.BackColor = System.Drawing.SystemColors.Highlight
+        Me.btnDeleteTutorial.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnDeleteTutorial.Font = New System.Drawing.Font("Segoe UI Semibold", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnDeleteTutorial.ForeColor = System.Drawing.Color.White
+        Me.btnDeleteTutorial.IconChar = FontAwesome.Sharp.IconChar.None
+        Me.btnDeleteTutorial.IconColor = System.Drawing.Color.Black
+        Me.btnDeleteTutorial.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnDeleteTutorial.Location = New System.Drawing.Point(33, 88)
+        Me.btnDeleteTutorial.Name = "btnDeleteTutorial"
+        Me.btnDeleteTutorial.Size = New System.Drawing.Size(321, 37)
+        Me.btnDeleteTutorial.TabIndex = 18
+        Me.btnDeleteTutorial.Text = "How to delete a booking"
+        Me.btnDeleteTutorial.UseVisualStyleBackColor = False
         '
         'btnBack
         '
@@ -142,12 +144,27 @@ Partial Class EditBookingTutorial
         Me.btnBack.TabIndex = 15
         Me.btnBack.TabStop = False
         '
+        'btnNavigateTutorial
+        '
+        Me.btnNavigateTutorial.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnNavigateTutorial.Font = New System.Drawing.Font("Segoe UI Semibold", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnNavigateTutorial.IconChar = FontAwesome.Sharp.IconChar.None
+        Me.btnNavigateTutorial.IconColor = System.Drawing.Color.Black
+        Me.btnNavigateTutorial.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnNavigateTutorial.Location = New System.Drawing.Point(676, 88)
+        Me.btnNavigateTutorial.Name = "btnNavigateTutorial"
+        Me.btnNavigateTutorial.Size = New System.Drawing.Size(321, 37)
+        Me.btnNavigateTutorial.TabIndex = 20
+        Me.btnNavigateTutorial.Text = "How to navigate bookings"
+        Me.btnNavigateTutorial.UseVisualStyleBackColor = True
+        '
         'EditBookingTutorial
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.ClientSize = New System.Drawing.Size(1021, 653)
+        Me.Controls.Add(Me.btnNavigateTutorial)
         Me.Controls.Add(Me.btnEditTutorial)
         Me.Controls.Add(Me.btnDeleteTutorial)
         Me.Controls.Add(Me.GroupBox1)
@@ -171,4 +188,5 @@ Partial Class EditBookingTutorial
     Friend WithEvents btnDeleteTutorial As FontAwesome.Sharp.IconButton
     Friend WithEvents btnEditTutorial As FontAwesome.Sharp.IconButton
     Friend WithEvents btnTryDelete As FontAwesome.Sharp.IconButton
+    Friend WithEvents btnNavigateTutorial As FontAwesome.Sharp.IconButton
 End Class

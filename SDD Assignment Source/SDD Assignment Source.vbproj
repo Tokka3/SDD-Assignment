@@ -47,6 +47,9 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>LogoFinal.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="FontAwesome.Sharp, Version=6.3.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
       <HintPath>..\packages\FontAwesome.Sharp.6.3.0\lib\net472\FontAwesome.Sharp.dll</HintPath>
@@ -246,10 +249,10 @@
     <Compile Include="Tutorial\Tutorial.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Tutorial\ViewBookingsTutorial.Designer.vb">
-      <DependentUpon>ViewBookingsTutorial.vb</DependentUpon>
+    <Compile Include="Tutorial\EditBookingTutorial3.Designer.vb">
+      <DependentUpon>EditBookingTutorial3.vb</DependentUpon>
     </Compile>
-    <Compile Include="Tutorial\ViewBookingsTutorial.vb">
+    <Compile Include="Tutorial\EditBookingTutorial3.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View-Edit Bookings\EditBooking.Designer.vb">
@@ -300,8 +303,8 @@
     <EmbeddedResource Include="Tutorial\Tutorial.resx">
       <DependentUpon>Tutorial.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Tutorial\ViewBookingsTutorial.resx">
-      <DependentUpon>ViewBookingsTutorial.vb</DependentUpon>
+    <EmbeddedResource Include="Tutorial\EditBookingTutorial3.resx">
+      <DependentUpon>EditBookingTutorial3.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View-Edit Bookings\EditBooking.resx">
       <DependentUpon>EditBooking.vb</DependentUpon>
@@ -326,6 +329,8 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="LogoFinal.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

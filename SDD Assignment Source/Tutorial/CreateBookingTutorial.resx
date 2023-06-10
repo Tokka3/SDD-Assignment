@@ -118,6 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Label4.Text" xml:space="preserve">
-    <value>Seats that appear red are unavailable. Seats that appear blue are available, and can be selected by simply left clicking them. Once you have selected a seat, it will turn green. You may click it again to deselect it.</value>
+    <value>Seats that appear red are unavailable. Seats that appear blue are available and can be selected by simply left clicking them. Once you have selected a seat, it will turn green. You may click it again to deselect it.</value>
   </data>
 </root>

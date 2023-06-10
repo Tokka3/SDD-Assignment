@@ -22,6 +22,7 @@ Partial Class CreateBookings
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -35,7 +36,7 @@ Partial Class CreateBookings
         Me.Label9 = New System.Windows.Forms.Label()
         Me.lblTotal = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.gbFilmSelection = New System.Windows.Forms.GroupBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.cbxMovieSelection = New System.Windows.Forms.ComboBox()
         Me.lblEditMode = New System.Windows.Forms.Label()
@@ -172,10 +173,11 @@ Partial Class CreateBookings
         Me.D3 = New FontAwesome.Sharp.IconPictureBox()
         Me.D2 = New FontAwesome.Sharp.IconPictureBox()
         Me.btnBack = New FontAwesome.Sharp.IconPictureBox()
-        Me.IconSplitButton1 = New FontAwesome.Sharp.IconSplitButton()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.btnHelp = New FontAwesome.Sharp.IconPictureBox()
         Me.Panel1.SuspendLayout()
         Me.gbCreateBooking.SuspendLayout()
-        Me.GroupBox2.SuspendLayout()
+        Me.gbFilmSelection.SuspendLayout()
         CType(Me.pbMovie, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.A1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.A16, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -307,6 +309,7 @@ Partial Class CreateBookings
         CType(Me.D3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.D2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnBack, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnHelp, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -324,7 +327,7 @@ Partial Class CreateBookings
         '
         Me.Panel1.BackColor = System.Drawing.SystemColors.Highlight
         Me.Panel1.Controls.Add(Me.Label6)
-        Me.Panel1.Location = New System.Drawing.Point(46, 726)
+        Me.Panel1.Location = New System.Drawing.Point(46, 677)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(836, 30)
         Me.Panel1.TabIndex = 149
@@ -400,6 +403,7 @@ Partial Class CreateBookings
         Me.rtbSelectedSeats.Name = "rtbSelectedSeats"
         Me.rtbSelectedSeats.Size = New System.Drawing.Size(274, 32)
         Me.rtbSelectedSeats.TabIndex = 160
+        Me.ToolTip1.SetToolTip(Me.rtbSelectedSeats, "Seats that are selected for booking.")
         '
         'Label7
         '
@@ -456,20 +460,20 @@ Partial Class CreateBookings
         Me.Label11.Text = "Selected Seats:"
         Me.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'GroupBox2
+        'gbFilmSelection
         '
-        Me.GroupBox2.Controls.Add(Me.btnUpdate)
-        Me.GroupBox2.Controls.Add(Me.pbMovie)
-        Me.GroupBox2.Controls.Add(Me.Label2)
-        Me.GroupBox2.Controls.Add(Me.cbxMovieSelection)
-        Me.GroupBox2.Font = New System.Drawing.Font("Nirmala UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.GroupBox2.Location = New System.Drawing.Point(931, 106)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(299, 236)
-        Me.GroupBox2.TabIndex = 155
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Film Selection"
+        Me.gbFilmSelection.Controls.Add(Me.btnUpdate)
+        Me.gbFilmSelection.Controls.Add(Me.pbMovie)
+        Me.gbFilmSelection.Controls.Add(Me.Label2)
+        Me.gbFilmSelection.Controls.Add(Me.cbxMovieSelection)
+        Me.gbFilmSelection.Font = New System.Drawing.Font("Nirmala UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.gbFilmSelection.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.gbFilmSelection.Location = New System.Drawing.Point(931, 106)
+        Me.gbFilmSelection.Name = "gbFilmSelection"
+        Me.gbFilmSelection.Size = New System.Drawing.Size(299, 236)
+        Me.gbFilmSelection.TabIndex = 155
+        Me.gbFilmSelection.TabStop = False
+        Me.gbFilmSelection.Text = "Film Selection"
         '
         'Label2
         '
@@ -489,6 +493,7 @@ Partial Class CreateBookings
         Me.cbxMovieSelection.Name = "cbxMovieSelection"
         Me.cbxMovieSelection.Size = New System.Drawing.Size(138, 33)
         Me.cbxMovieSelection.TabIndex = 0
+        Me.ToolTip1.SetToolTip(Me.cbxMovieSelection, "Display current bookings for select film.")
         '
         'lblEditMode
         '
@@ -553,6 +558,7 @@ Partial Class CreateBookings
         'A1
         '
         Me.A1.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.A1.Enabled = False
         Me.A1.ForeColor = System.Drawing.SystemColors.Highlight
         Me.A1.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.A1.IconColor = System.Drawing.SystemColors.Highlight
@@ -568,6 +574,7 @@ Partial Class CreateBookings
         'A16
         '
         Me.A16.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.A16.Enabled = False
         Me.A16.ForeColor = System.Drawing.SystemColors.Highlight
         Me.A16.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.A16.IconColor = System.Drawing.SystemColors.Highlight
@@ -583,6 +590,7 @@ Partial Class CreateBookings
         'A15
         '
         Me.A15.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.A15.Enabled = False
         Me.A15.ForeColor = System.Drawing.SystemColors.Highlight
         Me.A15.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.A15.IconColor = System.Drawing.SystemColors.Highlight
@@ -598,6 +606,7 @@ Partial Class CreateBookings
         'A14
         '
         Me.A14.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.A14.Enabled = False
         Me.A14.ForeColor = System.Drawing.SystemColors.Highlight
         Me.A14.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.A14.IconColor = System.Drawing.SystemColors.Highlight
@@ -613,6 +622,7 @@ Partial Class CreateBookings
         'A13
         '
         Me.A13.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.A13.Enabled = False
         Me.A13.ForeColor = System.Drawing.SystemColors.Highlight
         Me.A13.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.A13.IconColor = System.Drawing.SystemColors.Highlight
@@ -628,6 +638,7 @@ Partial Class CreateBookings
         'A12
         '
         Me.A12.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.A12.Enabled = False
         Me.A12.ForeColor = System.Drawing.SystemColors.Highlight
         Me.A12.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.A12.IconColor = System.Drawing.SystemColors.Highlight
@@ -643,6 +654,7 @@ Partial Class CreateBookings
         'A11
         '
         Me.A11.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.A11.Enabled = False
         Me.A11.ForeColor = System.Drawing.SystemColors.Highlight
         Me.A11.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.A11.IconColor = System.Drawing.SystemColors.Highlight
@@ -658,6 +670,7 @@ Partial Class CreateBookings
         'A10
         '
         Me.A10.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.A10.Enabled = False
         Me.A10.ForeColor = System.Drawing.SystemColors.Highlight
         Me.A10.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.A10.IconColor = System.Drawing.SystemColors.Highlight
@@ -673,6 +686,7 @@ Partial Class CreateBookings
         'A9
         '
         Me.A9.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.A9.Enabled = False
         Me.A9.ForeColor = System.Drawing.SystemColors.Highlight
         Me.A9.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.A9.IconColor = System.Drawing.SystemColors.Highlight
@@ -688,6 +702,7 @@ Partial Class CreateBookings
         'A8
         '
         Me.A8.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.A8.Enabled = False
         Me.A8.ForeColor = System.Drawing.SystemColors.Highlight
         Me.A8.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.A8.IconColor = System.Drawing.SystemColors.Highlight
@@ -703,6 +718,7 @@ Partial Class CreateBookings
         'A7
         '
         Me.A7.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.A7.Enabled = False
         Me.A7.ForeColor = System.Drawing.SystemColors.Highlight
         Me.A7.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.A7.IconColor = System.Drawing.SystemColors.Highlight
@@ -718,6 +734,7 @@ Partial Class CreateBookings
         'A6
         '
         Me.A6.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.A6.Enabled = False
         Me.A6.ForeColor = System.Drawing.SystemColors.Highlight
         Me.A6.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.A6.IconColor = System.Drawing.SystemColors.Highlight
@@ -733,6 +750,7 @@ Partial Class CreateBookings
         'A5
         '
         Me.A5.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.A5.Enabled = False
         Me.A5.ForeColor = System.Drawing.SystemColors.Highlight
         Me.A5.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.A5.IconColor = System.Drawing.SystemColors.Highlight
@@ -748,6 +766,7 @@ Partial Class CreateBookings
         'A4
         '
         Me.A4.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.A4.Enabled = False
         Me.A4.ForeColor = System.Drawing.SystemColors.Highlight
         Me.A4.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.A4.IconColor = System.Drawing.SystemColors.Highlight
@@ -763,6 +782,7 @@ Partial Class CreateBookings
         'A3
         '
         Me.A3.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.A3.Enabled = False
         Me.A3.ForeColor = System.Drawing.SystemColors.Highlight
         Me.A3.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.A3.IconColor = System.Drawing.SystemColors.Highlight
@@ -778,6 +798,7 @@ Partial Class CreateBookings
         'A2
         '
         Me.A2.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.A2.Enabled = False
         Me.A2.ForeColor = System.Drawing.SystemColors.Highlight
         Me.A2.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.A2.IconColor = System.Drawing.SystemColors.Highlight
@@ -793,6 +814,7 @@ Partial Class CreateBookings
         'B1
         '
         Me.B1.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.B1.Enabled = False
         Me.B1.ForeColor = System.Drawing.SystemColors.Highlight
         Me.B1.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.B1.IconColor = System.Drawing.SystemColors.Highlight
@@ -808,6 +830,7 @@ Partial Class CreateBookings
         'C1
         '
         Me.C1.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.C1.Enabled = False
         Me.C1.ForeColor = System.Drawing.SystemColors.Highlight
         Me.C1.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.C1.IconColor = System.Drawing.SystemColors.Highlight
@@ -823,6 +846,7 @@ Partial Class CreateBookings
         'I1
         '
         Me.I1.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.I1.Enabled = False
         Me.I1.ForeColor = System.Drawing.SystemColors.Highlight
         Me.I1.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.I1.IconColor = System.Drawing.SystemColors.Highlight
@@ -838,6 +862,7 @@ Partial Class CreateBookings
         'H1
         '
         Me.H1.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.H1.Enabled = False
         Me.H1.ForeColor = System.Drawing.SystemColors.Highlight
         Me.H1.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.H1.IconColor = System.Drawing.SystemColors.Highlight
@@ -853,6 +878,7 @@ Partial Class CreateBookings
         'G1
         '
         Me.G1.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.G1.Enabled = False
         Me.G1.ForeColor = System.Drawing.SystemColors.Highlight
         Me.G1.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.G1.IconColor = System.Drawing.SystemColors.Highlight
@@ -868,6 +894,7 @@ Partial Class CreateBookings
         'F1
         '
         Me.F1.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.F1.Enabled = False
         Me.F1.ForeColor = System.Drawing.SystemColors.Highlight
         Me.F1.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.F1.IconColor = System.Drawing.SystemColors.Highlight
@@ -883,6 +910,7 @@ Partial Class CreateBookings
         'E1
         '
         Me.E1.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.E1.Enabled = False
         Me.E1.ForeColor = System.Drawing.SystemColors.Highlight
         Me.E1.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.E1.IconColor = System.Drawing.SystemColors.Highlight
@@ -898,6 +926,7 @@ Partial Class CreateBookings
         'D1
         '
         Me.D1.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.D1.Enabled = False
         Me.D1.ForeColor = System.Drawing.SystemColors.Highlight
         Me.D1.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.D1.IconColor = System.Drawing.SystemColors.Highlight
@@ -913,6 +942,7 @@ Partial Class CreateBookings
         'B16
         '
         Me.B16.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.B16.Enabled = False
         Me.B16.ForeColor = System.Drawing.SystemColors.Highlight
         Me.B16.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.B16.IconColor = System.Drawing.SystemColors.Highlight
@@ -928,6 +958,7 @@ Partial Class CreateBookings
         'C16
         '
         Me.C16.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.C16.Enabled = False
         Me.C16.ForeColor = System.Drawing.SystemColors.Highlight
         Me.C16.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.C16.IconColor = System.Drawing.SystemColors.Highlight
@@ -943,6 +974,7 @@ Partial Class CreateBookings
         'I11
         '
         Me.I11.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.I11.Enabled = False
         Me.I11.ForeColor = System.Drawing.SystemColors.Highlight
         Me.I11.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.I11.IconColor = System.Drawing.SystemColors.Highlight
@@ -958,6 +990,7 @@ Partial Class CreateBookings
         'H12
         '
         Me.H12.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.H12.Enabled = False
         Me.H12.ForeColor = System.Drawing.SystemColors.Highlight
         Me.H12.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.H12.IconColor = System.Drawing.SystemColors.Highlight
@@ -973,6 +1006,7 @@ Partial Class CreateBookings
         'G13
         '
         Me.G13.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.G13.Enabled = False
         Me.G13.ForeColor = System.Drawing.SystemColors.Highlight
         Me.G13.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.G13.IconColor = System.Drawing.SystemColors.Highlight
@@ -988,6 +1022,7 @@ Partial Class CreateBookings
         'F14
         '
         Me.F14.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.F14.Enabled = False
         Me.F14.ForeColor = System.Drawing.SystemColors.Highlight
         Me.F14.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.F14.IconColor = System.Drawing.SystemColors.Highlight
@@ -1003,6 +1038,7 @@ Partial Class CreateBookings
         'E15
         '
         Me.E15.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.E15.Enabled = False
         Me.E15.ForeColor = System.Drawing.SystemColors.Highlight
         Me.E15.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.E15.IconColor = System.Drawing.SystemColors.Highlight
@@ -1018,6 +1054,7 @@ Partial Class CreateBookings
         'D16
         '
         Me.D16.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.D16.Enabled = False
         Me.D16.ForeColor = System.Drawing.SystemColors.Highlight
         Me.D16.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.D16.IconColor = System.Drawing.SystemColors.Highlight
@@ -1033,6 +1070,7 @@ Partial Class CreateBookings
         'B15
         '
         Me.B15.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.B15.Enabled = False
         Me.B15.ForeColor = System.Drawing.SystemColors.Highlight
         Me.B15.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.B15.IconColor = System.Drawing.SystemColors.Highlight
@@ -1048,6 +1086,7 @@ Partial Class CreateBookings
         'B14
         '
         Me.B14.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.B14.Enabled = False
         Me.B14.ForeColor = System.Drawing.SystemColors.Highlight
         Me.B14.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.B14.IconColor = System.Drawing.SystemColors.Highlight
@@ -1063,6 +1102,7 @@ Partial Class CreateBookings
         'B13
         '
         Me.B13.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.B13.Enabled = False
         Me.B13.ForeColor = System.Drawing.SystemColors.Highlight
         Me.B13.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.B13.IconColor = System.Drawing.SystemColors.Highlight
@@ -1078,6 +1118,7 @@ Partial Class CreateBookings
         'B12
         '
         Me.B12.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.B12.Enabled = False
         Me.B12.ForeColor = System.Drawing.SystemColors.Highlight
         Me.B12.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.B12.IconColor = System.Drawing.SystemColors.Highlight
@@ -1093,6 +1134,7 @@ Partial Class CreateBookings
         'B11
         '
         Me.B11.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.B11.Enabled = False
         Me.B11.ForeColor = System.Drawing.SystemColors.Highlight
         Me.B11.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.B11.IconColor = System.Drawing.SystemColors.Highlight
@@ -1108,6 +1150,7 @@ Partial Class CreateBookings
         'B10
         '
         Me.B10.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.B10.Enabled = False
         Me.B10.ForeColor = System.Drawing.SystemColors.Highlight
         Me.B10.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.B10.IconColor = System.Drawing.SystemColors.Highlight
@@ -1123,6 +1166,7 @@ Partial Class CreateBookings
         'B9
         '
         Me.B9.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.B9.Enabled = False
         Me.B9.ForeColor = System.Drawing.SystemColors.Highlight
         Me.B9.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.B9.IconColor = System.Drawing.SystemColors.Highlight
@@ -1138,6 +1182,7 @@ Partial Class CreateBookings
         'B8
         '
         Me.B8.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.B8.Enabled = False
         Me.B8.ForeColor = System.Drawing.SystemColors.Highlight
         Me.B8.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.B8.IconColor = System.Drawing.SystemColors.Highlight
@@ -1153,6 +1198,7 @@ Partial Class CreateBookings
         'B7
         '
         Me.B7.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.B7.Enabled = False
         Me.B7.ForeColor = System.Drawing.SystemColors.Highlight
         Me.B7.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.B7.IconColor = System.Drawing.SystemColors.Highlight
@@ -1168,6 +1214,7 @@ Partial Class CreateBookings
         'B6
         '
         Me.B6.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.B6.Enabled = False
         Me.B6.ForeColor = System.Drawing.SystemColors.Highlight
         Me.B6.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.B6.IconColor = System.Drawing.SystemColors.Highlight
@@ -1183,6 +1230,7 @@ Partial Class CreateBookings
         'B5
         '
         Me.B5.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.B5.Enabled = False
         Me.B5.ForeColor = System.Drawing.SystemColors.Highlight
         Me.B5.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.B5.IconColor = System.Drawing.SystemColors.Highlight
@@ -1198,6 +1246,7 @@ Partial Class CreateBookings
         'B4
         '
         Me.B4.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.B4.Enabled = False
         Me.B4.ForeColor = System.Drawing.SystemColors.Highlight
         Me.B4.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.B4.IconColor = System.Drawing.SystemColors.Highlight
@@ -1213,6 +1262,7 @@ Partial Class CreateBookings
         'B3
         '
         Me.B3.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.B3.Enabled = False
         Me.B3.ForeColor = System.Drawing.SystemColors.Highlight
         Me.B3.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.B3.IconColor = System.Drawing.SystemColors.Highlight
@@ -1228,6 +1278,7 @@ Partial Class CreateBookings
         'B2
         '
         Me.B2.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.B2.Enabled = False
         Me.B2.ForeColor = System.Drawing.SystemColors.Highlight
         Me.B2.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.B2.IconColor = System.Drawing.SystemColors.Highlight
@@ -1243,6 +1294,7 @@ Partial Class CreateBookings
         'C15
         '
         Me.C15.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.C15.Enabled = False
         Me.C15.ForeColor = System.Drawing.SystemColors.Highlight
         Me.C15.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.C15.IconColor = System.Drawing.SystemColors.Highlight
@@ -1258,6 +1310,7 @@ Partial Class CreateBookings
         'C14
         '
         Me.C14.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.C14.Enabled = False
         Me.C14.ForeColor = System.Drawing.SystemColors.Highlight
         Me.C14.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.C14.IconColor = System.Drawing.SystemColors.Highlight
@@ -1273,6 +1326,7 @@ Partial Class CreateBookings
         'C13
         '
         Me.C13.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.C13.Enabled = False
         Me.C13.ForeColor = System.Drawing.SystemColors.Highlight
         Me.C13.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.C13.IconColor = System.Drawing.SystemColors.Highlight
@@ -1288,6 +1342,7 @@ Partial Class CreateBookings
         'C12
         '
         Me.C12.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.C12.Enabled = False
         Me.C12.ForeColor = System.Drawing.SystemColors.Highlight
         Me.C12.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.C12.IconColor = System.Drawing.SystemColors.Highlight
@@ -1303,6 +1358,7 @@ Partial Class CreateBookings
         'C11
         '
         Me.C11.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.C11.Enabled = False
         Me.C11.ForeColor = System.Drawing.SystemColors.Highlight
         Me.C11.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.C11.IconColor = System.Drawing.SystemColors.Highlight
@@ -1318,6 +1374,7 @@ Partial Class CreateBookings
         'C10
         '
         Me.C10.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.C10.Enabled = False
         Me.C10.ForeColor = System.Drawing.SystemColors.Highlight
         Me.C10.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.C10.IconColor = System.Drawing.SystemColors.Highlight
@@ -1333,6 +1390,7 @@ Partial Class CreateBookings
         'C9
         '
         Me.C9.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.C9.Enabled = False
         Me.C9.ForeColor = System.Drawing.SystemColors.Highlight
         Me.C9.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.C9.IconColor = System.Drawing.SystemColors.Highlight
@@ -1348,6 +1406,7 @@ Partial Class CreateBookings
         'C8
         '
         Me.C8.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.C8.Enabled = False
         Me.C8.ForeColor = System.Drawing.SystemColors.Highlight
         Me.C8.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.C8.IconColor = System.Drawing.SystemColors.Highlight
@@ -1363,6 +1422,7 @@ Partial Class CreateBookings
         'C7
         '
         Me.C7.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.C7.Enabled = False
         Me.C7.ForeColor = System.Drawing.SystemColors.Highlight
         Me.C7.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.C7.IconColor = System.Drawing.SystemColors.Highlight
@@ -1378,6 +1438,7 @@ Partial Class CreateBookings
         'C6
         '
         Me.C6.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.C6.Enabled = False
         Me.C6.ForeColor = System.Drawing.SystemColors.Highlight
         Me.C6.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.C6.IconColor = System.Drawing.SystemColors.Highlight
@@ -1393,6 +1454,7 @@ Partial Class CreateBookings
         'C5
         '
         Me.C5.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.C5.Enabled = False
         Me.C5.ForeColor = System.Drawing.SystemColors.Highlight
         Me.C5.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.C5.IconColor = System.Drawing.SystemColors.Highlight
@@ -1408,6 +1470,7 @@ Partial Class CreateBookings
         'C4
         '
         Me.C4.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.C4.Enabled = False
         Me.C4.ForeColor = System.Drawing.SystemColors.Highlight
         Me.C4.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.C4.IconColor = System.Drawing.SystemColors.Highlight
@@ -1423,6 +1486,7 @@ Partial Class CreateBookings
         'C3
         '
         Me.C3.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.C3.Enabled = False
         Me.C3.ForeColor = System.Drawing.SystemColors.Highlight
         Me.C3.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.C3.IconColor = System.Drawing.SystemColors.Highlight
@@ -1438,6 +1502,7 @@ Partial Class CreateBookings
         'C2
         '
         Me.C2.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.C2.Enabled = False
         Me.C2.ForeColor = System.Drawing.SystemColors.Highlight
         Me.C2.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.C2.IconColor = System.Drawing.SystemColors.Highlight
@@ -1453,6 +1518,7 @@ Partial Class CreateBookings
         'I10
         '
         Me.I10.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.I10.Enabled = False
         Me.I10.ForeColor = System.Drawing.SystemColors.Highlight
         Me.I10.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.I10.IconColor = System.Drawing.SystemColors.Highlight
@@ -1468,6 +1534,7 @@ Partial Class CreateBookings
         'I9
         '
         Me.I9.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.I9.Enabled = False
         Me.I9.ForeColor = System.Drawing.SystemColors.Highlight
         Me.I9.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.I9.IconColor = System.Drawing.SystemColors.Highlight
@@ -1483,6 +1550,7 @@ Partial Class CreateBookings
         'I8
         '
         Me.I8.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.I8.Enabled = False
         Me.I8.ForeColor = System.Drawing.SystemColors.Highlight
         Me.I8.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.I8.IconColor = System.Drawing.SystemColors.Highlight
@@ -1498,6 +1566,7 @@ Partial Class CreateBookings
         'H11
         '
         Me.H11.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.H11.Enabled = False
         Me.H11.ForeColor = System.Drawing.SystemColors.Highlight
         Me.H11.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.H11.IconColor = System.Drawing.SystemColors.Highlight
@@ -1513,6 +1582,7 @@ Partial Class CreateBookings
         'H10
         '
         Me.H10.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.H10.Enabled = False
         Me.H10.ForeColor = System.Drawing.SystemColors.Highlight
         Me.H10.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.H10.IconColor = System.Drawing.SystemColors.Highlight
@@ -1528,6 +1598,7 @@ Partial Class CreateBookings
         'H9
         '
         Me.H9.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.H9.Enabled = False
         Me.H9.ForeColor = System.Drawing.SystemColors.Highlight
         Me.H9.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.H9.IconColor = System.Drawing.SystemColors.Highlight
@@ -1543,6 +1614,7 @@ Partial Class CreateBookings
         'G12
         '
         Me.G12.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.G12.Enabled = False
         Me.G12.ForeColor = System.Drawing.SystemColors.Highlight
         Me.G12.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.G12.IconColor = System.Drawing.SystemColors.Highlight
@@ -1558,6 +1630,7 @@ Partial Class CreateBookings
         'G11
         '
         Me.G11.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.G11.Enabled = False
         Me.G11.ForeColor = System.Drawing.SystemColors.Highlight
         Me.G11.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.G11.IconColor = System.Drawing.SystemColors.Highlight
@@ -1573,6 +1646,7 @@ Partial Class CreateBookings
         'G10
         '
         Me.G10.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.G10.Enabled = False
         Me.G10.ForeColor = System.Drawing.SystemColors.Highlight
         Me.G10.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.G10.IconColor = System.Drawing.SystemColors.Highlight
@@ -1588,6 +1662,7 @@ Partial Class CreateBookings
         'F13
         '
         Me.F13.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.F13.Enabled = False
         Me.F13.ForeColor = System.Drawing.SystemColors.Highlight
         Me.F13.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.F13.IconColor = System.Drawing.SystemColors.Highlight
@@ -1603,6 +1678,7 @@ Partial Class CreateBookings
         'F12
         '
         Me.F12.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.F12.Enabled = False
         Me.F12.ForeColor = System.Drawing.SystemColors.Highlight
         Me.F12.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.F12.IconColor = System.Drawing.SystemColors.Highlight
@@ -1618,6 +1694,7 @@ Partial Class CreateBookings
         'F11
         '
         Me.F11.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.F11.Enabled = False
         Me.F11.ForeColor = System.Drawing.SystemColors.Highlight
         Me.F11.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.F11.IconColor = System.Drawing.SystemColors.Highlight
@@ -1633,6 +1710,7 @@ Partial Class CreateBookings
         'I4
         '
         Me.I4.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.I4.Enabled = False
         Me.I4.ForeColor = System.Drawing.SystemColors.Highlight
         Me.I4.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.I4.IconColor = System.Drawing.SystemColors.Highlight
@@ -1648,6 +1726,7 @@ Partial Class CreateBookings
         'I3
         '
         Me.I3.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.I3.Enabled = False
         Me.I3.ForeColor = System.Drawing.SystemColors.Highlight
         Me.I3.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.I3.IconColor = System.Drawing.SystemColors.Highlight
@@ -1663,6 +1742,7 @@ Partial Class CreateBookings
         'I2
         '
         Me.I2.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.I2.Enabled = False
         Me.I2.ForeColor = System.Drawing.SystemColors.Highlight
         Me.I2.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.I2.IconColor = System.Drawing.SystemColors.Highlight
@@ -1678,6 +1758,7 @@ Partial Class CreateBookings
         'H4
         '
         Me.H4.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.H4.Enabled = False
         Me.H4.ForeColor = System.Drawing.SystemColors.Highlight
         Me.H4.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.H4.IconColor = System.Drawing.SystemColors.Highlight
@@ -1693,6 +1774,7 @@ Partial Class CreateBookings
         'H3
         '
         Me.H3.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.H3.Enabled = False
         Me.H3.ForeColor = System.Drawing.SystemColors.Highlight
         Me.H3.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.H3.IconColor = System.Drawing.SystemColors.Highlight
@@ -1708,6 +1790,7 @@ Partial Class CreateBookings
         'H2
         '
         Me.H2.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.H2.Enabled = False
         Me.H2.ForeColor = System.Drawing.SystemColors.Highlight
         Me.H2.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.H2.IconColor = System.Drawing.SystemColors.Highlight
@@ -1723,6 +1806,7 @@ Partial Class CreateBookings
         'G4
         '
         Me.G4.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.G4.Enabled = False
         Me.G4.ForeColor = System.Drawing.SystemColors.Highlight
         Me.G4.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.G4.IconColor = System.Drawing.SystemColors.Highlight
@@ -1738,6 +1822,7 @@ Partial Class CreateBookings
         'G3
         '
         Me.G3.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.G3.Enabled = False
         Me.G3.ForeColor = System.Drawing.SystemColors.Highlight
         Me.G3.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.G3.IconColor = System.Drawing.SystemColors.Highlight
@@ -1753,6 +1838,7 @@ Partial Class CreateBookings
         'G2
         '
         Me.G2.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.G2.Enabled = False
         Me.G2.ForeColor = System.Drawing.SystemColors.Highlight
         Me.G2.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.G2.IconColor = System.Drawing.SystemColors.Highlight
@@ -1768,6 +1854,7 @@ Partial Class CreateBookings
         'F4
         '
         Me.F4.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.F4.Enabled = False
         Me.F4.ForeColor = System.Drawing.SystemColors.Highlight
         Me.F4.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.F4.IconColor = System.Drawing.SystemColors.Highlight
@@ -1783,6 +1870,7 @@ Partial Class CreateBookings
         'F3
         '
         Me.F3.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.F3.Enabled = False
         Me.F3.ForeColor = System.Drawing.SystemColors.Highlight
         Me.F3.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.F3.IconColor = System.Drawing.SystemColors.Highlight
@@ -1798,6 +1886,7 @@ Partial Class CreateBookings
         'F2
         '
         Me.F2.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.F2.Enabled = False
         Me.F2.ForeColor = System.Drawing.SystemColors.Highlight
         Me.F2.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.F2.IconColor = System.Drawing.SystemColors.Highlight
@@ -1813,6 +1902,7 @@ Partial Class CreateBookings
         'I7
         '
         Me.I7.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.I7.Enabled = False
         Me.I7.ForeColor = System.Drawing.SystemColors.Highlight
         Me.I7.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.I7.IconColor = System.Drawing.SystemColors.Highlight
@@ -1828,6 +1918,7 @@ Partial Class CreateBookings
         'I6
         '
         Me.I6.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.I6.Enabled = False
         Me.I6.ForeColor = System.Drawing.SystemColors.Highlight
         Me.I6.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.I6.IconColor = System.Drawing.SystemColors.Highlight
@@ -1843,6 +1934,7 @@ Partial Class CreateBookings
         'I5
         '
         Me.I5.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.I5.Enabled = False
         Me.I5.ForeColor = System.Drawing.SystemColors.Highlight
         Me.I5.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.I5.IconColor = System.Drawing.SystemColors.Highlight
@@ -1858,6 +1950,7 @@ Partial Class CreateBookings
         'H8
         '
         Me.H8.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.H8.Enabled = False
         Me.H8.ForeColor = System.Drawing.SystemColors.Highlight
         Me.H8.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.H8.IconColor = System.Drawing.SystemColors.Highlight
@@ -1873,6 +1966,7 @@ Partial Class CreateBookings
         'H7
         '
         Me.H7.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.H7.Enabled = False
         Me.H7.ForeColor = System.Drawing.SystemColors.Highlight
         Me.H7.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.H7.IconColor = System.Drawing.SystemColors.Highlight
@@ -1888,6 +1982,7 @@ Partial Class CreateBookings
         'H6
         '
         Me.H6.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.H6.Enabled = False
         Me.H6.ForeColor = System.Drawing.SystemColors.Highlight
         Me.H6.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.H6.IconColor = System.Drawing.SystemColors.Highlight
@@ -1903,6 +1998,7 @@ Partial Class CreateBookings
         'H5
         '
         Me.H5.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.H5.Enabled = False
         Me.H5.ForeColor = System.Drawing.SystemColors.Highlight
         Me.H5.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.H5.IconColor = System.Drawing.SystemColors.Highlight
@@ -1918,6 +2014,7 @@ Partial Class CreateBookings
         'G9
         '
         Me.G9.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.G9.Enabled = False
         Me.G9.ForeColor = System.Drawing.SystemColors.Highlight
         Me.G9.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.G9.IconColor = System.Drawing.SystemColors.Highlight
@@ -1933,6 +2030,7 @@ Partial Class CreateBookings
         'G8
         '
         Me.G8.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.G8.Enabled = False
         Me.G8.ForeColor = System.Drawing.SystemColors.Highlight
         Me.G8.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.G8.IconColor = System.Drawing.SystemColors.Highlight
@@ -1948,6 +2046,7 @@ Partial Class CreateBookings
         'G7
         '
         Me.G7.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.G7.Enabled = False
         Me.G7.ForeColor = System.Drawing.SystemColors.Highlight
         Me.G7.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.G7.IconColor = System.Drawing.SystemColors.Highlight
@@ -1963,6 +2062,7 @@ Partial Class CreateBookings
         'G6
         '
         Me.G6.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.G6.Enabled = False
         Me.G6.ForeColor = System.Drawing.SystemColors.Highlight
         Me.G6.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.G6.IconColor = System.Drawing.SystemColors.Highlight
@@ -1978,6 +2078,7 @@ Partial Class CreateBookings
         'G5
         '
         Me.G5.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.G5.Enabled = False
         Me.G5.ForeColor = System.Drawing.SystemColors.Highlight
         Me.G5.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.G5.IconColor = System.Drawing.SystemColors.Highlight
@@ -1993,6 +2094,7 @@ Partial Class CreateBookings
         'F10
         '
         Me.F10.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.F10.Enabled = False
         Me.F10.ForeColor = System.Drawing.SystemColors.Highlight
         Me.F10.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.F10.IconColor = System.Drawing.SystemColors.Highlight
@@ -2008,6 +2110,7 @@ Partial Class CreateBookings
         'F9
         '
         Me.F9.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.F9.Enabled = False
         Me.F9.ForeColor = System.Drawing.SystemColors.Highlight
         Me.F9.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.F9.IconColor = System.Drawing.SystemColors.Highlight
@@ -2023,6 +2126,7 @@ Partial Class CreateBookings
         'F8
         '
         Me.F8.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.F8.Enabled = False
         Me.F8.ForeColor = System.Drawing.SystemColors.Highlight
         Me.F8.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.F8.IconColor = System.Drawing.SystemColors.Highlight
@@ -2038,6 +2142,7 @@ Partial Class CreateBookings
         'F7
         '
         Me.F7.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.F7.Enabled = False
         Me.F7.ForeColor = System.Drawing.SystemColors.Highlight
         Me.F7.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.F7.IconColor = System.Drawing.SystemColors.Highlight
@@ -2053,6 +2158,7 @@ Partial Class CreateBookings
         'F6
         '
         Me.F6.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.F6.Enabled = False
         Me.F6.ForeColor = System.Drawing.SystemColors.Highlight
         Me.F6.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.F6.IconColor = System.Drawing.SystemColors.Highlight
@@ -2068,6 +2174,7 @@ Partial Class CreateBookings
         'F5
         '
         Me.F5.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.F5.Enabled = False
         Me.F5.ForeColor = System.Drawing.SystemColors.Highlight
         Me.F5.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.F5.IconColor = System.Drawing.SystemColors.Highlight
@@ -2083,6 +2190,7 @@ Partial Class CreateBookings
         'E14
         '
         Me.E14.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.E14.Enabled = False
         Me.E14.ForeColor = System.Drawing.SystemColors.Highlight
         Me.E14.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.E14.IconColor = System.Drawing.SystemColors.Highlight
@@ -2098,6 +2206,7 @@ Partial Class CreateBookings
         'E13
         '
         Me.E13.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.E13.Enabled = False
         Me.E13.ForeColor = System.Drawing.SystemColors.Highlight
         Me.E13.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.E13.IconColor = System.Drawing.SystemColors.Highlight
@@ -2113,6 +2222,7 @@ Partial Class CreateBookings
         'E12
         '
         Me.E12.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.E12.Enabled = False
         Me.E12.ForeColor = System.Drawing.SystemColors.Highlight
         Me.E12.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.E12.IconColor = System.Drawing.SystemColors.Highlight
@@ -2128,6 +2238,7 @@ Partial Class CreateBookings
         'E4
         '
         Me.E4.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.E4.Enabled = False
         Me.E4.ForeColor = System.Drawing.SystemColors.Highlight
         Me.E4.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.E4.IconColor = System.Drawing.SystemColors.Highlight
@@ -2143,6 +2254,7 @@ Partial Class CreateBookings
         'E3
         '
         Me.E3.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.E3.Enabled = False
         Me.E3.ForeColor = System.Drawing.SystemColors.Highlight
         Me.E3.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.E3.IconColor = System.Drawing.SystemColors.Highlight
@@ -2158,6 +2270,7 @@ Partial Class CreateBookings
         'E2
         '
         Me.E2.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.E2.Enabled = False
         Me.E2.ForeColor = System.Drawing.SystemColors.Highlight
         Me.E2.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.E2.IconColor = System.Drawing.SystemColors.Highlight
@@ -2173,6 +2286,7 @@ Partial Class CreateBookings
         'E11
         '
         Me.E11.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.E11.Enabled = False
         Me.E11.ForeColor = System.Drawing.SystemColors.Highlight
         Me.E11.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.E11.IconColor = System.Drawing.SystemColors.Highlight
@@ -2188,6 +2302,7 @@ Partial Class CreateBookings
         'E10
         '
         Me.E10.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.E10.Enabled = False
         Me.E10.ForeColor = System.Drawing.SystemColors.Highlight
         Me.E10.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.E10.IconColor = System.Drawing.SystemColors.Highlight
@@ -2203,6 +2318,7 @@ Partial Class CreateBookings
         'E9
         '
         Me.E9.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.E9.Enabled = False
         Me.E9.ForeColor = System.Drawing.SystemColors.Highlight
         Me.E9.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.E9.IconColor = System.Drawing.SystemColors.Highlight
@@ -2218,6 +2334,7 @@ Partial Class CreateBookings
         'E8
         '
         Me.E8.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.E8.Enabled = False
         Me.E8.ForeColor = System.Drawing.SystemColors.Highlight
         Me.E8.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.E8.IconColor = System.Drawing.SystemColors.Highlight
@@ -2233,6 +2350,7 @@ Partial Class CreateBookings
         'E7
         '
         Me.E7.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.E7.Enabled = False
         Me.E7.ForeColor = System.Drawing.SystemColors.Highlight
         Me.E7.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.E7.IconColor = System.Drawing.SystemColors.Highlight
@@ -2248,6 +2366,7 @@ Partial Class CreateBookings
         'E6
         '
         Me.E6.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.E6.Enabled = False
         Me.E6.ForeColor = System.Drawing.SystemColors.Highlight
         Me.E6.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.E6.IconColor = System.Drawing.SystemColors.Highlight
@@ -2263,6 +2382,7 @@ Partial Class CreateBookings
         'E5
         '
         Me.E5.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.E5.Enabled = False
         Me.E5.ForeColor = System.Drawing.SystemColors.Highlight
         Me.E5.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.E5.IconColor = System.Drawing.SystemColors.Highlight
@@ -2278,6 +2398,7 @@ Partial Class CreateBookings
         'D15
         '
         Me.D15.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.D15.Enabled = False
         Me.D15.ForeColor = System.Drawing.SystemColors.Highlight
         Me.D15.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.D15.IconColor = System.Drawing.SystemColors.Highlight
@@ -2293,6 +2414,7 @@ Partial Class CreateBookings
         'D14
         '
         Me.D14.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.D14.Enabled = False
         Me.D14.ForeColor = System.Drawing.SystemColors.Highlight
         Me.D14.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.D14.IconColor = System.Drawing.SystemColors.Highlight
@@ -2308,6 +2430,7 @@ Partial Class CreateBookings
         'D13
         '
         Me.D13.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.D13.Enabled = False
         Me.D13.ForeColor = System.Drawing.SystemColors.Highlight
         Me.D13.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.D13.IconColor = System.Drawing.SystemColors.Highlight
@@ -2323,6 +2446,7 @@ Partial Class CreateBookings
         'D12
         '
         Me.D12.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.D12.Enabled = False
         Me.D12.ForeColor = System.Drawing.SystemColors.Highlight
         Me.D12.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.D12.IconColor = System.Drawing.SystemColors.Highlight
@@ -2338,6 +2462,7 @@ Partial Class CreateBookings
         'D11
         '
         Me.D11.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.D11.Enabled = False
         Me.D11.ForeColor = System.Drawing.SystemColors.Highlight
         Me.D11.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.D11.IconColor = System.Drawing.SystemColors.Highlight
@@ -2353,6 +2478,7 @@ Partial Class CreateBookings
         'D10
         '
         Me.D10.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.D10.Enabled = False
         Me.D10.ForeColor = System.Drawing.SystemColors.Highlight
         Me.D10.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.D10.IconColor = System.Drawing.SystemColors.Highlight
@@ -2368,6 +2494,7 @@ Partial Class CreateBookings
         'D9
         '
         Me.D9.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.D9.Enabled = False
         Me.D9.ForeColor = System.Drawing.SystemColors.Highlight
         Me.D9.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.D9.IconColor = System.Drawing.SystemColors.Highlight
@@ -2383,6 +2510,7 @@ Partial Class CreateBookings
         'D8
         '
         Me.D8.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.D8.Enabled = False
         Me.D8.ForeColor = System.Drawing.SystemColors.Highlight
         Me.D8.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.D8.IconColor = System.Drawing.SystemColors.Highlight
@@ -2398,6 +2526,7 @@ Partial Class CreateBookings
         'D7
         '
         Me.D7.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.D7.Enabled = False
         Me.D7.ForeColor = System.Drawing.SystemColors.Highlight
         Me.D7.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.D7.IconColor = System.Drawing.SystemColors.Highlight
@@ -2413,6 +2542,7 @@ Partial Class CreateBookings
         'D6
         '
         Me.D6.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.D6.Enabled = False
         Me.D6.ForeColor = System.Drawing.SystemColors.Highlight
         Me.D6.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.D6.IconColor = System.Drawing.SystemColors.Highlight
@@ -2428,6 +2558,7 @@ Partial Class CreateBookings
         'D5
         '
         Me.D5.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.D5.Enabled = False
         Me.D5.ForeColor = System.Drawing.SystemColors.Highlight
         Me.D5.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.D5.IconColor = System.Drawing.SystemColors.Highlight
@@ -2443,6 +2574,7 @@ Partial Class CreateBookings
         'D4
         '
         Me.D4.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.D4.Enabled = False
         Me.D4.ForeColor = System.Drawing.SystemColors.Highlight
         Me.D4.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.D4.IconColor = System.Drawing.SystemColors.Highlight
@@ -2458,6 +2590,7 @@ Partial Class CreateBookings
         'D3
         '
         Me.D3.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.D3.Enabled = False
         Me.D3.ForeColor = System.Drawing.SystemColors.Highlight
         Me.D3.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.D3.IconColor = System.Drawing.SystemColors.Highlight
@@ -2473,6 +2606,7 @@ Partial Class CreateBookings
         'D2
         '
         Me.D2.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.D2.Enabled = False
         Me.D2.ForeColor = System.Drawing.SystemColors.Highlight
         Me.D2.IconChar = FontAwesome.Sharp.IconChar.Couch
         Me.D2.IconColor = System.Drawing.SystemColors.Highlight
@@ -2500,26 +2634,30 @@ Partial Class CreateBookings
         Me.btnBack.TabIndex = 13
         Me.btnBack.TabStop = False
         '
-        'IconSplitButton1
+        'btnHelp
         '
-        Me.IconSplitButton1.Flip = FontAwesome.Sharp.FlipOrientation.Normal
-        Me.IconSplitButton1.IconChar = FontAwesome.Sharp.IconChar.None
-        Me.IconSplitButton1.IconColor = System.Drawing.Color.Black
-        Me.IconSplitButton1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconSplitButton1.IconSize = 48
-        Me.IconSplitButton1.Name = "IconSplitButton1"
-        Me.IconSplitButton1.Rotation = 0R
-        Me.IconSplitButton1.Size = New System.Drawing.Size(23, 23)
-        Me.IconSplitButton1.Text = "IconSplitButton1"
+        Me.btnHelp.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnHelp.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnHelp.ForeColor = System.Drawing.SystemColors.Highlight
+        Me.btnHelp.IconChar = FontAwesome.Sharp.IconChar.QuestionCircle
+        Me.btnHelp.IconColor = System.Drawing.SystemColors.Highlight
+        Me.btnHelp.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnHelp.IconSize = 41
+        Me.btnHelp.Location = New System.Drawing.Point(1199, 7)
+        Me.btnHelp.Name = "btnHelp"
+        Me.btnHelp.Size = New System.Drawing.Size(46, 41)
+        Me.btnHelp.TabIndex = 165
+        Me.btnHelp.TabStop = False
         '
         'CreateBookings
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.ClientSize = New System.Drawing.Size(1242, 768)
+        Me.ClientSize = New System.Drawing.Size(1242, 733)
+        Me.Controls.Add(Me.btnHelp)
         Me.Controls.Add(Me.lblEditMode)
-        Me.Controls.Add(Me.GroupBox2)
+        Me.Controls.Add(Me.gbFilmSelection)
         Me.Controls.Add(Me.gbCreateBooking)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.A1)
@@ -2661,8 +2799,8 @@ Partial Class CreateBookings
         Me.Panel1.ResumeLayout(False)
         Me.gbCreateBooking.ResumeLayout(False)
         Me.gbCreateBooking.PerformLayout()
-        Me.GroupBox2.ResumeLayout(False)
-        Me.GroupBox2.PerformLayout()
+        Me.gbFilmSelection.ResumeLayout(False)
+        Me.gbFilmSelection.PerformLayout()
         CType(Me.pbMovie, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.A1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.A16, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2794,6 +2932,7 @@ Partial Class CreateBookings
         CType(Me.D3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.D2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnBack, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnHelp, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -2801,7 +2940,6 @@ Partial Class CreateBookings
 
     Friend WithEvents btnBack As FontAwesome.Sharp.IconPictureBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents IconSplitButton1 As FontAwesome.Sharp.IconSplitButton
 
     Friend WithEvents B15 As FontAwesome.Sharp.IconPictureBox
     Friend WithEvents B14 As FontAwesome.Sharp.IconPictureBox
@@ -2945,10 +3083,12 @@ Partial Class CreateBookings
     Friend WithEvents lblTotal As Label
     Friend WithEvents Label11 As Label
     Friend WithEvents btnPayment As FontAwesome.Sharp.IconButton
-    Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents gbFilmSelection As GroupBox
     Friend WithEvents btnUpdate As FontAwesome.Sharp.IconButton
     Friend WithEvents pbMovie As PictureBox
     Friend WithEvents Label2 As Label
     Friend WithEvents cbxMovieSelection As ComboBox
     Friend WithEvents lblEditMode As Label
+    Friend WithEvents ToolTip1 As ToolTip
+    Friend WithEvents btnHelp As FontAwesome.Sharp.IconPictureBox
 End Class
