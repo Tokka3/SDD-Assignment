@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Tutorial
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,27 +20,27 @@ Partial Class Tutorial
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.IconPictureBox2 = New FontAwesome.Sharp.IconPictureBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.btnLearnMoreEdit = New FontAwesome.Sharp.IconButton()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.IconPictureBox1 = New FontAwesome.Sharp.IconPictureBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.IconPictureBox1 = New FontAwesome.Sharp.IconPictureBox()
         Me.btnLearnMoreCreate = New FontAwesome.Sharp.IconButton()
-        Me.IconPictureBox2 = New FontAwesome.Sharp.IconPictureBox()
-        Me.btnLearnMoreEdit = New FontAwesome.Sharp.IconButton()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.btnClose = New FontAwesome.Sharp.IconPictureBox()
         Me.Panel3.SuspendLayout()
-        Me.Panel2.SuspendLayout()
-        Me.GroupBox1.SuspendLayout()
-        CType(Me.IconPictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.IconPictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel2.SuspendLayout()
+        CType(Me.IconPictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox1.SuspendLayout()
         CType(Me.btnClose, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -48,9 +48,9 @@ Partial Class Tutorial
         '
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(65, 9)
+        Me.Label1.Location = New System.Drawing.Point(41, -4)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(918, 78)
+        Me.Label1.Size = New System.Drawing.Size(561, 78)
         Me.Label1.TabIndex = 14
         Me.Label1.Text = "Tutorial"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -59,9 +59,9 @@ Partial Class Tutorial
         '
         Me.Label2.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Bold)
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(65, 68)
+        Me.Label2.Location = New System.Drawing.Point(41, 55)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(918, 39)
+        Me.Label2.Size = New System.Drawing.Size(561, 39)
         Me.Label2.TabIndex = 15
         Me.Label2.Text = "What would you like help with?"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -77,6 +77,20 @@ Partial Class Tutorial
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(248, 408)
         Me.Panel3.TabIndex = 17
+        '
+        'IconPictureBox2
+        '
+        Me.IconPictureBox2.BackColor = System.Drawing.SystemColors.Highlight
+        Me.IconPictureBox2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(214, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.IconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.PenToSquare
+        Me.IconPictureBox2.IconColor = System.Drawing.Color.FromArgb(CType(CType(214, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.IconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconPictureBox2.IconSize = 175
+        Me.IconPictureBox2.Location = New System.Drawing.Point(45, 37)
+        Me.IconPictureBox2.Name = "IconPictureBox2"
+        Me.IconPictureBox2.Size = New System.Drawing.Size(175, 177)
+        Me.IconPictureBox2.TabIndex = 24
+        Me.IconPictureBox2.TabStop = False
         '
         'Label6
         '
@@ -99,6 +113,25 @@ Partial Class Tutorial
         Me.Label3.TabIndex = 20
         Me.Label3.Text = "Manage Bookings"
         '
+        'btnLearnMoreEdit
+        '
+        Me.btnLearnMoreEdit.BackColor = System.Drawing.Color.White
+        Me.btnLearnMoreEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnLearnMoreEdit.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLearnMoreEdit.ForeColor = System.Drawing.SystemColors.Highlight
+        Me.btnLearnMoreEdit.IconChar = FontAwesome.Sharp.IconChar.ArrowRight
+        Me.btnLearnMoreEdit.IconColor = System.Drawing.SystemColors.Highlight
+        Me.btnLearnMoreEdit.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnLearnMoreEdit.IconSize = 20
+        Me.btnLearnMoreEdit.ImageAlign = System.Drawing.ContentAlignment.BottomRight
+        Me.btnLearnMoreEdit.Location = New System.Drawing.Point(8, 361)
+        Me.btnLearnMoreEdit.Name = "btnLearnMoreEdit"
+        Me.btnLearnMoreEdit.Size = New System.Drawing.Size(226, 34)
+        Me.btnLearnMoreEdit.TabIndex = 17
+        Me.btnLearnMoreEdit.Text = "Learn More"
+        Me.btnLearnMoreEdit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnLearnMoreEdit.UseVisualStyleBackColor = False
+        '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.SystemColors.Highlight
@@ -110,6 +143,20 @@ Partial Class Tutorial
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(248, 408)
         Me.Panel2.TabIndex = 16
+        '
+        'IconPictureBox1
+        '
+        Me.IconPictureBox1.BackColor = System.Drawing.SystemColors.Highlight
+        Me.IconPictureBox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(214, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.IconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.PlusCircle
+        Me.IconPictureBox1.IconColor = System.Drawing.Color.FromArgb(CType(CType(214, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.IconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconPictureBox1.IconSize = 181
+        Me.IconPictureBox1.Location = New System.Drawing.Point(31, 24)
+        Me.IconPictureBox1.Name = "IconPictureBox1"
+        Me.IconPictureBox1.Size = New System.Drawing.Size(181, 190)
+        Me.IconPictureBox1.TabIndex = 23
+        Me.IconPictureBox1.TabStop = False
         '
         'Label5
         '
@@ -132,32 +179,6 @@ Partial Class Tutorial
         Me.Label4.TabIndex = 19
         Me.Label4.Text = "Creating A Booking"
         '
-        'GroupBox1
-        '
-        Me.GroupBox1.Controls.Add(Me.Panel2)
-        Me.GroupBox1.Controls.Add(Me.Panel3)
-        Me.GroupBox1.Font = New System.Drawing.Font("Open Sans", 14.25!)
-        Me.GroupBox1.Location = New System.Drawing.Point(212, 136)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(595, 456)
-        Me.GroupBox1.TabIndex = 25
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Tutorial Screens"
-        '
-        'IconPictureBox1
-        '
-        Me.IconPictureBox1.BackColor = System.Drawing.SystemColors.Highlight
-        Me.IconPictureBox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(214, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.IconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.PlusCircle
-        Me.IconPictureBox1.IconColor = System.Drawing.Color.FromArgb(CType(CType(214, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.IconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconPictureBox1.IconSize = 181
-        Me.IconPictureBox1.Location = New System.Drawing.Point(34, 37)
-        Me.IconPictureBox1.Name = "IconPictureBox1"
-        Me.IconPictureBox1.Size = New System.Drawing.Size(181, 190)
-        Me.IconPictureBox1.TabIndex = 23
-        Me.IconPictureBox1.TabStop = False
-        '
         'btnLearnMoreCreate
         '
         Me.btnLearnMoreCreate.BackColor = System.Drawing.Color.White
@@ -177,38 +198,17 @@ Partial Class Tutorial
         Me.btnLearnMoreCreate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnLearnMoreCreate.UseVisualStyleBackColor = False
         '
-        'IconPictureBox2
+        'GroupBox1
         '
-        Me.IconPictureBox2.BackColor = System.Drawing.SystemColors.Highlight
-        Me.IconPictureBox2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(214, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.IconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.PenToSquare
-        Me.IconPictureBox2.IconColor = System.Drawing.Color.FromArgb(CType(CType(214, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.IconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconPictureBox2.IconSize = 175
-        Me.IconPictureBox2.Location = New System.Drawing.Point(45, 37)
-        Me.IconPictureBox2.Name = "IconPictureBox2"
-        Me.IconPictureBox2.Size = New System.Drawing.Size(175, 177)
-        Me.IconPictureBox2.TabIndex = 24
-        Me.IconPictureBox2.TabStop = False
-        '
-        'btnLearnMoreEdit
-        '
-        Me.btnLearnMoreEdit.BackColor = System.Drawing.Color.White
-        Me.btnLearnMoreEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnLearnMoreEdit.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLearnMoreEdit.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.btnLearnMoreEdit.IconChar = FontAwesome.Sharp.IconChar.ArrowRight
-        Me.btnLearnMoreEdit.IconColor = System.Drawing.SystemColors.Highlight
-        Me.btnLearnMoreEdit.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.btnLearnMoreEdit.IconSize = 20
-        Me.btnLearnMoreEdit.ImageAlign = System.Drawing.ContentAlignment.BottomRight
-        Me.btnLearnMoreEdit.Location = New System.Drawing.Point(8, 361)
-        Me.btnLearnMoreEdit.Name = "btnLearnMoreEdit"
-        Me.btnLearnMoreEdit.Size = New System.Drawing.Size(226, 34)
-        Me.btnLearnMoreEdit.TabIndex = 17
-        Me.btnLearnMoreEdit.Text = "Learn More"
-        Me.btnLearnMoreEdit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnLearnMoreEdit.UseVisualStyleBackColor = False
+        Me.GroupBox1.Controls.Add(Me.Panel2)
+        Me.GroupBox1.Controls.Add(Me.Panel3)
+        Me.GroupBox1.Font = New System.Drawing.Font("Open Sans", 14.25!)
+        Me.GroupBox1.Location = New System.Drawing.Point(16, 119)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(595, 456)
+        Me.GroupBox1.TabIndex = 25
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Tutorial Screens"
         '
         'btnClose
         '
@@ -219,7 +219,7 @@ Partial Class Tutorial
         Me.btnClose.IconColor = System.Drawing.SystemColors.Highlight
         Me.btnClose.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.btnClose.IconSize = 41
-        Me.btnClose.Location = New System.Drawing.Point(974, 9)
+        Me.btnClose.Location = New System.Drawing.Point(585, -4)
         Me.btnClose.Name = "btnClose"
         Me.btnClose.Size = New System.Drawing.Size(46, 41)
         Me.btnClose.TabIndex = 26
@@ -230,7 +230,7 @@ Partial Class Tutorial
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.ClientSize = New System.Drawing.Size(1021, 653)
+        Me.ClientSize = New System.Drawing.Size(625, 623)
         Me.ControlBox = False
         Me.Controls.Add(Me.btnClose)
         Me.Controls.Add(Me.GroupBox1)
@@ -239,15 +239,14 @@ Partial Class Tutorial
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "Tutorial"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Tutorial"
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
+        CType(Me.IconPictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
-        Me.GroupBox1.ResumeLayout(False)
         CType(Me.IconPictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.IconPictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox1.ResumeLayout(False)
         CType(Me.btnClose, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 

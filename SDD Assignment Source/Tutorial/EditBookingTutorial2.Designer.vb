@@ -36,10 +36,10 @@ Partial Class EditBookingTutorial2
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.btnBack = New FontAwesome.Sharp.IconPictureBox()
         Me.btnNavigateTutorial = New FontAwesome.Sharp.IconButton()
         Me.btnEditTutorial = New FontAwesome.Sharp.IconButton()
         Me.btnDeleteTutorial = New FontAwesome.Sharp.IconButton()
+        Me.btnClose = New FontAwesome.Sharp.IconPictureBox()
         Me.GroupBox4.SuspendLayout()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox3.SuspendLayout()
@@ -48,7 +48,7 @@ Partial Class EditBookingTutorial2
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.btnBack, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnClose, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -194,21 +194,6 @@ Partial Class EditBookingTutorial2
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
-        'btnBack
-        '
-        Me.btnBack.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnBack.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnBack.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.btnBack.IconChar = FontAwesome.Sharp.IconChar.ArrowCircleLeft
-        Me.btnBack.IconColor = System.Drawing.SystemColors.Highlight
-        Me.btnBack.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.btnBack.IconSize = 41
-        Me.btnBack.Location = New System.Drawing.Point(17, 15)
-        Me.btnBack.Name = "btnBack"
-        Me.btnBack.Size = New System.Drawing.Size(46, 41)
-        Me.btnBack.TabIndex = 17
-        Me.btnBack.TabStop = False
-        '
         'btnNavigateTutorial
         '
         Me.btnNavigateTutorial.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -255,12 +240,29 @@ Partial Class EditBookingTutorial2
         Me.btnDeleteTutorial.Text = "How to delete a booking"
         Me.btnDeleteTutorial.UseVisualStyleBackColor = False
         '
+        'btnClose
+        '
+        Me.btnClose.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnClose.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnClose.ForeColor = System.Drawing.SystemColors.Highlight
+        Me.btnClose.IconChar = FontAwesome.Sharp.IconChar.Xmark
+        Me.btnClose.IconColor = System.Drawing.SystemColors.Highlight
+        Me.btnClose.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnClose.IconSize = 41
+        Me.btnClose.Location = New System.Drawing.Point(976, -1)
+        Me.btnClose.Name = "btnClose"
+        Me.btnClose.Size = New System.Drawing.Size(46, 41)
+        Me.btnClose.TabIndex = 42
+        Me.btnClose.TabStop = False
+        '
         'EditBookingTutorial2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.ClientSize = New System.Drawing.Size(1021, 653)
+        Me.ControlBox = False
+        Me.Controls.Add(Me.btnClose)
         Me.Controls.Add(Me.btnNavigateTutorial)
         Me.Controls.Add(Me.btnEditTutorial)
         Me.Controls.Add(Me.GroupBox4)
@@ -269,9 +271,7 @@ Partial Class EditBookingTutorial2
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.btnBack)
         Me.Name = "EditBookingTutorial2"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "EditBookingTutorial2"
         Me.GroupBox4.ResumeLayout(False)
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
@@ -281,13 +281,12 @@ Partial Class EditBookingTutorial2
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.btnBack, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnClose, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents Label1 As Label
-    Friend WithEvents btnBack As FontAwesome.Sharp.IconPictureBox
     Friend WithEvents GroupBox4 As GroupBox
     Friend WithEvents Label5 As Label
     Friend WithEvents GroupBox3 As GroupBox
@@ -303,4 +302,5 @@ Partial Class EditBookingTutorial2
     Friend WithEvents btnNavigateTutorial As FontAwesome.Sharp.IconButton
     Friend WithEvents btnEditTutorial As FontAwesome.Sharp.IconButton
     Friend WithEvents btnDeleteTutorial As FontAwesome.Sharp.IconButton
+    Friend WithEvents btnClose As FontAwesome.Sharp.IconPictureBox
 End Class

@@ -85,10 +85,10 @@
             End If
 
             If cbxSearchCategory.Text = "First Name" Or cbxSearchCategory.Text = "All" Then
-                Return (booking.strBookingFirstName = txtSearch.Text) 'If the booking ID matches search query, return true
+                Return (booking.strBookingFirstName = txtSearch.Text) 'If the booking first name matches search query, return true
             End If
             If cbxSearchCategory.Text = "Last Name" Or cbxSearchCategory.Text = "All" Then
-                Return (booking.strBookingLastName = txtSearch.Text) 'If the booking ID matches search query, return true
+                Return (booking.strBookingLastName = txtSearch.Text) 'If the booking last name matches search query, return true
             End If
 
         End If
@@ -96,6 +96,32 @@
 
         '   If cbxMovieSelection.Text = booking.
     End Function
+
+    Public Function CalculateTotalRevenueForMovie(ByVal movie As String) As Integer
+        Dim totalRevenue As Integer = 0
+
+        For Each booking As Booking In BookingRecord
+            If booking.strFilm = movie Or movie = "All" Then
+                totalRevenue += booking.intTotal
+            End If
+        Next
+
+        Return totalRevenue
+    End Function
+
+    Public Function CountBookingsForFilm(ByVal movie As String) As Integer
+        Dim count As Integer = 0
+
+        For Each booking As Booking In BookingRecord
+            If booking.strFilm = movie Or movie = "All" And String.IsNullOrEmpty(booking.strBookingFirstName) <> True Then
+                count += 1
+                Debug.WriteLine(count)
+            End If
+        Next
+
+        Return count
+    End Function
+
     Public Sub Booking_Refresh()
         grpBookings.Controls.Clear()
         Dim container As New Panel With {.Dock = DockStyle.Fill, .AutoScroll = True, .Name = "displayPanel"}
@@ -138,7 +164,7 @@
             lblFilm.Font = New Font("Segoe UI", 10, FontStyle.Regular)
             recordPanel.Controls.Add(lblFilm)
 
-            Dim txtSeats As New TextBox With {.Text = String.Join(",", BookingDisplay(i).arrSeatsBooked), .Top = 8, .Left = 342, .Width = 140, .ForeColor = SystemColors.HotTrack}
+            Dim txtSeats As New TextBox With {.Text = String.Join(",", BookingDisplay(i).arrSeatsBooked), .Top = 8, .Left = 342, .Width = 140, .ForeColor = SystemColors.HotTrack, .[ReadOnly] = True}
             txtSeats.Font = New Font("Segoe UI", 10, FontStyle.Regular)
             recordPanel.Controls.Add(txtSeats)
 
@@ -175,6 +201,10 @@
         'Initialise Search/Filter Combo Boxes
         cbxMovieSelection.SelectedIndex = 0
         cbxSort.SelectedIndex = 0
+
+        gpInsights.Text = "Insights - " & cbxMovieSelection.Text
+        lblRevenue.Text = "Revenue: $" & CalculateTotalRevenueForMovie(cbxMovieSelection.Text)
+        lblTotalBookings.Text = "Total Bookings: " & CountBookingsForFilm(cbxMovieSelection.Text)
     End Sub
 
     Private Sub btnRefresh_Click(sender As Object, e As EventArgs) Handles btnRefresh.Click
@@ -183,6 +213,9 @@
     End Sub
 
     Private Sub btnSortFilterSearch_Click(sender As Object, e As EventArgs) Handles btnSort.Click, btnSearch.Click, btnFilter.Click
+        gpInsights.Text = "Insights - " & cbxMovieSelection.Text
+        lblRevenue.Text = "Revenue: $" & CalculateTotalRevenueForMovie(cbxMovieSelection.Text)
+        lblTotalBookings.Text = "Total Bookings: " & CountBookingsForFilm(cbxMovieSelection.Text)
         Booking_Refresh()
     End Sub
 
@@ -196,6 +229,10 @@
     Private Sub btnClearFilters_Click(sender As Object, e As EventArgs) Handles btnClearFilters.Click
         cbxMovieSelection.SelectedIndex = 0 'Set the Movie Filter to All
         Booking_Refresh()
+
+        gpInsights.Text = "Insights - " & cbxMovieSelection.Text
+        lblRevenue.Text = "Revenue: $" & CalculateTotalRevenueForMovie(cbxMovieSelection.Text)
+        lblTotalBookings.Text = "Total Bookings: " & CountBookingsForFilm(cbxMovieSelection.Text)
     End Sub
 
     Private Sub btnClearSort_Click(sender As Object, e As EventArgs) Handles btnClearSort.Click
@@ -205,5 +242,9 @@
 
     Private Sub btnHelp_Click(sender As Object, e As EventArgs) Handles btnHelp.Click
         EditBookingTutorial.Show()
+    End Sub
+
+    Private Sub IconButton1_Click(sender As Object, e As EventArgs) Handles btnExit.Click
+        ExitProgram()
     End Sub
 End Class

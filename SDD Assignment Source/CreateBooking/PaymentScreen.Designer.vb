@@ -209,6 +209,7 @@ Partial Class PaymentScreen
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.ClientSize = New System.Drawing.Size(351, 482)
+        Me.ControlBox = False
         Me.Controls.Add(Me.txtCCV)
         Me.Controls.Add(Me.txtExpiryDate)
         Me.Controls.Add(Me.txtCCNo)

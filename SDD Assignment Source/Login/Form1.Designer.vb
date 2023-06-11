@@ -27,16 +27,17 @@ Partial Class Form1
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.btnLogin = New System.Windows.Forms.Button()
         Me.txtUsername = New System.Windows.Forms.TextBox()
         Me.txtPassword = New System.Windows.Forms.TextBox()
         Me.iconEye = New FontAwesome.Sharp.IconPictureBox()
         Me.IconPictureBox1 = New FontAwesome.Sharp.IconPictureBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.btnExit = New FontAwesome.Sharp.IconButton()
         Me.Panel1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.iconEye, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.IconPictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -92,6 +93,16 @@ Partial Class Form1
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(483, 653)
         Me.Panel1.TabIndex = 19
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.SDD_Assignment_Source.My.Resources.Resources.LogoFinal
+        Me.PictureBox1.Location = New System.Drawing.Point(42, 141)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(429, 408)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
         '
         'btnLogin
         '
@@ -156,15 +167,24 @@ Partial Class Form1
         Me.IconPictureBox1.TabIndex = 17
         Me.IconPictureBox1.TabStop = False
         '
-        'PictureBox1
+        'btnExit
         '
-        Me.PictureBox1.Image = Global.SDD_Assignment_Source.My.Resources.Resources.LogoFinal
-        Me.PictureBox1.Location = New System.Drawing.Point(42, 141)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(429, 408)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
+        Me.btnExit.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(56, Byte), Integer))
+        Me.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnExit.Font = New System.Drawing.Font("Segoe UI Semibold", 11.0!, System.Drawing.FontStyle.Bold)
+        Me.btnExit.ForeColor = System.Drawing.Color.White
+        Me.btnExit.IconChar = FontAwesome.Sharp.IconChar.Xmark
+        Me.btnExit.IconColor = System.Drawing.Color.White
+        Me.btnExit.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnExit.IconSize = 22
+        Me.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnExit.Location = New System.Drawing.Point(930, 611)
+        Me.btnExit.Name = "btnExit"
+        Me.btnExit.Size = New System.Drawing.Size(79, 30)
+        Me.btnExit.TabIndex = 30
+        Me.btnExit.Text = "EXIT"
+        Me.btnExit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnExit.UseVisualStyleBackColor = False
         '
         'Form1
         '
@@ -172,6 +192,8 @@ Partial Class Form1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.ClientSize = New System.Drawing.Size(1021, 653)
+        Me.ControlBox = False
+        Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.txtPassword)
         Me.Controls.Add(Me.txtUsername)
         Me.Controls.Add(Me.btnLogin)
@@ -189,9 +211,9 @@ Partial Class Form1
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form1"
         Me.Panel1.ResumeLayout(False)
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.iconEye, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.IconPictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -207,4 +229,5 @@ Partial Class Form1
     Friend WithEvents txtUsername As TextBox
     Friend WithEvents txtPassword As TextBox
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents btnExit As FontAwesome.Sharp.IconButton
 End Class

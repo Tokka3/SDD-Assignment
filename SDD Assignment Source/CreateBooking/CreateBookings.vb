@@ -135,17 +135,22 @@
         'Grid buttons
         Dim counter As Byte = 0
 
+        ColourBookedSeats()
+
+
         For Each button As FontAwesome.Sharp.IconPictureBox In Controls.OfType(Of FontAwesome.Sharp.IconPictureBox)()
-            If button.Name = "btnBack" Then
+            If button.IconChar <> button.IconChar.Couch Then
                 Continue For
             End If
             AddHandler button.Click, AddressOf DynamicButton_Click
             AddHandler button.MouseEnter, AddressOf DynamicButton_Hover
             AddHandler button.MouseLeave, AddressOf DynamicButton_MouseLeave
+
+
         Next
 
 
-        ColourBookedSeats()
+
 
     End Sub
 
@@ -158,8 +163,25 @@
         Next
     End Sub
     Private Sub btnPayment_Click(sender As Object, e As EventArgs) Handles btnPayment.Click
+
+        Dim dateDummyVar As Date
+        If Date.TryParseExact(txtDOB.Text, "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture, System.Globalization.DateTimeStyles.None, dateDummyVar) Then
+
+        Else
+            MessageBox.Show("Invalid date of birth.")
+            Return
+        End If
+        If String.IsNullOrEmpty(txtFirstName.Text) Or String.IsNullOrEmpty(txtLastName.Text) Then
+            MessageBox.Show("Please fill in all fields.")
+            Return
+
+        End If
+
         strFirstName = txtFirstName.Text
         strLastName = txtLastName.Text
+
+
+
         PaymentScreen.Show()
         PaymentScreen.InitialiseTextBoxes()
         Me.Enabled = False
@@ -191,5 +213,13 @@
 
     Private Sub btnHelp_Click(sender As Object, e As EventArgs) Handles btnHelp.Click
         CreateBookingTutorial.Show()
+    End Sub
+
+    Private Sub txtDOB_TextChanged(sender As Object, e As EventArgs) Handles txtDOB.TextChanged
+
+    End Sub
+
+    Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
+        ExitProgram()
     End Sub
 End Class

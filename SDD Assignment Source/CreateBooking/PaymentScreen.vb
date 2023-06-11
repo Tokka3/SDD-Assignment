@@ -68,4 +68,8 @@
     Private Sub btnExitButton_Click_1(sender As Object, e As EventArgs)
 
     End Sub
+
+    Private Sub txtCCNo_TextChanged(sender As Object, e As EventArgs) Handles txtCCNo.TextChanged
+
+    End Sub
 End Class

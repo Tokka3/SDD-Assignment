@@ -1,5 +1,5 @@
 ﻿Public Class EditBookingTutorial3
-    Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
+    Private Sub btnBack_Click(sender As Object, e As EventArgs)
         Me.Hide()
         Tutorial.Show()
     End Sub
@@ -17,5 +17,9 @@
     Private Sub btnDeleteTutorial_Click(sender As Object, e As EventArgs) Handles btnDeleteTutorial.Click
         Me.Hide()
         EditBookingTutorial.Show()
+    End Sub
+
+    Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
+        Me.Hide()
     End Sub
 End Class

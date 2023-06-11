@@ -36,13 +36,13 @@ Partial Class CreateBookings
         Me.Label9 = New System.Windows.Forms.Label()
         Me.lblTotal = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
+        Me.btnPayment = New FontAwesome.Sharp.IconButton()
         Me.gbFilmSelection = New System.Windows.Forms.GroupBox()
+        Me.btnUpdate = New FontAwesome.Sharp.IconButton()
+        Me.pbMovie = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.cbxMovieSelection = New System.Windows.Forms.ComboBox()
         Me.lblEditMode = New System.Windows.Forms.Label()
-        Me.btnUpdate = New FontAwesome.Sharp.IconButton()
-        Me.pbMovie = New System.Windows.Forms.PictureBox()
-        Me.btnPayment = New FontAwesome.Sharp.IconButton()
         Me.A1 = New FontAwesome.Sharp.IconPictureBox()
         Me.A16 = New FontAwesome.Sharp.IconPictureBox()
         Me.A15 = New FontAwesome.Sharp.IconPictureBox()
@@ -175,6 +175,25 @@ Partial Class CreateBookings
         Me.btnBack = New FontAwesome.Sharp.IconPictureBox()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.btnHelp = New FontAwesome.Sharp.IconPictureBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.Label23 = New System.Windows.Forms.Label()
+        Me.Label24 = New System.Windows.Forms.Label()
+        Me.Label25 = New System.Windows.Forms.Label()
+        Me.btnExit = New FontAwesome.Sharp.IconButton()
         Me.Panel1.SuspendLayout()
         Me.gbCreateBooking.SuspendLayout()
         Me.gbFilmSelection.SuspendLayout()
@@ -327,7 +346,7 @@ Partial Class CreateBookings
         '
         Me.Panel1.BackColor = System.Drawing.SystemColors.Highlight
         Me.Panel1.Controls.Add(Me.Label6)
-        Me.Panel1.Location = New System.Drawing.Point(46, 677)
+        Me.Panel1.Location = New System.Drawing.Point(46, 715)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(836, 30)
         Me.Panel1.TabIndex = 149
@@ -366,7 +385,7 @@ Partial Class CreateBookings
         '
         'txtDOB
         '
-        Me.txtDOB.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.txtDOB.Font = New System.Drawing.Font("Segoe UI", 14.25!)
         Me.txtDOB.ForeColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
         Me.txtDOB.Location = New System.Drawing.Point(11, 241)
         Me.txtDOB.Multiline = True
@@ -376,7 +395,7 @@ Partial Class CreateBookings
         '
         'txtLastName
         '
-        Me.txtLastName.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.txtLastName.Font = New System.Drawing.Font("Segoe UI", 14.25!)
         Me.txtLastName.ForeColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
         Me.txtLastName.Location = New System.Drawing.Point(12, 172)
         Me.txtLastName.Multiline = True
@@ -386,7 +405,7 @@ Partial Class CreateBookings
         '
         'txtFirstName
         '
-        Me.txtFirstName.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.txtFirstName.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtFirstName.ForeColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
         Me.txtFirstName.Location = New System.Drawing.Point(11, 109)
         Me.txtFirstName.Multiline = True
@@ -396,11 +415,12 @@ Partial Class CreateBookings
         '
         'rtbSelectedSeats
         '
-        Me.rtbSelectedSeats.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.rtbSelectedSeats.Font = New System.Drawing.Font("Segoe UI", 14.25!)
         Me.rtbSelectedSeats.ForeColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
         Me.rtbSelectedSeats.Location = New System.Drawing.Point(11, 49)
         Me.rtbSelectedSeats.Multiline = True
         Me.rtbSelectedSeats.Name = "rtbSelectedSeats"
+        Me.rtbSelectedSeats.ReadOnly = True
         Me.rtbSelectedSeats.Size = New System.Drawing.Size(274, 32)
         Me.rtbSelectedSeats.TabIndex = 160
         Me.ToolTip1.SetToolTip(Me.rtbSelectedSeats, "Seats that are selected for booking.")
@@ -460,6 +480,25 @@ Partial Class CreateBookings
         Me.Label11.Text = "Selected Seats:"
         Me.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
+        'btnPayment
+        '
+        Me.btnPayment.BackColor = System.Drawing.SystemColors.Highlight
+        Me.btnPayment.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnPayment.Font = New System.Drawing.Font("Segoe UI Semibold", 13.25!, System.Drawing.FontStyle.Bold)
+        Me.btnPayment.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnPayment.IconChar = FontAwesome.Sharp.IconChar.CcVisa
+        Me.btnPayment.IconColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnPayment.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnPayment.IconSize = 34
+        Me.btnPayment.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnPayment.Location = New System.Drawing.Point(11, 307)
+        Me.btnPayment.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnPayment.Name = "btnPayment"
+        Me.btnPayment.Size = New System.Drawing.Size(274, 38)
+        Me.btnPayment.TabIndex = 154
+        Me.btnPayment.Text = "Proceed To Payment"
+        Me.btnPayment.UseVisualStyleBackColor = False
+        '
         'gbFilmSelection
         '
         Me.gbFilmSelection.Controls.Add(Me.btnUpdate)
@@ -474,38 +513,6 @@ Partial Class CreateBookings
         Me.gbFilmSelection.TabIndex = 155
         Me.gbFilmSelection.TabStop = False
         Me.gbFilmSelection.Text = "Film Selection"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Open Sans", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(8, 26)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(50, 26)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Film"
-        '
-        'cbxMovieSelection
-        '
-        Me.cbxMovieSelection.FormattingEnabled = True
-        Me.cbxMovieSelection.Items.AddRange(New Object() {"Good Will Hunting", "The Lion King", "Forrest Gump"})
-        Me.cbxMovieSelection.Location = New System.Drawing.Point(12, 54)
-        Me.cbxMovieSelection.Name = "cbxMovieSelection"
-        Me.cbxMovieSelection.Size = New System.Drawing.Size(138, 33)
-        Me.cbxMovieSelection.TabIndex = 0
-        Me.ToolTip1.SetToolTip(Me.cbxMovieSelection, "Display current bookings for select film.")
-        '
-        'lblEditMode
-        '
-        Me.lblEditMode.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblEditMode.ForeColor = System.Drawing.Color.DodgerBlue
-        Me.lblEditMode.Location = New System.Drawing.Point(79, 76)
-        Me.lblEditMode.Name = "lblEditMode"
-        Me.lblEditMode.Size = New System.Drawing.Size(792, 41)
-        Me.lblEditMode.TabIndex = 156
-        Me.lblEditMode.Text = "EDIT MODE"
-        Me.lblEditMode.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.lblEditMode.Visible = False
         '
         'btnUpdate
         '
@@ -536,24 +543,38 @@ Partial Class CreateBookings
         Me.pbMovie.TabIndex = 2
         Me.pbMovie.TabStop = False
         '
-        'btnPayment
+        'Label2
         '
-        Me.btnPayment.BackColor = System.Drawing.SystemColors.Highlight
-        Me.btnPayment.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnPayment.Font = New System.Drawing.Font("Segoe UI Semibold", 13.25!, System.Drawing.FontStyle.Bold)
-        Me.btnPayment.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnPayment.IconChar = FontAwesome.Sharp.IconChar.CcVisa
-        Me.btnPayment.IconColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnPayment.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.btnPayment.IconSize = 34
-        Me.btnPayment.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnPayment.Location = New System.Drawing.Point(11, 307)
-        Me.btnPayment.Margin = New System.Windows.Forms.Padding(2)
-        Me.btnPayment.Name = "btnPayment"
-        Me.btnPayment.Size = New System.Drawing.Size(274, 38)
-        Me.btnPayment.TabIndex = 154
-        Me.btnPayment.Text = "Proceed To Payment"
-        Me.btnPayment.UseVisualStyleBackColor = False
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Open Sans", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(8, 26)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(50, 26)
+        Me.Label2.TabIndex = 1
+        Me.Label2.Text = "Film"
+        '
+        'cbxMovieSelection
+        '
+        Me.cbxMovieSelection.Font = New System.Drawing.Font("Open Sans", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cbxMovieSelection.FormattingEnabled = True
+        Me.cbxMovieSelection.Items.AddRange(New Object() {"Good Will Hunting", "The Lion King", "Forrest Gump"})
+        Me.cbxMovieSelection.Location = New System.Drawing.Point(12, 54)
+        Me.cbxMovieSelection.Name = "cbxMovieSelection"
+        Me.cbxMovieSelection.Size = New System.Drawing.Size(138, 34)
+        Me.cbxMovieSelection.TabIndex = 0
+        Me.ToolTip1.SetToolTip(Me.cbxMovieSelection, "Display current bookings for select film.")
+        '
+        'lblEditMode
+        '
+        Me.lblEditMode.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblEditMode.ForeColor = System.Drawing.Color.DodgerBlue
+        Me.lblEditMode.Location = New System.Drawing.Point(79, 76)
+        Me.lblEditMode.Name = "lblEditMode"
+        Me.lblEditMode.Size = New System.Drawing.Size(792, 41)
+        Me.lblEditMode.TabIndex = 156
+        Me.lblEditMode.Text = "EDIT MODE"
+        Me.lblEditMode.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lblEditMode.Visible = False
         '
         'A1
         '
@@ -1716,7 +1737,7 @@ Partial Class CreateBookings
         Me.I4.IconColor = System.Drawing.SystemColors.Highlight
         Me.I4.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.I4.IconSize = 43
-        Me.I4.Location = New System.Drawing.Point(318, 576)
+        Me.I4.Location = New System.Drawing.Point(316, 576)
         Me.I4.Name = "I4"
         Me.I4.Size = New System.Drawing.Size(43, 51)
         Me.I4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -1732,7 +1753,7 @@ Partial Class CreateBookings
         Me.I3.IconColor = System.Drawing.SystemColors.Highlight
         Me.I3.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.I3.IconSize = 43
-        Me.I3.Location = New System.Drawing.Point(269, 576)
+        Me.I3.Location = New System.Drawing.Point(267, 576)
         Me.I3.Name = "I3"
         Me.I3.Size = New System.Drawing.Size(43, 51)
         Me.I3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -1748,7 +1769,7 @@ Partial Class CreateBookings
         Me.I2.IconColor = System.Drawing.SystemColors.Highlight
         Me.I2.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.I2.IconSize = 43
-        Me.I2.Location = New System.Drawing.Point(220, 576)
+        Me.I2.Location = New System.Drawing.Point(218, 576)
         Me.I2.Name = "I2"
         Me.I2.Size = New System.Drawing.Size(43, 51)
         Me.I2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -1764,7 +1785,7 @@ Partial Class CreateBookings
         Me.H4.IconColor = System.Drawing.SystemColors.Highlight
         Me.H4.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.H4.IconSize = 43
-        Me.H4.Location = New System.Drawing.Point(295, 519)
+        Me.H4.Location = New System.Drawing.Point(293, 519)
         Me.H4.Name = "H4"
         Me.H4.Size = New System.Drawing.Size(43, 51)
         Me.H4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -1780,7 +1801,7 @@ Partial Class CreateBookings
         Me.H3.IconColor = System.Drawing.SystemColors.Highlight
         Me.H3.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.H3.IconSize = 43
-        Me.H3.Location = New System.Drawing.Point(246, 519)
+        Me.H3.Location = New System.Drawing.Point(244, 519)
         Me.H3.Name = "H3"
         Me.H3.Size = New System.Drawing.Size(43, 51)
         Me.H3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -1796,7 +1817,7 @@ Partial Class CreateBookings
         Me.H2.IconColor = System.Drawing.SystemColors.Highlight
         Me.H2.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.H2.IconSize = 43
-        Me.H2.Location = New System.Drawing.Point(197, 519)
+        Me.H2.Location = New System.Drawing.Point(195, 519)
         Me.H2.Name = "H2"
         Me.H2.Size = New System.Drawing.Size(43, 51)
         Me.H2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -1812,7 +1833,7 @@ Partial Class CreateBookings
         Me.G4.IconColor = System.Drawing.SystemColors.Highlight
         Me.G4.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.G4.IconSize = 43
-        Me.G4.Location = New System.Drawing.Point(270, 462)
+        Me.G4.Location = New System.Drawing.Point(268, 462)
         Me.G4.Name = "G4"
         Me.G4.Size = New System.Drawing.Size(43, 51)
         Me.G4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -1828,7 +1849,7 @@ Partial Class CreateBookings
         Me.G3.IconColor = System.Drawing.SystemColors.Highlight
         Me.G3.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.G3.IconSize = 43
-        Me.G3.Location = New System.Drawing.Point(221, 462)
+        Me.G3.Location = New System.Drawing.Point(219, 462)
         Me.G3.Name = "G3"
         Me.G3.Size = New System.Drawing.Size(43, 51)
         Me.G3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -1844,7 +1865,7 @@ Partial Class CreateBookings
         Me.G2.IconColor = System.Drawing.SystemColors.Highlight
         Me.G2.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.G2.IconSize = 43
-        Me.G2.Location = New System.Drawing.Point(172, 462)
+        Me.G2.Location = New System.Drawing.Point(170, 462)
         Me.G2.Name = "G2"
         Me.G2.Size = New System.Drawing.Size(43, 51)
         Me.G2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -1860,7 +1881,7 @@ Partial Class CreateBookings
         Me.F4.IconColor = System.Drawing.SystemColors.Highlight
         Me.F4.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.F4.IconSize = 43
-        Me.F4.Location = New System.Drawing.Point(244, 405)
+        Me.F4.Location = New System.Drawing.Point(243, 405)
         Me.F4.Name = "F4"
         Me.F4.Size = New System.Drawing.Size(43, 51)
         Me.F4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -1876,7 +1897,7 @@ Partial Class CreateBookings
         Me.F3.IconColor = System.Drawing.SystemColors.Highlight
         Me.F3.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.F3.IconSize = 43
-        Me.F3.Location = New System.Drawing.Point(195, 405)
+        Me.F3.Location = New System.Drawing.Point(194, 405)
         Me.F3.Name = "F3"
         Me.F3.Size = New System.Drawing.Size(43, 51)
         Me.F3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -1892,7 +1913,7 @@ Partial Class CreateBookings
         Me.F2.IconColor = System.Drawing.SystemColors.Highlight
         Me.F2.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.F2.IconSize = 43
-        Me.F2.Location = New System.Drawing.Point(146, 405)
+        Me.F2.Location = New System.Drawing.Point(144, 405)
         Me.F2.Name = "F2"
         Me.F2.Size = New System.Drawing.Size(43, 51)
         Me.F2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -2244,7 +2265,7 @@ Partial Class CreateBookings
         Me.E4.IconColor = System.Drawing.SystemColors.Highlight
         Me.E4.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.E4.IconSize = 43
-        Me.E4.Location = New System.Drawing.Point(221, 348)
+        Me.E4.Location = New System.Drawing.Point(219, 348)
         Me.E4.Name = "E4"
         Me.E4.Size = New System.Drawing.Size(43, 51)
         Me.E4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -2260,7 +2281,7 @@ Partial Class CreateBookings
         Me.E3.IconColor = System.Drawing.SystemColors.Highlight
         Me.E3.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.E3.IconSize = 43
-        Me.E3.Location = New System.Drawing.Point(172, 348)
+        Me.E3.Location = New System.Drawing.Point(170, 348)
         Me.E3.Name = "E3"
         Me.E3.Size = New System.Drawing.Size(43, 51)
         Me.E3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -2276,7 +2297,7 @@ Partial Class CreateBookings
         Me.E2.IconColor = System.Drawing.SystemColors.Highlight
         Me.E2.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.E2.IconSize = 43
-        Me.E2.Location = New System.Drawing.Point(123, 348)
+        Me.E2.Location = New System.Drawing.Point(121, 348)
         Me.E2.Name = "E2"
         Me.E2.Size = New System.Drawing.Size(43, 51)
         Me.E2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -2649,12 +2670,249 @@ Partial Class CreateBookings
         Me.btnHelp.TabIndex = 165
         Me.btnHelp.TabStop = False
         '
+        'Label3
+        '
+        Me.Label3.Font = New System.Drawing.Font("Open Sans", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label3.Location = New System.Drawing.Point(12, 132)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(24, 28)
+        Me.Label3.TabIndex = 164
+        Me.Label3.Text = "A"
+        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label4
+        '
+        Me.Label4.Font = New System.Drawing.Font("Open Sans", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label4.Location = New System.Drawing.Point(12, 187)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(24, 28)
+        Me.Label4.TabIndex = 166
+        Me.Label4.Text = "B"
+        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label5
+        '
+        Me.Label5.Font = New System.Drawing.Font("Open Sans", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label5.Location = New System.Drawing.Point(12, 244)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(24, 28)
+        Me.Label5.TabIndex = 167
+        Me.Label5.Text = "C"
+        Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label10
+        '
+        Me.Label10.Font = New System.Drawing.Font("Open Sans", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label10.Location = New System.Drawing.Point(12, 299)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(24, 28)
+        Me.Label10.TabIndex = 168
+        Me.Label10.Text = "D"
+        Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label12
+        '
+        Me.Label12.Font = New System.Drawing.Font("Open Sans", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label12.Location = New System.Drawing.Point(41, 359)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(24, 28)
+        Me.Label12.TabIndex = 169
+        Me.Label12.Text = "E"
+        Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label13
+        '
+        Me.Label13.Font = New System.Drawing.Font("Open Sans", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label13.Location = New System.Drawing.Point(63, 414)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(24, 28)
+        Me.Label13.TabIndex = 170
+        Me.Label13.Text = "F"
+        Me.Label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label14
+        '
+        Me.Label14.Font = New System.Drawing.Font("Open Sans", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label14.Location = New System.Drawing.Point(89, 472)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(24, 28)
+        Me.Label14.TabIndex = 171
+        Me.Label14.Text = "G"
+        Me.Label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label15
+        '
+        Me.Label15.Font = New System.Drawing.Font("Open Sans", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label15.Location = New System.Drawing.Point(115, 528)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(24, 28)
+        Me.Label15.TabIndex = 172
+        Me.Label15.Text = "H"
+        Me.Label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label16
+        '
+        Me.Label16.Font = New System.Drawing.Font("Open Sans", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label16.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label16.Location = New System.Drawing.Point(143, 586)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(24, 28)
+        Me.Label16.TabIndex = 173
+        Me.Label16.Text = "I"
+        Me.Label16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label17
+        '
+        Me.Label17.Font = New System.Drawing.Font("Open Sans", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label17.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label17.Location = New System.Drawing.Point(889, 299)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(24, 28)
+        Me.Label17.TabIndex = 177
+        Me.Label17.Text = "D"
+        Me.Label17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label18
+        '
+        Me.Label18.Font = New System.Drawing.Font("Open Sans", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label18.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label18.Location = New System.Drawing.Point(889, 244)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(24, 28)
+        Me.Label18.TabIndex = 176
+        Me.Label18.Text = "C"
+        Me.Label18.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label19
+        '
+        Me.Label19.Font = New System.Drawing.Font("Open Sans", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label19.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label19.Location = New System.Drawing.Point(889, 187)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(24, 28)
+        Me.Label19.TabIndex = 175
+        Me.Label19.Text = "B"
+        Me.Label19.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label20
+        '
+        Me.Label20.Font = New System.Drawing.Font("Open Sans", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label20.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label20.Location = New System.Drawing.Point(889, 132)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(24, 28)
+        Me.Label20.TabIndex = 174
+        Me.Label20.Text = "A"
+        Me.Label20.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label21
+        '
+        Me.Label21.Font = New System.Drawing.Font("Open Sans", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label21.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label21.Location = New System.Drawing.Point(766, 586)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(24, 28)
+        Me.Label21.TabIndex = 182
+        Me.Label21.Text = "I"
+        Me.Label21.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label22
+        '
+        Me.Label22.Font = New System.Drawing.Font("Open Sans", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label22.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label22.Location = New System.Drawing.Point(786, 528)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(24, 28)
+        Me.Label22.TabIndex = 181
+        Me.Label22.Text = "H"
+        Me.Label22.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label23
+        '
+        Me.Label23.Font = New System.Drawing.Font("Open Sans", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label23.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label23.Location = New System.Drawing.Point(811, 472)
+        Me.Label23.Name = "Label23"
+        Me.Label23.Size = New System.Drawing.Size(24, 28)
+        Me.Label23.TabIndex = 180
+        Me.Label23.Text = "G"
+        Me.Label23.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label24
+        '
+        Me.Label24.Font = New System.Drawing.Font("Open Sans", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label24.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label24.Location = New System.Drawing.Point(839, 414)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(24, 28)
+        Me.Label24.TabIndex = 179
+        Me.Label24.Text = "F"
+        Me.Label24.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label25
+        '
+        Me.Label25.Font = New System.Drawing.Font("Open Sans", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label25.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label25.Location = New System.Drawing.Point(864, 359)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(24, 28)
+        Me.Label25.TabIndex = 178
+        Me.Label25.Text = "E"
+        Me.Label25.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'btnExit
+        '
+        Me.btnExit.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(56, Byte), Integer))
+        Me.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnExit.Font = New System.Drawing.Font("Segoe UI Semibold", 11.0!, System.Drawing.FontStyle.Bold)
+        Me.btnExit.ForeColor = System.Drawing.Color.White
+        Me.btnExit.IconChar = FontAwesome.Sharp.IconChar.Xmark
+        Me.btnExit.IconColor = System.Drawing.Color.White
+        Me.btnExit.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnExit.IconSize = 22
+        Me.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnExit.Location = New System.Drawing.Point(1151, 713)
+        Me.btnExit.Name = "btnExit"
+        Me.btnExit.Size = New System.Drawing.Size(79, 30)
+        Me.btnExit.TabIndex = 183
+        Me.btnExit.Text = "EXIT"
+        Me.btnExit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnExit.UseVisualStyleBackColor = False
+        '
         'CreateBookings
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.ClientSize = New System.Drawing.Size(1242, 733)
+        Me.ClientSize = New System.Drawing.Size(1242, 752)
+        Me.ControlBox = False
+        Me.Controls.Add(Me.btnExit)
+        Me.Controls.Add(Me.Label21)
+        Me.Controls.Add(Me.Label22)
+        Me.Controls.Add(Me.Label23)
+        Me.Controls.Add(Me.Label24)
+        Me.Controls.Add(Me.Label25)
+        Me.Controls.Add(Me.Label17)
+        Me.Controls.Add(Me.Label18)
+        Me.Controls.Add(Me.Label19)
+        Me.Controls.Add(Me.Label20)
+        Me.Controls.Add(Me.Label16)
+        Me.Controls.Add(Me.Label15)
+        Me.Controls.Add(Me.Label14)
+        Me.Controls.Add(Me.Label13)
+        Me.Controls.Add(Me.Label12)
+        Me.Controls.Add(Me.Label10)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.btnHelp)
         Me.Controls.Add(Me.lblEditMode)
         Me.Controls.Add(Me.gbFilmSelection)
@@ -3091,4 +3349,23 @@ Partial Class CreateBookings
     Friend WithEvents lblEditMode As Label
     Friend WithEvents ToolTip1 As ToolTip
     Friend WithEvents btnHelp As FontAwesome.Sharp.IconPictureBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label10 As Label
+    Friend WithEvents Label12 As Label
+    Friend WithEvents Label13 As Label
+    Friend WithEvents Label14 As Label
+    Friend WithEvents Label15 As Label
+    Friend WithEvents Label16 As Label
+    Friend WithEvents Label17 As Label
+    Friend WithEvents Label18 As Label
+    Friend WithEvents Label19 As Label
+    Friend WithEvents Label20 As Label
+    Friend WithEvents Label21 As Label
+    Friend WithEvents Label22 As Label
+    Friend WithEvents Label23 As Label
+    Friend WithEvents Label24 As Label
+    Friend WithEvents Label25 As Label
+    Friend WithEvents btnExit As FontAwesome.Sharp.IconButton
 End Class

@@ -24,26 +24,27 @@ Partial Class WelcomeScreen
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.IconPictureBox1 = New FontAwesome.Sharp.IconPictureBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.btnEditBookings = New FontAwesome.Sharp.IconButton()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.IconPictureBox2 = New FontAwesome.Sharp.IconPictureBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.btnViewInsights = New FontAwesome.Sharp.IconButton()
         Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.IconPictureBox3 = New FontAwesome.Sharp.IconPictureBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.btnViewTutorial = New FontAwesome.Sharp.IconButton()
-        Me.btnViewInsights = New FontAwesome.Sharp.IconButton()
-        Me.btnEditBookings = New FontAwesome.Sharp.IconButton()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.IconPictureBox1 = New FontAwesome.Sharp.IconPictureBox()
-        Me.IconPictureBox2 = New FontAwesome.Sharp.IconPictureBox()
-        Me.IconPictureBox3 = New FontAwesome.Sharp.IconPictureBox()
+        Me.btnExit = New FontAwesome.Sharp.IconButton()
         Me.Panel2.SuspendLayout()
-        Me.Panel3.SuspendLayout()
-        Me.Panel5.SuspendLayout()
         CType(Me.IconPictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel3.SuspendLayout()
         CType(Me.IconPictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel5.SuspendLayout()
         CType(Me.IconPictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -70,6 +71,20 @@ Partial Class WelcomeScreen
         Me.Panel2.Size = New System.Drawing.Size(288, 442)
         Me.Panel2.TabIndex = 14
         '
+        'IconPictureBox1
+        '
+        Me.IconPictureBox1.BackColor = System.Drawing.SystemColors.Highlight
+        Me.IconPictureBox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(214, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.IconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.PlusCircle
+        Me.IconPictureBox1.IconColor = System.Drawing.Color.FromArgb(CType(CType(214, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.IconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconPictureBox1.IconSize = 228
+        Me.IconPictureBox1.Location = New System.Drawing.Point(26, 27)
+        Me.IconPictureBox1.Name = "IconPictureBox1"
+        Me.IconPictureBox1.Size = New System.Drawing.Size(241, 228)
+        Me.IconPictureBox1.TabIndex = 24
+        Me.IconPictureBox1.TabStop = False
+        '
         'Label5
         '
         Me.Label5.Font = New System.Drawing.Font("Segoe UI Semibold", 10.75!, System.Drawing.FontStyle.Bold)
@@ -93,6 +108,25 @@ Partial Class WelcomeScreen
         Me.Label2.TabIndex = 19
         Me.Label2.Text = "Create Bookings"
         '
+        'btnEditBookings
+        '
+        Me.btnEditBookings.BackColor = System.Drawing.Color.White
+        Me.btnEditBookings.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnEditBookings.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEditBookings.ForeColor = System.Drawing.SystemColors.Highlight
+        Me.btnEditBookings.IconChar = FontAwesome.Sharp.IconChar.ArrowRight
+        Me.btnEditBookings.IconColor = System.Drawing.SystemColors.Highlight
+        Me.btnEditBookings.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnEditBookings.IconSize = 20
+        Me.btnEditBookings.ImageAlign = System.Drawing.ContentAlignment.BottomRight
+        Me.btnEditBookings.Location = New System.Drawing.Point(101, 394)
+        Me.btnEditBookings.Name = "btnEditBookings"
+        Me.btnEditBookings.Size = New System.Drawing.Size(82, 34)
+        Me.btnEditBookings.TabIndex = 18
+        Me.btnEditBookings.Text = "View"
+        Me.btnEditBookings.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnEditBookings.UseVisualStyleBackColor = False
+        '
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.SystemColors.Highlight
@@ -104,6 +138,20 @@ Partial Class WelcomeScreen
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(288, 442)
         Me.Panel3.TabIndex = 15
+        '
+        'IconPictureBox2
+        '
+        Me.IconPictureBox2.BackColor = System.Drawing.SystemColors.Highlight
+        Me.IconPictureBox2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(214, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.IconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.PenToSquare
+        Me.IconPictureBox2.IconColor = System.Drawing.Color.FromArgb(CType(CType(214, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.IconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconPictureBox2.IconSize = 213
+        Me.IconPictureBox2.Location = New System.Drawing.Point(49, 27)
+        Me.IconPictureBox2.Name = "IconPictureBox2"
+        Me.IconPictureBox2.Size = New System.Drawing.Size(214, 213)
+        Me.IconPictureBox2.TabIndex = 25
+        Me.IconPictureBox2.TabStop = False
         '
         'Label6
         '
@@ -128,6 +176,25 @@ Partial Class WelcomeScreen
         Me.Label3.TabIndex = 20
         Me.Label3.Text = "View/Edit Bookings"
         '
+        'btnViewInsights
+        '
+        Me.btnViewInsights.BackColor = System.Drawing.Color.White
+        Me.btnViewInsights.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnViewInsights.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnViewInsights.ForeColor = System.Drawing.SystemColors.Highlight
+        Me.btnViewInsights.IconChar = FontAwesome.Sharp.IconChar.ArrowRight
+        Me.btnViewInsights.IconColor = System.Drawing.SystemColors.Highlight
+        Me.btnViewInsights.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnViewInsights.IconSize = 20
+        Me.btnViewInsights.ImageAlign = System.Drawing.ContentAlignment.BottomRight
+        Me.btnViewInsights.Location = New System.Drawing.Point(100, 394)
+        Me.btnViewInsights.Name = "btnViewInsights"
+        Me.btnViewInsights.Size = New System.Drawing.Size(82, 34)
+        Me.btnViewInsights.TabIndex = 17
+        Me.btnViewInsights.Text = "View"
+        Me.btnViewInsights.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnViewInsights.UseVisualStyleBackColor = False
+        '
         'Panel5
         '
         Me.Panel5.BackColor = System.Drawing.SystemColors.Highlight
@@ -139,6 +206,20 @@ Partial Class WelcomeScreen
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(288, 441)
         Me.Panel5.TabIndex = 16
+        '
+        'IconPictureBox3
+        '
+        Me.IconPictureBox3.BackColor = System.Drawing.SystemColors.Highlight
+        Me.IconPictureBox3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(214, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.IconPictureBox3.IconChar = FontAwesome.Sharp.IconChar.QuestionCircle
+        Me.IconPictureBox3.IconColor = System.Drawing.Color.FromArgb(CType(CType(214, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.IconPictureBox3.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconPictureBox3.IconSize = 213
+        Me.IconPictureBox3.Location = New System.Drawing.Point(40, 41)
+        Me.IconPictureBox3.Name = "IconPictureBox3"
+        Me.IconPictureBox3.Size = New System.Drawing.Size(214, 213)
+        Me.IconPictureBox3.TabIndex = 26
+        Me.IconPictureBox3.TabStop = False
         '
         'Label7
         '
@@ -181,44 +262,6 @@ Partial Class WelcomeScreen
         Me.btnViewTutorial.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnViewTutorial.UseVisualStyleBackColor = False
         '
-        'btnViewInsights
-        '
-        Me.btnViewInsights.BackColor = System.Drawing.Color.White
-        Me.btnViewInsights.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnViewInsights.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnViewInsights.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.btnViewInsights.IconChar = FontAwesome.Sharp.IconChar.ArrowRight
-        Me.btnViewInsights.IconColor = System.Drawing.SystemColors.Highlight
-        Me.btnViewInsights.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.btnViewInsights.IconSize = 20
-        Me.btnViewInsights.ImageAlign = System.Drawing.ContentAlignment.BottomRight
-        Me.btnViewInsights.Location = New System.Drawing.Point(100, 394)
-        Me.btnViewInsights.Name = "btnViewInsights"
-        Me.btnViewInsights.Size = New System.Drawing.Size(82, 34)
-        Me.btnViewInsights.TabIndex = 17
-        Me.btnViewInsights.Text = "View"
-        Me.btnViewInsights.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnViewInsights.UseVisualStyleBackColor = False
-        '
-        'btnEditBookings
-        '
-        Me.btnEditBookings.BackColor = System.Drawing.Color.White
-        Me.btnEditBookings.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnEditBookings.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnEditBookings.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.btnEditBookings.IconChar = FontAwesome.Sharp.IconChar.ArrowRight
-        Me.btnEditBookings.IconColor = System.Drawing.SystemColors.Highlight
-        Me.btnEditBookings.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.btnEditBookings.IconSize = 20
-        Me.btnEditBookings.ImageAlign = System.Drawing.ContentAlignment.BottomRight
-        Me.btnEditBookings.Location = New System.Drawing.Point(101, 394)
-        Me.btnEditBookings.Name = "btnEditBookings"
-        Me.btnEditBookings.Size = New System.Drawing.Size(82, 34)
-        Me.btnEditBookings.TabIndex = 18
-        Me.btnEditBookings.Text = "View"
-        Me.btnEditBookings.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnEditBookings.UseVisualStyleBackColor = False
-        '
         'Label8
         '
         Me.Label8.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -230,47 +273,24 @@ Partial Class WelcomeScreen
         Me.Label8.Text = "Where would you like to go?"
         Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'IconPictureBox1
+        'btnExit
         '
-        Me.IconPictureBox1.BackColor = System.Drawing.SystemColors.Highlight
-        Me.IconPictureBox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(214, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.IconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.PlusCircle
-        Me.IconPictureBox1.IconColor = System.Drawing.Color.FromArgb(CType(CType(214, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.IconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconPictureBox1.IconSize = 228
-        Me.IconPictureBox1.Location = New System.Drawing.Point(26, 27)
-        Me.IconPictureBox1.Name = "IconPictureBox1"
-        Me.IconPictureBox1.Size = New System.Drawing.Size(241, 228)
-        Me.IconPictureBox1.TabIndex = 24
-        Me.IconPictureBox1.TabStop = False
-        '
-        'IconPictureBox2
-        '
-        Me.IconPictureBox2.BackColor = System.Drawing.SystemColors.Highlight
-        Me.IconPictureBox2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(214, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.IconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.PenToSquare
-        Me.IconPictureBox2.IconColor = System.Drawing.Color.FromArgb(CType(CType(214, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.IconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconPictureBox2.IconSize = 213
-        Me.IconPictureBox2.Location = New System.Drawing.Point(49, 27)
-        Me.IconPictureBox2.Name = "IconPictureBox2"
-        Me.IconPictureBox2.Size = New System.Drawing.Size(214, 213)
-        Me.IconPictureBox2.TabIndex = 25
-        Me.IconPictureBox2.TabStop = False
-        '
-        'IconPictureBox3
-        '
-        Me.IconPictureBox3.BackColor = System.Drawing.SystemColors.Highlight
-        Me.IconPictureBox3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(214, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.IconPictureBox3.IconChar = FontAwesome.Sharp.IconChar.QuestionCircle
-        Me.IconPictureBox3.IconColor = System.Drawing.Color.FromArgb(CType(CType(214, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.IconPictureBox3.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconPictureBox3.IconSize = 213
-        Me.IconPictureBox3.Location = New System.Drawing.Point(40, 41)
-        Me.IconPictureBox3.Name = "IconPictureBox3"
-        Me.IconPictureBox3.Size = New System.Drawing.Size(214, 213)
-        Me.IconPictureBox3.TabIndex = 26
-        Me.IconPictureBox3.TabStop = False
+        Me.btnExit.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(56, Byte), Integer))
+        Me.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnExit.Font = New System.Drawing.Font("Segoe UI Semibold", 11.0!, System.Drawing.FontStyle.Bold)
+        Me.btnExit.ForeColor = System.Drawing.Color.White
+        Me.btnExit.IconChar = FontAwesome.Sharp.IconChar.Xmark
+        Me.btnExit.IconColor = System.Drawing.Color.White
+        Me.btnExit.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnExit.IconSize = 22
+        Me.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnExit.Location = New System.Drawing.Point(930, 611)
+        Me.btnExit.Name = "btnExit"
+        Me.btnExit.Size = New System.Drawing.Size(79, 30)
+        Me.btnExit.TabIndex = 29
+        Me.btnExit.Text = "EXIT"
+        Me.btnExit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnExit.UseVisualStyleBackColor = False
         '
         'WelcomeScreen
         '
@@ -278,6 +298,8 @@ Partial Class WelcomeScreen
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.ClientSize = New System.Drawing.Size(1021, 653)
+        Me.ControlBox = False
+        Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Panel5)
         Me.Controls.Add(Me.Panel3)
@@ -290,12 +312,12 @@ Partial Class WelcomeScreen
         Me.Text = "WelcomeScreen"
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
+        CType(Me.IconPictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
+        CType(Me.IconPictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel5.ResumeLayout(False)
         Me.Panel5.PerformLayout()
-        CType(Me.IconPictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.IconPictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.IconPictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -318,4 +340,5 @@ Partial Class WelcomeScreen
     Friend WithEvents IconPictureBox1 As FontAwesome.Sharp.IconPictureBox
     Friend WithEvents IconPictureBox2 As FontAwesome.Sharp.IconPictureBox
     Friend WithEvents IconPictureBox3 As FontAwesome.Sharp.IconPictureBox
+    Friend WithEvents btnExit As FontAwesome.Sharp.IconButton
 End Class

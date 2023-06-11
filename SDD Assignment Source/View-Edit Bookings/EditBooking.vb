@@ -63,12 +63,15 @@
     End Sub
 
     Private Sub btnExitButton_Click(sender As Object, e As EventArgs) Handles btnExitButton.Click
+
+
         If IsNothing(selectedSeats) = False Then
             Array.Clear(selectedSeats, 0, selectedSeats.Length)
         End If
 
 
         ReDim selectedSeats(0 To -1)
+        BookingRecord(idxBookingToEdit).arrSeatsBooked = Split(txtSeats.Text, ",")
 
         CreateBookings.gbCreateBooking.Enabled = True
 

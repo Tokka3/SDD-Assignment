@@ -25,6 +25,8 @@ Partial Class EditBookingTutorial3
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(EditBookingTutorial3))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -32,15 +34,13 @@ Partial Class EditBookingTutorial3
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.btnTryDelete = New FontAwesome.Sharp.IconButton()
-        Me.btnBack = New FontAwesome.Sharp.IconPictureBox()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.btnNavigateTutorial = New FontAwesome.Sharp.IconButton()
         Me.btnEditTutorial = New FontAwesome.Sharp.IconButton()
         Me.btnDeleteTutorial = New FontAwesome.Sharp.IconButton()
+        Me.btnClose = New FontAwesome.Sharp.IconPictureBox()
         Me.GroupBox2.SuspendLayout()
-        CType(Me.btnBack, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnClose, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -71,6 +71,27 @@ Partial Class EditBookingTutorial3
         Me.GroupBox2.Size = New System.Drawing.Size(961, 517)
         Me.GroupBox2.TabIndex = 20
         Me.GroupBox2.TabStop = False
+        '
+        'Label9
+        '
+        Me.Label9.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Bold)
+        Me.Label9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.Label9.Location = New System.Drawing.Point(717, 463)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(204, 41)
+        Me.Label9.TabIndex = 46
+        Me.Label9.Text = "THIS IS A PICTURE"
+        Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = Global.SDD_Assignment_Source.My.Resources.Resources.SearchSortFilterTut
+        Me.PictureBox2.Location = New System.Drawing.Point(694, 32)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(246, 428)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 45
+        Me.PictureBox2.TabStop = False
         '
         'Label7
         '
@@ -155,42 +176,6 @@ Partial Class EditBookingTutorial3
         Me.btnTryDelete.Text = "Try Now"
         Me.btnTryDelete.UseVisualStyleBackColor = False
         '
-        'btnBack
-        '
-        Me.btnBack.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnBack.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnBack.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.btnBack.IconChar = FontAwesome.Sharp.IconChar.ArrowCircleLeft
-        Me.btnBack.IconColor = System.Drawing.SystemColors.Highlight
-        Me.btnBack.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.btnBack.IconSize = 41
-        Me.btnBack.Location = New System.Drawing.Point(24, 24)
-        Me.btnBack.Name = "btnBack"
-        Me.btnBack.Size = New System.Drawing.Size(46, 41)
-        Me.btnBack.TabIndex = 17
-        Me.btnBack.TabStop = False
-        '
-        'Label9
-        '
-        Me.Label9.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Bold)
-        Me.Label9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.Label9.Location = New System.Drawing.Point(251, 455)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(204, 41)
-        Me.Label9.TabIndex = 46
-        Me.Label9.Text = "THIS IS A PICTURE"
-        Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Image = Global.SDD_Assignment_Source.My.Resources.Resources.SearchSortFilterTut
-        Me.PictureBox2.Location = New System.Drawing.Point(627, 57)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(246, 428)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 45
-        Me.PictureBox2.TabStop = False
-        '
         'btnNavigateTutorial
         '
         Me.btnNavigateTutorial.BackColor = System.Drawing.SystemColors.Highlight
@@ -238,30 +223,44 @@ Partial Class EditBookingTutorial3
         Me.btnDeleteTutorial.Text = "How to delete a booking"
         Me.btnDeleteTutorial.UseVisualStyleBackColor = False
         '
+        'btnClose
+        '
+        Me.btnClose.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnClose.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnClose.ForeColor = System.Drawing.SystemColors.Highlight
+        Me.btnClose.IconChar = FontAwesome.Sharp.IconChar.Xmark
+        Me.btnClose.IconColor = System.Drawing.SystemColors.Highlight
+        Me.btnClose.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnClose.IconSize = 41
+        Me.btnClose.Location = New System.Drawing.Point(974, -1)
+        Me.btnClose.Name = "btnClose"
+        Me.btnClose.Size = New System.Drawing.Size(46, 41)
+        Me.btnClose.TabIndex = 43
+        Me.btnClose.TabStop = False
+        '
         'EditBookingTutorial3
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.ClientSize = New System.Drawing.Size(1021, 653)
+        Me.ControlBox = False
+        Me.Controls.Add(Me.btnClose)
         Me.Controls.Add(Me.btnNavigateTutorial)
         Me.Controls.Add(Me.btnEditTutorial)
         Me.Controls.Add(Me.btnDeleteTutorial)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.btnBack)
         Me.Name = "EditBookingTutorial3"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "ViewBookingsTutorial"
         Me.GroupBox2.ResumeLayout(False)
-        CType(Me.btnBack, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnClose, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents Label1 As Label
-    Friend WithEvents btnBack As FontAwesome.Sharp.IconPictureBox
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents btnTryDelete As FontAwesome.Sharp.IconButton
     Friend WithEvents Label7 As Label
@@ -275,4 +274,5 @@ Partial Class EditBookingTutorial3
     Friend WithEvents btnNavigateTutorial As FontAwesome.Sharp.IconButton
     Friend WithEvents btnEditTutorial As FontAwesome.Sharp.IconButton
     Friend WithEvents btnDeleteTutorial As FontAwesome.Sharp.IconButton
+    Friend WithEvents btnClose As FontAwesome.Sharp.IconPictureBox
 End Class
