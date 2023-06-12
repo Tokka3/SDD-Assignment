@@ -4,7 +4,7 @@
 6-60-Michael-Shoe-22/12/25-C9,C10,C11-The Lion King
 7-60-Nick-Tok-25/52/2023-F5,F6,F7-Forrest Gump
 8-80-Forest-Gumpy-12/25/1958-D11,D10,D9,D8-Forrest Gump
-9-100-David-Beckhama-22/10/1922-H9,H10,H11,H12,I8-Forrest Gump
+9-60-David-Beckhama-22/10/1922-F9,F8,F7-The Lion King
 10-80-Bill-Gump-22/11/2003-H4,H3,H2,H1-Forrest Gump
 12-120-Philip-Tokareff-03/01/2005-D11,D10,D9,D12,E11,E10-The Lion King
 13-80-Visual-Studio-03/03/2003-D13,D14,D15,D16-Forrest Gump

@@ -13,12 +13,17 @@
     End Sub
 
     Public Sub EditBookingRequest()
+
         ColourBookedSeats()
-        selectedSeats = BookingToEdit.arrSeatsBooked
-        For Each seat In selectedSeats
-            Dim btnSeat As FontAwesome.Sharp.IconPictureBox = DirectCast(Controls(seat), FontAwesome.Sharp.IconPictureBox)
+
+        If bFilmChanged <> True Then 'If the admin edits the film in the Edit Booking window, then reset the seats. Otherwise keep the original ones.
+            selectedSeats = BookingToEdit.arrSeatsBooked
+        End If
+
+        For Each seat In selectedSeats 'loop through the users booked seats they want to edit. 
+            Dim btnSeat As FontAwesome.Sharp.IconPictureBox = DirectCast(Controls(seat), FontAwesome.Sharp.IconPictureBox) 'convert the seat string to a button object
             If btnSeat IsNot Nothing Then
-                btnSeat.IconColor = Color.LimeGreen
+                btnSeat.IconColor = Color.LimeGreen 'Colour the users seats green so they can now edit them again.
             End If
         Next
     End Sub
@@ -31,12 +36,22 @@
         End If
         Dim btn As FontAwesome.Sharp.IconPictureBox = DirectCast(sender, FontAwesome.Sharp.IconPictureBox)
 
+        If btn.IconColor = Color.Red Then 'We can't book red seats as they are already occupied.
+            Return
+        End If
 
-        If Array.IndexOf(selectedSeats, btn.Name) >= 0 Then
-            ' The string already exists in the array, so remove it
+
+        If bFilmChanged Then 'If the Film Has been changed in the Edit Bookings window, then we remove the old seats.
+            EditBooking.txtSeats.Clear()
+            bFilmChanged = False
+        End If
+
+        If Array.IndexOf(selectedSeats, btn.Name) >= 0 Then 'Add the seat to an array or remove it.
+
+            'The string already exists in the array, so remove it
             selectedSeats = RemoveElementFromArray(selectedSeats, btn.Name)
         Else
-            ' The string doesn't exist in the array, so add it
+            'The string doesn't exist in the array, so add it
             ReDim Preserve selectedSeats(UBound(selectedSeats) + 1)
             selectedSeats(UBound(selectedSeats)) = btn.Name
         End If
@@ -45,21 +60,21 @@
         End If
 
 
-        ' Function to remove an element from an array
-
+        'Display the selected seats in the rich text box.
         rtbSelectedSeats.Clear()
+
         If selectedSeats.Length >= 1 Then
             rtbSelectedSeats.AppendText(Strings.Join(selectedSeats, ","))
         End If
 
-        'MessageBox.Show("seat: " & btn.Name)
+
         'if we click on a button, highlight it.
         Select Case (btn.IconColor)
             'Select/Deselect empty seat
-            Case Color.CornflowerBlue
+            Case Color.CornflowerBlue 'If the button isn't selected, display it as the selected colour. 
                 btn.IconColor = Color.LightGreen
             Case Color.LightGreen
-                btn.IconColor = Color.CornflowerBlue
+                btn.IconColor = Color.CornflowerBlue 'If the button was selected, set it back to the default colour.
 
         End Select
 
@@ -70,6 +85,7 @@
     End Sub
 
     Private Sub DynamicButton_Hover(ByVal sender As Object, ByVal e As System.EventArgs)
+        'When hovering over a seat, we show a hover over effect.
 
         Dim btn As FontAwesome.Sharp.IconPictureBox = DirectCast(sender, FontAwesome.Sharp.IconPictureBox)
 
@@ -88,6 +104,8 @@
     End Sub
     Private Sub DynamicButton_MouseLeave(ByVal sender As Object, ByVal e As System.EventArgs)
 
+        'When we stop hovering over a seat, remove the hover over effect. 
+
         Dim btn As FontAwesome.Sharp.IconPictureBox = DirectCast(sender, FontAwesome.Sharp.IconPictureBox)
         If btn.IconColor = Color.CornflowerBlue Then
             btn.IconColor = SystemColors.Highlight
@@ -103,7 +121,7 @@
 
     Sub ColourBookedSeats()
 
-        For Each button As FontAwesome.Sharp.IconPictureBox In Controls.OfType(Of FontAwesome.Sharp.IconPictureBox)()
+        For Each button As FontAwesome.Sharp.IconPictureBox In Controls.OfType(Of FontAwesome.Sharp.IconPictureBox)() 'Reset all buttons to the original colour.
             If button.Name = "btnBack" Then
                 Continue For
             End If
@@ -111,52 +129,49 @@
             button.Enabled = True
         Next
 
-        For Each booking In BookingRecord
+        For Each booking In BookingRecord 'Loop through all bookings in the Booking Record
             If booking.arrSeatsBooked IsNot Nothing And booking.strFilm = strSelectedFilm Then
-                For Each seat In booking.arrSeatsBooked
+                For Each seat In booking.arrSeatsBooked 'Loop through al the seats in each booking
                     Dim btnSeat As FontAwesome.Sharp.IconPictureBox = DirectCast(Controls(seat), FontAwesome.Sharp.IconPictureBox)
                     If btnSeat IsNot Nothing Then
-                        btnSeat.IconColor = Color.Red
+                        btnSeat.IconColor = Color.Red 'Set the seat to red, indicating that it's occupied and it may not be booked again.
                     End If
                 Next
             End If
 
         Next
+
+        Dim strSelectedSeats As String() 'Seats that were selected for a booking need to be recoloured after exiting out the window. 
+        strSelectedSeats = Split(rtbSelectedSeats.Text, ",") 'Read the seats from the "Selected Seats" textbox.
+        For Each seat In strSelectedSeats
+            Dim btnSeat As FontAwesome.Sharp.IconPictureBox = DirectCast(Controls(seat), FontAwesome.Sharp.IconPictureBox)
+            If btnSeat IsNot Nothing Then
+                btnSeat.IconColor = Color.LimeGreen 'Colour the seats green.
+            End If
+        Next
     End Sub
+
     Private Sub CreateBookings_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ReDim selectedSeats(0 To -1) ' Initialize with size 0
-
-
-        'Dynamically Load Buttons Upon load
-        'Specified dimensions
-        Dim form_width As Integer = Me.Width - 300
-        Dim buttons_width As Integer = (button_row_num + 1) * 75
-
-        'Grid buttons
-        Dim counter As Byte = 0
 
         ColourBookedSeats()
 
 
         For Each button As FontAwesome.Sharp.IconPictureBox In Controls.OfType(Of FontAwesome.Sharp.IconPictureBox)()
-            If button.IconChar <> button.IconChar.Couch Then
+            If button.IconChar <> button.IconChar.Couch Then 'If the icon is not a couch/seat, don't add a handler.
                 Continue For
             End If
+
+            'Add handlers to all seats. These will be responsible for clicks, hovers and unhovering.
             AddHandler button.Click, AddressOf DynamicButton_Click
             AddHandler button.MouseEnter, AddressOf DynamicButton_Hover
             AddHandler button.MouseLeave, AddressOf DynamicButton_MouseLeave
-
-
         Next
-
-
-
-
     End Sub
 
     Public Sub PaymentSuccess()
         For Each button As FontAwesome.Sharp.IconPictureBox In Controls.OfType(Of FontAwesome.Sharp.IconPictureBox)()
-            If button.IconColor = Color.LimeGreen Then
+            If button.IconColor = Color.LimeGreen Then 'All the selected seats (green seats) should now be coloured red because the booking was successful.
                 button.IconColor = Color.Red
                 button.Enabled = False
             End If
@@ -164,31 +179,18 @@
     End Sub
     Private Sub btnPayment_Click(sender As Object, e As EventArgs) Handles btnPayment.Click
 
-        Dim dateDummyVar As Date
-        If Date.TryParseExact(txtDOB.Text, "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture, System.Globalization.DateTimeStyles.None, dateDummyVar) Then
-
-        Else
-            MessageBox.Show("Invalid date of birth.")
-            Return
-        End If
-        If String.IsNullOrEmpty(txtFirstName.Text) Or String.IsNullOrEmpty(txtLastName.Text) Then
-            MessageBox.Show("Please fill in all fields.")
-            Return
-
-        End If
-
+        'Initialise Payment Window
         strFirstName = txtFirstName.Text
         strLastName = txtLastName.Text
-
-
-
         PaymentScreen.Show()
         PaymentScreen.InitialiseTextBoxes()
+
         Me.Enabled = False
     End Sub
 
 
     Private Sub cbxMovieSelection_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbxMovieSelection.SelectedIndexChanged
+        'Change the movie image when the combo box value is changed.
         Select Case cbxMovieSelection.Text
             Case "The Lion King"
                 pbMovie.Image = My.Resources.LionKing
@@ -201,14 +203,19 @@
         strSelectedFilm = cbxMovieSelection.Text
 
 
-    End Sub
-
-    Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
         If IsNothing(selectedSeats) = False Then 'Clear the seats array if it's not empty
             Array.Clear(selectedSeats, 0, selectedSeats.Length)
+
+            ReDim selectedSeats(0 To -1) 'Reset the selectedSeats array 
+
         End If
         rtbSelectedSeats.Clear()
         ColourBookedSeats()
+
+    End Sub
+
+    Private Sub btnUpdate_Click(sender As Object, e As EventArgs)
+
     End Sub
 
     Private Sub btnHelp_Click(sender As Object, e As EventArgs) Handles btnHelp.Click
@@ -222,4 +229,47 @@
     Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
         ExitProgram()
     End Sub
+
+    Function ValidateInputs() As Boolean
+        Dim dateDummyVar As Date
+        Dim bValid As Boolean = True
+
+        'Validate DOB's
+        If Not Date.TryParseExact(txtDOB.Text, "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture, System.Globalization.DateTimeStyles.None, dateDummyVar) Then
+            bValid = False
+            pValidDOB.BackColor = Color.LightCoral
+        Else
+            pValidDOB.BackColor = Color.YellowGreen
+        End If
+        'Validate First Name Textbox
+        If String.IsNullOrEmpty(txtFirstName.Text) Then
+            bValid = False
+            pValidFirstName.BackColor = Color.LightCoral
+
+        Else
+            pValidFirstName.BackColor = Color.YellowGreen
+
+        End If
+        'Validate Last Name Textbox
+        If String.IsNullOrEmpty(txtLastName.Text) Then
+            bValid = False
+            pValidLastName.BackColor = Color.LightCoral
+        Else
+            pValidLastName.BackColor = Color.YellowGreen
+        End If
+
+        'Validate If Seats have been selected 
+        If String.IsNullOrEmpty(rtbSelectedSeats.Text) Then
+            bValid = False
+            pValidSeats.BackColor = Color.LightCoral
+        Else
+            pValidSeats.BackColor = Color.YellowGreen
+        End If
+        Return bValid
+    End Function
+    Private Sub txtField_Changed(sender As Object, e As EventArgs) Handles txtFirstName.TextChanged, txtLastName.TextChanged, txtDOB.TextChanged, rtbSelectedSeats.TextChanged
+        btnPayment.Enabled = ValidateInputs() 'If all text fields are valid, enable the payment button.
+    End Sub
+
+
 End Class

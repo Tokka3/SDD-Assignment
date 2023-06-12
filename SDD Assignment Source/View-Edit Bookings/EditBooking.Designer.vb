@@ -133,6 +133,7 @@ Partial Class EditBooking
         Me.txtSeats.Location = New System.Drawing.Point(12, 268)
         Me.txtSeats.Multiline = True
         Me.txtSeats.Name = "txtSeats"
+        Me.txtSeats.ReadOnly = True
         Me.txtSeats.Size = New System.Drawing.Size(225, 32)
         Me.txtSeats.TabIndex = 175
         '

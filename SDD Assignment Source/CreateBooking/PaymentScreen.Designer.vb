@@ -37,6 +37,11 @@ Partial Class PaymentScreen
         Me.txtExpiryDate = New System.Windows.Forms.TextBox()
         Me.txtCCV = New System.Windows.Forms.TextBox()
         Me.btnPayment = New FontAwesome.Sharp.IconButton()
+        Me.pValidFirstName = New System.Windows.Forms.Panel()
+        Me.pValidLastName = New System.Windows.Forms.Panel()
+        Me.pValidCCNo = New System.Windows.Forms.Panel()
+        Me.pValidExpDate = New System.Windows.Forms.Panel()
+        Me.pValidCVV = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
         CType(Me.btnExitButton, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -69,9 +74,9 @@ Partial Class PaymentScreen
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.Label3.Location = New System.Drawing.Point(7, 207)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(209, 28)
+        Me.Label3.Size = New System.Drawing.Size(293, 28)
         Me.Label3.TabIndex = 29
-        Me.Label3.Text = "Credit Card Number:"
+        Me.Label3.Text = "Credit Card No. (No Spaces)"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Label4
@@ -146,47 +151,55 @@ Partial Class PaymentScreen
         '
         'txtFirstname
         '
-        Me.txtFirstname.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtFirstname.Font = New System.Drawing.Font("Segoe UI", 14.25!)
+        Me.txtFirstname.ForeColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
         Me.txtFirstname.Location = New System.Drawing.Point(12, 90)
         Me.txtFirstname.Name = "txtFirstname"
-        Me.txtFirstname.Size = New System.Drawing.Size(322, 33)
+        Me.txtFirstname.ReadOnly = True
+        Me.txtFirstname.Size = New System.Drawing.Size(312, 33)
         Me.txtFirstname.TabIndex = 39
         '
         'txtLastname
         '
-        Me.txtLastname.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtLastname.Font = New System.Drawing.Font("Segoe UI", 14.25!)
+        Me.txtLastname.ForeColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
         Me.txtLastname.Location = New System.Drawing.Point(12, 163)
         Me.txtLastname.Name = "txtLastname"
-        Me.txtLastname.Size = New System.Drawing.Size(322, 33)
+        Me.txtLastname.ReadOnly = True
+        Me.txtLastname.Size = New System.Drawing.Size(312, 33)
         Me.txtLastname.TabIndex = 40
         '
         'txtCCNo
         '
-        Me.txtCCNo.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCCNo.Font = New System.Drawing.Font("Segoe UI", 14.25!)
+        Me.txtCCNo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
         Me.txtCCNo.Location = New System.Drawing.Point(14, 238)
         Me.txtCCNo.Name = "txtCCNo"
-        Me.txtCCNo.Size = New System.Drawing.Size(322, 33)
+        Me.txtCCNo.Size = New System.Drawing.Size(310, 33)
         Me.txtCCNo.TabIndex = 41
         '
         'txtExpiryDate
         '
-        Me.txtExpiryDate.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtExpiryDate.Font = New System.Drawing.Font("Segoe UI", 14.25!)
+        Me.txtExpiryDate.ForeColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
         Me.txtExpiryDate.Location = New System.Drawing.Point(12, 310)
         Me.txtExpiryDate.Name = "txtExpiryDate"
-        Me.txtExpiryDate.Size = New System.Drawing.Size(191, 33)
+        Me.txtExpiryDate.Size = New System.Drawing.Size(185, 33)
         Me.txtExpiryDate.TabIndex = 42
         '
         'txtCCV
         '
-        Me.txtCCV.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCCV.Font = New System.Drawing.Font("Segoe UI", 14.25!)
+        Me.txtCCV.ForeColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
         Me.txtCCV.Location = New System.Drawing.Point(230, 310)
         Me.txtCCV.Name = "txtCCV"
-        Me.txtCCV.Size = New System.Drawing.Size(104, 33)
+        Me.txtCCV.Size = New System.Drawing.Size(94, 33)
         Me.txtCCV.TabIndex = 43
         '
         'btnPayment
         '
         Me.btnPayment.BackColor = System.Drawing.SystemColors.Highlight
+        Me.btnPayment.Enabled = False
         Me.btnPayment.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnPayment.Font = New System.Drawing.Font("Segoe UI Semibold", 13.25!, System.Drawing.FontStyle.Bold)
         Me.btnPayment.ForeColor = System.Drawing.SystemColors.ButtonHighlight
@@ -195,7 +208,7 @@ Partial Class PaymentScreen
         Me.btnPayment.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.btnPayment.IconSize = 34
         Me.btnPayment.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnPayment.Location = New System.Drawing.Point(14, 431)
+        Me.btnPayment.Location = New System.Drawing.Point(14, 391)
         Me.btnPayment.Margin = New System.Windows.Forms.Padding(2)
         Me.btnPayment.Name = "btnPayment"
         Me.btnPayment.Size = New System.Drawing.Size(323, 38)
@@ -203,13 +216,58 @@ Partial Class PaymentScreen
         Me.btnPayment.Text = "Complete Payment"
         Me.btnPayment.UseVisualStyleBackColor = False
         '
+        'pValidFirstName
+        '
+        Me.pValidFirstName.BackColor = System.Drawing.Color.YellowGreen
+        Me.pValidFirstName.Location = New System.Drawing.Point(324, 90)
+        Me.pValidFirstName.Name = "pValidFirstName"
+        Me.pValidFirstName.Size = New System.Drawing.Size(10, 33)
+        Me.pValidFirstName.TabIndex = 166
+        '
+        'pValidLastName
+        '
+        Me.pValidLastName.BackColor = System.Drawing.Color.YellowGreen
+        Me.pValidLastName.Location = New System.Drawing.Point(324, 163)
+        Me.pValidLastName.Name = "pValidLastName"
+        Me.pValidLastName.Size = New System.Drawing.Size(10, 33)
+        Me.pValidLastName.TabIndex = 167
+        '
+        'pValidCCNo
+        '
+        Me.pValidCCNo.BackColor = System.Drawing.Color.LightCoral
+        Me.pValidCCNo.Location = New System.Drawing.Point(324, 238)
+        Me.pValidCCNo.Name = "pValidCCNo"
+        Me.pValidCCNo.Size = New System.Drawing.Size(10, 33)
+        Me.pValidCCNo.TabIndex = 168
+        '
+        'pValidExpDate
+        '
+        Me.pValidExpDate.BackColor = System.Drawing.Color.LightCoral
+        Me.pValidExpDate.Location = New System.Drawing.Point(196, 310)
+        Me.pValidExpDate.Name = "pValidExpDate"
+        Me.pValidExpDate.Size = New System.Drawing.Size(10, 33)
+        Me.pValidExpDate.TabIndex = 169
+        '
+        'pValidCVV
+        '
+        Me.pValidCVV.BackColor = System.Drawing.Color.LightCoral
+        Me.pValidCVV.Location = New System.Drawing.Point(324, 310)
+        Me.pValidCVV.Name = "pValidCVV"
+        Me.pValidCVV.Size = New System.Drawing.Size(10, 33)
+        Me.pValidCVV.TabIndex = 170
+        '
         'PaymentScreen
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.ClientSize = New System.Drawing.Size(351, 482)
+        Me.ClientSize = New System.Drawing.Size(351, 442)
         Me.ControlBox = False
+        Me.Controls.Add(Me.pValidCVV)
+        Me.Controls.Add(Me.pValidExpDate)
+        Me.Controls.Add(Me.pValidCCNo)
+        Me.Controls.Add(Me.pValidLastName)
+        Me.Controls.Add(Me.pValidFirstName)
         Me.Controls.Add(Me.txtCCV)
         Me.Controls.Add(Me.txtExpiryDate)
         Me.Controls.Add(Me.txtCCNo)
@@ -248,4 +306,9 @@ Partial Class PaymentScreen
     Friend WithEvents txtCCNo As TextBox
     Friend WithEvents txtExpiryDate As TextBox
     Friend WithEvents txtCCV As TextBox
+    Friend WithEvents pValidFirstName As Panel
+    Friend WithEvents pValidLastName As Panel
+    Friend WithEvents pValidCCNo As Panel
+    Friend WithEvents pValidExpDate As Panel
+    Friend WithEvents pValidCVV As Panel
 End Class

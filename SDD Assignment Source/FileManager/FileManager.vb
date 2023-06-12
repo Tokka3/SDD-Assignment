@@ -17,13 +17,15 @@
     End Function
 
     Public Sub ClearBookingFile()
-        System.IO.File.WriteAllText("Bookings.Txt", String.Empty)
+        System.IO.File.WriteAllText("Bookings.Txt", String.Empty) 'Clear the booking file completely
     End Sub
     Public Sub UpdateBookingRecordArray() 'Populates the BookingRecord array by reading Bookings.txt file
 
 
-        Array.Clear(BookingRecord, 0, BookingRecord.Length)
-        intBookingCount = 0
+        Array.Clear(BookingRecord, 0, BookingRecord.Length) 'Clear the array
+
+        intBookingCount = 0 'Reset the booking count
+
         Dim filePath As String = "Bookings.txt"
 
         Dim counter As Integer = 0
@@ -32,16 +34,16 @@
 
         readFile = New System.IO.StreamReader("Bookings.txt")
 
-        While Not readFile.EndOfStream And counter < 100
+        While Not readFile.EndOfStream And counter < 100 'Loop through the file
 
             Dim line As String = readFile.ReadLine()
 
-            Dim parts() As String = line.Split("-"c)
+            Dim parts() As String = line.Split("-") 'Split the booking into it's individual parts.
 
             If parts.Length >= 6 Then
 
-                BookingRecord(counter).intBookingID = Integer.Parse(parts(0))
-                'Debug.WriteLine(BookingRecord(counter).intBookingID.ToString & " uoueo")
+                BookingRecord(counter).intBookingID = Integer.Parse(parts(0)) 'Copy all the information from the line to the array at index "counter".
+
                 BookingRecord(counter).intTotal = Integer.Parse(parts(1))
 
                 BookingRecord(counter).strBookingFirstName = parts(2)
@@ -54,9 +56,9 @@
 
                 BookingRecord(counter).strFilm = parts(6)
 
-                If BookingRecord(counter).intBookingID > intBookingCount Then
+                If BookingRecord(counter).intBookingID > intBookingCount Then 'When we create a new booking we need to find out what the next booking ID is
 
-                    intBookingCount = BookingRecord(counter).intBookingID 'Gets the latest booking ID
+                    intBookingCount = BookingRecord(counter).intBookingID 'intBookingCount will now store the latest booking ID 
 
                 End If
 
@@ -75,11 +77,11 @@
         Dim writeFile As System.IO.StreamWriter 'Open stream to file
         writeFile = System.IO.File.AppendText("Bookings.txt")
 
-        For Each booking In BookingRecord
+        For Each booking In BookingRecord 'Loop through booking record array
 
             Dim strField As String = ""
 
-            strField &= (booking.intBookingID.ToString() & "-")
+            strField &= (booking.intBookingID.ToString() & "-") 'Combine the booking information into one string, separated by delimiter "-"
 
             strField &= (booking.intTotal.ToString() & "-")
 
@@ -93,7 +95,7 @@
 
             strField &= (booking.strFilm)
 
-            If strField = "0-0-----" Then
+            If strField = "0-0-----" Then 'If the booking is empty don't write it to file.
                 Continue For
             End If
             writeFile.WriteLine(strField)

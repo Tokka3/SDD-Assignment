@@ -219,7 +219,7 @@ Partial Class Tutorial
         Me.btnClose.IconColor = System.Drawing.SystemColors.Highlight
         Me.btnClose.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.btnClose.IconSize = 41
-        Me.btnClose.Location = New System.Drawing.Point(585, -4)
+        Me.btnClose.Location = New System.Drawing.Point(574, -5)
         Me.btnClose.Name = "btnClose"
         Me.btnClose.Size = New System.Drawing.Size(46, 41)
         Me.btnClose.TabIndex = 26

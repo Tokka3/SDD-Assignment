@@ -14,17 +14,18 @@
 
         If result = DialogResult.Yes Then
 
-            ClearBookingFile()
+            ClearBookingFile() 'Clear the booking file
+
             Dim writeFile As System.IO.StreamWriter 'Open stream to file
             writeFile = System.IO.File.AppendText("Bookings.txt")
 
-            For Each booking In BookingRecord
+            For Each booking In BookingRecord 'Rewrite all the bookings to the file except for the one we want to delete
 
-                If booking.intBookingID = booking_to_delete.intBookingID Then
+                If booking.intBookingID = booking_to_delete.intBookingID Then 'Skip the booking we want to delete
                     Continue For
                 End If
 
-                Dim strField As String = ""
+                Dim strField As String = "" 'Combine all the fields into one string
                 strField &= (booking.intBookingID.ToString() & "-")
                 strField &= (booking.intTotal.ToString() & "-")
                 strField &= (booking.strBookingFirstName & "-")
@@ -32,7 +33,7 @@
                 strField &= (booking.strDOB & "-")
                 strField &= (Join(booking.arrSeatsBooked, ",") & "-")
                 strField &= (booking.strFilm)
-                If strField = "0-0-----" Then
+                If strField = "0-0-----" Then 'Don't write empty records to file'
                     Continue For
                 End If
 
@@ -41,20 +42,24 @@
 
             writeFile.Close()
 
-            UpdateBookingRecordArray()
+            UpdateBookingRecordArray() 'Update the global array in the program by reading the file that has deleted the record.
 
-            Booking_Refresh()
+            Booking_Refresh() 'Refresh the display of bookings
 
         End If
     End Sub
 
-    Private Sub Edit_Record(ByVal sender As Object, ByVal e As System.EventArgs)
+    Private Sub Edit_Record(ByVal sender As Object, ByVal e As System.EventArgs) 'Gets called when the edit button is clicked on a record in the "View Bookings" window
         Dim btn As Button = DirectCast(sender, Button)
 
-        BookingToEdit = BookingRecord(GetBookingIdxByID(btn.AccessibleDescription))
-        idxBookingToEdit = GetBookingIdxByID(btn.AccessibleDescription)
-        EditBooking.Show()
+        BookingToEdit = BookingRecord(GetBookingIdxByID(btn.AccessibleDescription)) 'Stores the booking that needs to be edited in a global variable
 
+        idxBookingToEdit = GetBookingIdxByID(btn.AccessibleDescription) 'Stores the index of the booking to be edited in a global variable
+
+        EditBooking.Show() 'Display the Edit Booking window
+
+
+        'Automatically fill in all the booking details so you can simply edit what you want and not have to retype everything.
         EditBooking.txtFirstName.Text = BookingToEdit.strBookingFirstName
         EditBooking.txtLastName.Text = BookingToEdit.strBookingLastName
         EditBooking.txtDOB.Text = BookingToEdit.strDOB
@@ -100,7 +105,7 @@
     Public Function CalculateTotalRevenueForMovie(ByVal movie As String) As Integer
         Dim totalRevenue As Integer = 0
 
-        For Each booking As Booking In BookingRecord
+        For Each booking As Booking In BookingRecord 'Loop through all the bookings and if the film matches the criteria, add the booking cost to the total
             If booking.strFilm = movie Or movie = "All" Then
                 totalRevenue += booking.intTotal
             End If
@@ -112,7 +117,7 @@
     Public Function CountBookingsForFilm(ByVal movie As String) As Integer
         Dim count As Integer = 0
 
-        For Each booking As Booking In BookingRecord
+        For Each booking As Booking In BookingRecord 'Loop through all the bookings and if the film matches the criteria, increase the count by 1
             If booking.strFilm = movie Or movie = "All" And String.IsNullOrEmpty(booking.strBookingFirstName) <> True Then
                 count += 1
                 Debug.WriteLine(count)
@@ -123,23 +128,25 @@
     End Function
 
     Public Sub Booking_Refresh()
+
         grpBookings.Controls.Clear()
         Dim container As New Panel With {.Dock = DockStyle.Fill, .AutoScroll = True, .Name = "displayPanel"}
 
-        grpBookings.Controls.Add(container) ' Assume grpBookings is your GroupBox
+        grpBookings.Controls.Add(container) 'Add the elements to the group box.
 
-        Dim yPos As Integer = 0 ' Initial vertical position for the first Panel
+        Dim yPos As Integer = 0 'Initial vertical position for the first Panel
 
-        Dim BookingDisplay(100) As Booking
-        BookingDisplay = SortBookingRecord()
+        Dim BookingDisplay(100) As Booking 'The Bookings that will be displayed
+
+        BookingDisplay = SortBookingRecord() 'Sort the Booking Records according to the sort combo box
         For i As Integer = 0 To BookingDisplay.Length - 1
 
             ' Create a new Panel for the record
-            If String.IsNullOrEmpty(BookingDisplay(i).strBookingFirstName) Then
+            If String.IsNullOrEmpty(BookingDisplay(i).strBookingFirstName) Then 'If the booking does not have a first name, it's an empty element in the array
                 Continue For
             End If
 
-            If Filter_Record(BookingDisplay(i)) = False Then
+            If Filter_Record(BookingDisplay(i)) = False Then 'Check if the booking matches the search/sort/filter requirements, if it doesn't, iterate next.
                 Continue For
             End If
 
@@ -147,45 +154,51 @@
             Dim recordPanel As New Panel With {.Width = 705, .Height = 40, .Top = yPos, .Left = 5, .BackColor = SystemColors.Highlight}
             container.Controls.Add(recordPanel)
 
-            ' Create Labels and add them to the record's Panel
+            'DISPLAY RECORDS - THIS USES DYNAMIC ELEMENTS, ALL CONTROLS ARE CREATED AT RUNTIME
+
+            'Create Labels and add them to the record's Panel
             Dim lblID As New Label With {.Text = BookingDisplay(i).intBookingID.ToString(), .Top = 10, .Width = 30, .Left = 5, .ForeColor = Color.White}
             lblID.Font = New Font("Segoe UI", 10, FontStyle.Regular)
             recordPanel.Controls.Add(lblID)
 
+            'Display the first name
             Dim lblFirstName As New Label With {.Text = BookingDisplay(i).strBookingFirstName, .Top = 10, .Width = 95, .Left = 45, .ForeColor = Color.White}
             lblFirstName.Font = New Font("Segoe UI", 10, FontStyle.Regular)
             recordPanel.Controls.Add(lblFirstName)
 
+            'Display the last name
             Dim lblLastName As New Label With {.Text = BookingDisplay(i).strBookingLastName, .Top = 10, .Left = 140, .Width = 100, .ForeColor = Color.White}
             lblLastName.Font = New Font("Segoe UI", 10, FontStyle.Regular)
             recordPanel.Controls.Add(lblLastName)
 
+            'Display the film
             Dim lblFilm As New Label With {.Text = BookingDisplay(i).strFilm, .Top = 10, .Left = 235, .Width = 106, .ForeColor = Color.White}
             lblFilm.Font = New Font("Segoe UI", 10, FontStyle.Regular)
             recordPanel.Controls.Add(lblFilm)
 
+            'Create a textbox to display the bookings seats
             Dim txtSeats As New TextBox With {.Text = String.Join(",", BookingDisplay(i).arrSeatsBooked), .Top = 8, .Left = 342, .Width = 140, .ForeColor = SystemColors.HotTrack, .[ReadOnly] = True}
             txtSeats.Font = New Font("Segoe UI", 10, FontStyle.Regular)
             recordPanel.Controls.Add(txtSeats)
-
+            'Display the total price
             Dim lblPrice As New Label With {.Text = "$" & BookingDisplay(i).intTotal.ToString(), .Top = 10, .Left = 512, .Width = 55, .ForeColor = Color.White}
             lblPrice.Font = New Font("Segoe UI", 10, FontStyle.Regular)
             recordPanel.Controls.Add(lblPrice)
-
+            'Display the Edit Button
             Dim btnEdit As New Button With {.FlatStyle = FlatStyle.Flat, .Width = 50, .Height = 28, .Top = 6, .ForeColor = Color.White, .Left = 567, .Text = "Edit", .BackColor = SystemColors.HotTrack}
             btnEdit.Font = New Font("Segoe UI", 10, FontStyle.Regular)
             btnEdit.AccessibleDescription = BookingDisplay(i).intBookingID.ToString()
             recordPanel.Controls.Add(btnEdit)
-            AddHandler btnEdit.Click, AddressOf Edit_Record
+            AddHandler btnEdit.Click, AddressOf Edit_Record 'Add a handler for the edit button when it's clicked.
 
+            'Display the Delete Button
             Dim btnDelete As New Button With {.FlatStyle = FlatStyle.Flat, .Width = 70, .Height = 28, .Top = 6, .ForeColor = Color.White, .Left = 627, .Text = "Delete", .BackColor = Color.OrangeRed}
             btnDelete.Font = New Font("Segoe UI", 10, FontStyle.Regular)
             btnDelete.AccessibleDescription = BookingDisplay(i).intBookingID.ToString()
-            AddHandler btnDelete.Click, AddressOf Delete_Record
+            AddHandler btnDelete.Click, AddressOf Delete_Record 'Add a handler for the delete button when it's clicked.
             recordPanel.Controls.Add(btnDelete)
-            ' ... create more Labels for the other pieces of data
 
-            ' Increase the vertical position for the next Panel
+            'Increase the vertical position for the next Panel
             yPos += 50
         Next
     End Sub
@@ -244,7 +257,7 @@
         EditBookingTutorial.Show()
     End Sub
 
-    Private Sub IconButton1_Click(sender As Object, e As EventArgs) Handles btnExit.Click
+    Private Sub Exit_Button(sender As Object, e As EventArgs) Handles btnExit.Click
         ExitProgram()
     End Sub
 End Class

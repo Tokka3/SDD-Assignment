@@ -40,12 +40,14 @@ Partial Class WelcomeScreen
         Me.btnViewTutorial = New FontAwesome.Sharp.IconButton()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.btnExit = New FontAwesome.Sharp.IconButton()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel2.SuspendLayout()
         CType(Me.IconPictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel3.SuspendLayout()
         CType(Me.IconPictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel5.SuspendLayout()
         CType(Me.IconPictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -292,6 +294,16 @@ Partial Class WelcomeScreen
         Me.btnExit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnExit.UseVisualStyleBackColor = False
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.SDD_Assignment_Source.My.Resources.Resources.LogoFinal
+        Me.PictureBox1.Location = New System.Drawing.Point(588, 21)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(58, 60)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 30
+        Me.PictureBox1.TabStop = False
+        '
         'WelcomeScreen
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -299,6 +311,7 @@ Partial Class WelcomeScreen
         Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.ClientSize = New System.Drawing.Size(1021, 653)
         Me.ControlBox = False
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Panel5)
@@ -319,6 +332,7 @@ Partial Class WelcomeScreen
         Me.Panel5.ResumeLayout(False)
         Me.Panel5.PerformLayout()
         CType(Me.IconPictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -341,4 +355,5 @@ Partial Class WelcomeScreen
     Friend WithEvents IconPictureBox2 As FontAwesome.Sharp.IconPictureBox
     Friend WithEvents IconPictureBox3 As FontAwesome.Sharp.IconPictureBox
     Friend WithEvents btnExit As FontAwesome.Sharp.IconButton
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

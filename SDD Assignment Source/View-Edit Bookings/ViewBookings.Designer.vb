@@ -52,11 +52,11 @@ Partial Class ViewBookings
         Me.btnBack = New FontAwesome.Sharp.IconPictureBox()
         Me.IconMenuItem1 = New FontAwesome.Sharp.IconMenuItem()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.btnExit = New FontAwesome.Sharp.IconButton()
         Me.btnHelp = New FontAwesome.Sharp.IconPictureBox()
         Me.gpInsights = New System.Windows.Forms.GroupBox()
-        Me.lblRevenue = New System.Windows.Forms.Label()
         Me.lblTotalBookings = New System.Windows.Forms.Label()
-        Me.btnExit = New FontAwesome.Sharp.IconButton()
+        Me.lblRevenue = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -67,7 +67,7 @@ Partial Class ViewBookings
         '
         'grpBookings
         '
-        Me.grpBookings.Location = New System.Drawing.Point(33, 128)
+        Me.grpBookings.Location = New System.Drawing.Point(33, 90)
         Me.grpBookings.Name = "grpBookings"
         Me.grpBookings.Size = New System.Drawing.Size(741, 504)
         Me.grpBookings.TabIndex = 14
@@ -79,7 +79,7 @@ Partial Class ViewBookings
         Me.Label1.BackColor = System.Drawing.SystemColors.Highlight
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(83, 104)
+        Me.Label1.Location = New System.Drawing.Point(83, 66)
         Me.Label1.Name = "Label1"
         Me.Label1.Padding = New System.Windows.Forms.Padding(2)
         Me.Label1.Size = New System.Drawing.Size(78, 21)
@@ -92,7 +92,7 @@ Partial Class ViewBookings
         Me.Label2.BackColor = System.Drawing.SystemColors.Highlight
         Me.Label2.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(43, 104)
+        Me.Label2.Location = New System.Drawing.Point(43, 66)
         Me.Label2.Name = "Label2"
         Me.Label2.Padding = New System.Windows.Forms.Padding(2)
         Me.Label2.Size = New System.Drawing.Size(27, 21)
@@ -105,7 +105,7 @@ Partial Class ViewBookings
         Me.Label3.BackColor = System.Drawing.SystemColors.Highlight
         Me.Label3.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(183, 104)
+        Me.Label3.Location = New System.Drawing.Point(183, 66)
         Me.Label3.Name = "Label3"
         Me.Label3.Padding = New System.Windows.Forms.Padding(2)
         Me.Label3.Size = New System.Drawing.Size(77, 21)
@@ -118,7 +118,7 @@ Partial Class ViewBookings
         Me.Label4.BackColor = System.Drawing.SystemColors.Highlight
         Me.Label4.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(383, 104)
+        Me.Label4.Location = New System.Drawing.Point(383, 66)
         Me.Label4.Name = "Label4"
         Me.Label4.Padding = New System.Windows.Forms.Padding(2)
         Me.Label4.Size = New System.Drawing.Size(46, 21)
@@ -131,7 +131,7 @@ Partial Class ViewBookings
         Me.Label5.BackColor = System.Drawing.SystemColors.Highlight
         Me.Label5.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Location = New System.Drawing.Point(548, 104)
+        Me.Label5.Location = New System.Drawing.Point(548, 66)
         Me.Label5.Name = "Label5"
         Me.Label5.Padding = New System.Windows.Forms.Padding(2)
         Me.Label5.Size = New System.Drawing.Size(43, 21)
@@ -142,9 +142,9 @@ Partial Class ViewBookings
         '
         Me.Label6.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label6.Location = New System.Drawing.Point(65, 9)
+        Me.Label6.Location = New System.Drawing.Point(65, -1)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(907, 78)
+        Me.Label6.Size = New System.Drawing.Size(907, 53)
         Me.Label6.TabIndex = 15
         Me.Label6.Text = "View/Edit Bookings"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -159,7 +159,7 @@ Partial Class ViewBookings
         Me.GroupBox1.Controls.Add(Me.txtSearch)
         Me.GroupBox1.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.GroupBox1.Location = New System.Drawing.Point(780, 123)
+        Me.GroupBox1.Location = New System.Drawing.Point(780, 85)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(236, 170)
         Me.GroupBox1.TabIndex = 15
@@ -255,7 +255,7 @@ Partial Class ViewBookings
         Me.GroupBox2.Controls.Add(Me.btnSort)
         Me.GroupBox2.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.GroupBox2.Location = New System.Drawing.Point(780, 292)
+        Me.GroupBox2.Location = New System.Drawing.Point(780, 254)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(236, 124)
         Me.GroupBox2.TabIndex = 21
@@ -353,7 +353,7 @@ Partial Class ViewBookings
         Me.Label10.BackColor = System.Drawing.SystemColors.Highlight
         Me.Label10.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.White
-        Me.Label10.Location = New System.Drawing.Point(282, 104)
+        Me.Label10.Location = New System.Drawing.Point(282, 66)
         Me.Label10.Name = "Label10"
         Me.Label10.Padding = New System.Windows.Forms.Padding(2)
         Me.Label10.Size = New System.Drawing.Size(38, 21)
@@ -368,7 +368,7 @@ Partial Class ViewBookings
         Me.GroupBox3.Controls.Add(Me.cbxMovieSelection)
         Me.GroupBox3.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.GroupBox3.Location = New System.Drawing.Point(780, 415)
+        Me.GroupBox3.Location = New System.Drawing.Point(780, 377)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(236, 116)
         Me.GroupBox3.TabIndex = 27
@@ -424,7 +424,7 @@ Partial Class ViewBookings
         Me.btnRefresh.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.btnRefresh.IconSize = 28
         Me.btnRefresh.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnRefresh.Location = New System.Drawing.Point(683, 96)
+        Me.btnRefresh.Location = New System.Drawing.Point(683, 58)
         Me.btnRefresh.Name = "btnRefresh"
         Me.btnRefresh.Size = New System.Drawing.Size(91, 32)
         Me.btnRefresh.TabIndex = 16
@@ -441,7 +441,7 @@ Partial Class ViewBookings
         Me.btnBack.IconColor = System.Drawing.SystemColors.Highlight
         Me.btnBack.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.btnBack.IconSize = 41
-        Me.btnBack.Location = New System.Drawing.Point(13, 15)
+        Me.btnBack.Location = New System.Drawing.Point(10, -1)
         Me.btnBack.Name = "btnBack"
         Me.btnBack.Size = New System.Drawing.Size(46, 41)
         Me.btnBack.TabIndex = 13
@@ -456,6 +456,26 @@ Partial Class ViewBookings
         Me.IconMenuItem1.Size = New System.Drawing.Size(32, 19)
         Me.IconMenuItem1.Text = "IconMenuItem1"
         '
+        'btnExit
+        '
+        Me.btnExit.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(56, Byte), Integer))
+        Me.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnExit.Font = New System.Drawing.Font("Segoe UI Semibold", 11.0!, System.Drawing.FontStyle.Bold)
+        Me.btnExit.ForeColor = System.Drawing.Color.White
+        Me.btnExit.IconChar = FontAwesome.Sharp.IconChar.Xmark
+        Me.btnExit.IconColor = System.Drawing.Color.White
+        Me.btnExit.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnExit.IconSize = 22
+        Me.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnExit.Location = New System.Drawing.Point(937, 600)
+        Me.btnExit.Name = "btnExit"
+        Me.btnExit.Size = New System.Drawing.Size(79, 30)
+        Me.btnExit.TabIndex = 28
+        Me.btnExit.Text = "EXIT"
+        Me.btnExit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.ToolTip1.SetToolTip(Me.btnExit, "Remove film filter on all records.")
+        Me.btnExit.UseVisualStyleBackColor = False
+        '
         'btnHelp
         '
         Me.btnHelp.BackColor = System.Drawing.SystemColors.ButtonHighlight
@@ -465,7 +485,7 @@ Partial Class ViewBookings
         Me.btnHelp.IconColor = System.Drawing.SystemColors.Highlight
         Me.btnHelp.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.btnHelp.IconSize = 41
-        Me.btnHelp.Location = New System.Drawing.Point(970, 9)
+        Me.btnHelp.Location = New System.Drawing.Point(970, -1)
         Me.btnHelp.Name = "btnHelp"
         Me.btnHelp.Size = New System.Drawing.Size(46, 41)
         Me.btnHelp.TabIndex = 28
@@ -477,23 +497,12 @@ Partial Class ViewBookings
         Me.gpInsights.Controls.Add(Me.lblRevenue)
         Me.gpInsights.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gpInsights.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.gpInsights.Location = New System.Drawing.Point(780, 537)
+        Me.gpInsights.Location = New System.Drawing.Point(780, 499)
         Me.gpInsights.Name = "gpInsights"
         Me.gpInsights.Size = New System.Drawing.Size(236, 95)
         Me.gpInsights.TabIndex = 28
         Me.gpInsights.TabStop = False
         Me.gpInsights.Text = "Insights"
-        '
-        'lblRevenue
-        '
-        Me.lblRevenue.AutoSize = True
-        Me.lblRevenue.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblRevenue.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.lblRevenue.Location = New System.Drawing.Point(6, 25)
-        Me.lblRevenue.Name = "lblRevenue"
-        Me.lblRevenue.Size = New System.Drawing.Size(73, 21)
-        Me.lblRevenue.TabIndex = 27
-        Me.lblRevenue.Text = "Revenue:"
         '
         'lblTotalBookings
         '
@@ -506,32 +515,24 @@ Partial Class ViewBookings
         Me.lblTotalBookings.TabIndex = 28
         Me.lblTotalBookings.Text = "Total Bookings:"
         '
-        'btnExit
+        'lblRevenue
         '
-        Me.btnExit.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(56, Byte), Integer))
-        Me.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnExit.Font = New System.Drawing.Font("Segoe UI Semibold", 11.0!, System.Drawing.FontStyle.Bold)
-        Me.btnExit.ForeColor = System.Drawing.Color.White
-        Me.btnExit.IconChar = FontAwesome.Sharp.IconChar.Xmark
-        Me.btnExit.IconColor = System.Drawing.Color.White
-        Me.btnExit.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.btnExit.IconSize = 22
-        Me.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnExit.Location = New System.Drawing.Point(937, 638)
-        Me.btnExit.Name = "btnExit"
-        Me.btnExit.Size = New System.Drawing.Size(79, 30)
-        Me.btnExit.TabIndex = 28
-        Me.btnExit.Text = "EXIT"
-        Me.btnExit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.ToolTip1.SetToolTip(Me.btnExit, "Remove film filter on all records.")
-        Me.btnExit.UseVisualStyleBackColor = False
+        Me.lblRevenue.AutoSize = True
+        Me.lblRevenue.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRevenue.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.lblRevenue.Location = New System.Drawing.Point(6, 25)
+        Me.lblRevenue.Name = "lblRevenue"
+        Me.lblRevenue.Size = New System.Drawing.Size(73, 21)
+        Me.lblRevenue.TabIndex = 27
+        Me.lblRevenue.Text = "Revenue:"
         '
         'ViewBookings
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.ClientSize = New System.Drawing.Size(1021, 674)
+        Me.ClientSize = New System.Drawing.Size(1021, 636)
+        Me.ControlBox = False
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.gpInsights)
         Me.Controls.Add(Me.btnHelp)

@@ -27,6 +27,10 @@ Partial Class CreateBookings
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.gbCreateBooking = New System.Windows.Forms.GroupBox()
+        Me.pValidSeats = New System.Windows.Forms.Panel()
+        Me.pValidDOB = New System.Windows.Forms.Panel()
+        Me.pValidLastName = New System.Windows.Forms.Panel()
+        Me.pValidFirstName = New System.Windows.Forms.Panel()
         Me.txtDOB = New System.Windows.Forms.TextBox()
         Me.txtLastName = New System.Windows.Forms.TextBox()
         Me.txtFirstName = New System.Windows.Forms.TextBox()
@@ -38,7 +42,6 @@ Partial Class CreateBookings
         Me.Label11 = New System.Windows.Forms.Label()
         Me.btnPayment = New FontAwesome.Sharp.IconButton()
         Me.gbFilmSelection = New System.Windows.Forms.GroupBox()
-        Me.btnUpdate = New FontAwesome.Sharp.IconButton()
         Me.pbMovie = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.cbxMovieSelection = New System.Windows.Forms.ComboBox()
@@ -364,6 +367,10 @@ Partial Class CreateBookings
         '
         'gbCreateBooking
         '
+        Me.gbCreateBooking.Controls.Add(Me.pValidSeats)
+        Me.gbCreateBooking.Controls.Add(Me.pValidDOB)
+        Me.gbCreateBooking.Controls.Add(Me.pValidLastName)
+        Me.gbCreateBooking.Controls.Add(Me.pValidFirstName)
         Me.gbCreateBooking.Controls.Add(Me.txtDOB)
         Me.gbCreateBooking.Controls.Add(Me.txtLastName)
         Me.gbCreateBooking.Controls.Add(Me.txtFirstName)
@@ -382,6 +389,38 @@ Partial Class CreateBookings
         Me.gbCreateBooking.TabIndex = 154
         Me.gbCreateBooking.TabStop = False
         Me.gbCreateBooking.Text = "Create Booking"
+        '
+        'pValidSeats
+        '
+        Me.pValidSeats.BackColor = System.Drawing.Color.LightCoral
+        Me.pValidSeats.Location = New System.Drawing.Point(284, 49)
+        Me.pValidSeats.Name = "pValidSeats"
+        Me.pValidSeats.Size = New System.Drawing.Size(10, 32)
+        Me.pValidSeats.TabIndex = 165
+        '
+        'pValidDOB
+        '
+        Me.pValidDOB.BackColor = System.Drawing.Color.LightCoral
+        Me.pValidDOB.Location = New System.Drawing.Point(284, 241)
+        Me.pValidDOB.Name = "pValidDOB"
+        Me.pValidDOB.Size = New System.Drawing.Size(10, 32)
+        Me.pValidDOB.TabIndex = 166
+        '
+        'pValidLastName
+        '
+        Me.pValidLastName.BackColor = System.Drawing.Color.LightCoral
+        Me.pValidLastName.Location = New System.Drawing.Point(284, 172)
+        Me.pValidLastName.Name = "pValidLastName"
+        Me.pValidLastName.Size = New System.Drawing.Size(10, 32)
+        Me.pValidLastName.TabIndex = 165
+        '
+        'pValidFirstName
+        '
+        Me.pValidFirstName.BackColor = System.Drawing.Color.LightCoral
+        Me.pValidFirstName.Location = New System.Drawing.Point(284, 109)
+        Me.pValidFirstName.Name = "pValidFirstName"
+        Me.pValidFirstName.Size = New System.Drawing.Size(10, 32)
+        Me.pValidFirstName.TabIndex = 164
         '
         'txtDOB
         '
@@ -483,6 +522,7 @@ Partial Class CreateBookings
         'btnPayment
         '
         Me.btnPayment.BackColor = System.Drawing.SystemColors.Highlight
+        Me.btnPayment.Enabled = False
         Me.btnPayment.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnPayment.Font = New System.Drawing.Font("Segoe UI Semibold", 13.25!, System.Drawing.FontStyle.Bold)
         Me.btnPayment.ForeColor = System.Drawing.SystemColors.ButtonHighlight
@@ -501,7 +541,6 @@ Partial Class CreateBookings
         '
         'gbFilmSelection
         '
-        Me.gbFilmSelection.Controls.Add(Me.btnUpdate)
         Me.gbFilmSelection.Controls.Add(Me.pbMovie)
         Me.gbFilmSelection.Controls.Add(Me.Label2)
         Me.gbFilmSelection.Controls.Add(Me.cbxMovieSelection)
@@ -513,26 +552,6 @@ Partial Class CreateBookings
         Me.gbFilmSelection.TabIndex = 155
         Me.gbFilmSelection.TabStop = False
         Me.gbFilmSelection.Text = "Film Selection"
-        '
-        'btnUpdate
-        '
-        Me.btnUpdate.BackColor = System.Drawing.SystemColors.Highlight
-        Me.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnUpdate.Font = New System.Drawing.Font("Segoe UI Semibold", 13.25!, System.Drawing.FontStyle.Bold)
-        Me.btnUpdate.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnUpdate.IconChar = FontAwesome.Sharp.IconChar.ArrowRightRotate
-        Me.btnUpdate.IconColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnUpdate.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.btnUpdate.IconSize = 28
-        Me.btnUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnUpdate.Location = New System.Drawing.Point(12, 93)
-        Me.btnUpdate.Margin = New System.Windows.Forms.Padding(2)
-        Me.btnUpdate.Name = "btnUpdate"
-        Me.btnUpdate.Size = New System.Drawing.Size(138, 37)
-        Me.btnUpdate.TabIndex = 164
-        Me.btnUpdate.Text = "Update"
-        Me.btnUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnUpdate.UseVisualStyleBackColor = False
         '
         'pbMovie
         '
@@ -562,6 +581,7 @@ Partial Class CreateBookings
         Me.cbxMovieSelection.Name = "cbxMovieSelection"
         Me.cbxMovieSelection.Size = New System.Drawing.Size(138, 34)
         Me.cbxMovieSelection.TabIndex = 0
+        Me.cbxMovieSelection.Text = "Select Film"
         Me.ToolTip1.SetToolTip(Me.cbxMovieSelection, "Display current bookings for select film.")
         '
         'lblEditMode
@@ -3342,7 +3362,6 @@ Partial Class CreateBookings
     Friend WithEvents Label11 As Label
     Friend WithEvents btnPayment As FontAwesome.Sharp.IconButton
     Friend WithEvents gbFilmSelection As GroupBox
-    Friend WithEvents btnUpdate As FontAwesome.Sharp.IconButton
     Friend WithEvents pbMovie As PictureBox
     Friend WithEvents Label2 As Label
     Friend WithEvents cbxMovieSelection As ComboBox
@@ -3368,4 +3387,8 @@ Partial Class CreateBookings
     Friend WithEvents Label24 As Label
     Friend WithEvents Label25 As Label
     Friend WithEvents btnExit As FontAwesome.Sharp.IconButton
+    Friend WithEvents pValidDOB As Panel
+    Friend WithEvents pValidLastName As Panel
+    Friend WithEvents pValidFirstName As Panel
+    Friend WithEvents pValidSeats As Panel
 End Class

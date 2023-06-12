@@ -11,3 +11,8 @@
 15-84-Random-Book-05/20/2003-C13,C14,I10-Forrest Gump
 16-78-Magnus-Carlsen-25/03/1988-D13,D14,D15-Good Will Hunting
 17-120-Alex-Tokareff-05/02/1966-F11,F12,F13,F14-Good Will Hunting
+18-90-Theo-Behz-03/02/2005-F13,F12,F11-The Lion King
+19-102-deji-olate-20/05/2002-H9,H10,H11-Good Will Hunting
+20-44-Randy-Cheee-02/05/2001-B14,B15-Good Will Hunting
+21-96-phi-tok-03/02/2005-G4,G3,G2-Good Will Hunting
+22-60-Ham-Burger-02/05/2003-A6,A7,A8-The Lion King

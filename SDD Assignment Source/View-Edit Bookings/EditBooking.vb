@@ -1,15 +1,18 @@
 ﻿Public Class EditBooking
-    Private Sub btnEdit_Click(sender As Object, e As EventArgs) Handles btnEdit.Click
+    Private Sub btnEdit_Click(sender As Object, e As EventArgs) Handles btnEdit.Click 'This button is used to edit the seats of a booking.
+
         ViewBookings.Hide()
 
+        'Display the Seat Editing Window, named "CreateBookings", however this window has an "Edit Mode"
         CreateBookings.cbxMovieSelection.Text = cbxMovieSelection.Text
         CreateBookings.Show()
         CreateBookings.Refresh()
-        CreateBookings.EditBookingRequest()
-        CreateBookings.gbFilmSelection.Enabled = False
+        CreateBookings.EditBookingRequest() 'Send a request to edit a booking.
+        CreateBookings.gbFilmSelection.Enabled = False 'Disable the other controls because we're not creating a new booking, we are editing one.
         CreateBookings.lblEditMode.Visible = True
         CreateBookings.gbCreateBooking.Enabled = False
-        bEditMode = True
+
+        bEditMode = True 'Initiate edit mode
     End Sub
 
     Private Sub EditBooking_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -18,6 +21,7 @@
 
     Private Sub btnConfirmEdit_Click(sender As Object, e As EventArgs) Handles btnConfirmEdit.Click
 
+        'Update the BookingRecord array to store the edited booking.
         BookingRecord(idxBookingToEdit).strBookingFirstName = txtFirstName.Text
 
         BookingRecord(idxBookingToEdit).strBookingLastName = txtLastName.Text
@@ -26,33 +30,31 @@
 
         BookingRecord(idxBookingToEdit).arrSeatsBooked = Split(txtSeats.Text, ",")
 
-        Dim totalSeats As Integer = BookingRecord(idxBookingToEdit).arrSeatsBooked.Length
-
-        BookingRecord(idxBookingToEdit).intTotal = totalSeats * 20
+        BookingRecord(idxBookingToEdit).intTotal = CalculateTotalSeatCost(BookingRecord(idxBookingToEdit).arrSeatsBooked)
 
         BookingRecord(idxBookingToEdit).strFilm = cbxMovieSelection.Text
 
-        If IsNothing(selectedSeats) = False Then
+        If IsNothing(selectedSeats) = False Then 'Clear the selected seats array now that we're done with it.
             Array.Clear(selectedSeats, 0, selectedSeats.Length)
         End If
 
-        ReDim selectedSeats(0 To -1)
+        ReDim selectedSeats(0 To -1) 'Remove the array's size.
 
-        WriteBookingRecordArrayToFile()
+        WriteBookingRecordArrayToFile() 'Update the file with the edited booking record.
 
-        CreateBookings.PaymentSuccess()
+        CreateBookings.PaymentSuccess() 'Colour the edited seats red again.
 
-        CreateBookings.gbCreateBooking.Enabled = True
+        CreateBookings.gbCreateBooking.Enabled = True 'Enable the controls on "Create Booking" window because we're no longer editing.
 
         CreateBookings.gbFilmSelection.Enabled = True
 
         CreateBookings.rtbSelectedSeats.Clear()
 
-        bEditMode = False
+        bEditMode = False 'No longer in edit mode.
 
         CreateBookings.lblEditMode.Visible = False
 
-        MessageBox.Show("Booking has been successfully edited")
+        MessageBox.Show("Booking has been successfully edited") 'Confirmation
 
         ViewBookings.Enabled = True
 
@@ -64,6 +66,8 @@
 
     Private Sub btnExitButton_Click(sender As Object, e As EventArgs) Handles btnExitButton.Click
 
+        'Get out of edit mode then go back to the View Bookings Window
+
 
         If IsNothing(selectedSeats) = False Then
             Array.Clear(selectedSeats, 0, selectedSeats.Length)
@@ -81,6 +85,8 @@
 
         bEditMode = False
 
+        bFilmChanged = False
+
         CreateBookings.lblEditMode.Visible = False
 
         Me.Hide()
@@ -90,5 +96,10 @@
         CreateBookings.Hide()
 
         ViewBookings.Show()
+    End Sub
+
+    Private Sub cbxMovieSelection_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbxMovieSelection.SelectedIndexChanged
+
+        bFilmChanged = True
     End Sub
 End Class
