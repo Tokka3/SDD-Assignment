@@ -16,7 +16,7 @@
 
         ColourBookedSeats()
 
-        If bFilmChanged <> True Then 'If the admin edits the film in the Edit Booking window, then reset the seats. Otherwise keep the original ones.
+        If bFilmChanged = False Then 'If the admin edits the film in the Edit Booking window, then reset the seats. Otherwise keep the original ones.
             selectedSeats = BookingToEdit.arrSeatsBooked
         End If
 
@@ -30,7 +30,7 @@
 
     Private Sub DynamicButton_Click(ByVal sender As Object, ByVal e As System.EventArgs)
 
-        If String.IsNullOrEmpty(cbxMovieSelection.Text) Then
+        If (cbxMovieSelection.Text = "Select Film") Then
             MessageBox.Show("Please select a film before selecting a seat.")
             Return
         End If

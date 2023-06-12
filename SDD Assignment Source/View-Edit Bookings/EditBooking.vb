@@ -1,8 +1,11 @@
 ﻿Public Class EditBooking
     Private Sub btnEdit_Click(sender As Object, e As EventArgs) Handles btnEdit.Click 'This button is used to edit the seats of a booking.
 
+        If cbxMovieSelection.Text <> BookingToEdit.strFilm Then
+            bFilmChanged = True
+        End If
         ViewBookings.Hide()
-
+        MessageBox.Show(bFilmChanged)
         'Display the Seat Editing Window, named "CreateBookings", however this window has an "Edit Mode"
         CreateBookings.cbxMovieSelection.Text = cbxMovieSelection.Text
         CreateBookings.Show()
@@ -12,6 +15,7 @@
         CreateBookings.lblEditMode.Visible = True
         CreateBookings.gbCreateBooking.Enabled = False
 
+        cbxMovieSelection.Enabled = False
         bEditMode = True 'Initiate edit mode
     End Sub
 
@@ -58,6 +62,8 @@
 
         ViewBookings.Enabled = True
 
+        cbxMovieSelection.Enabled = True
+
         Me.Hide()
         CreateBookings.Hide()
         ViewBookings.Booking_Refresh()
@@ -93,6 +99,8 @@
 
         ViewBookings.Enabled = True
 
+        cbxMovieSelection.Enabled = True
+
         CreateBookings.Hide()
 
         ViewBookings.Show()
@@ -100,6 +108,6 @@
 
     Private Sub cbxMovieSelection_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbxMovieSelection.SelectedIndexChanged
 
-        bFilmChanged = True
+
     End Sub
 End Class

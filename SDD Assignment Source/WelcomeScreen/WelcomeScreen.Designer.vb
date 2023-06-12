@@ -76,9 +76,9 @@ Partial Class WelcomeScreen
         'IconPictureBox1
         '
         Me.IconPictureBox1.BackColor = System.Drawing.SystemColors.Highlight
-        Me.IconPictureBox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(214, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.IconPictureBox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.IconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.PlusCircle
-        Me.IconPictureBox1.IconColor = System.Drawing.Color.FromArgb(CType(CType(214, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.IconPictureBox1.IconColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.IconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconPictureBox1.IconSize = 228
         Me.IconPictureBox1.Location = New System.Drawing.Point(26, 27)
@@ -144,9 +144,9 @@ Partial Class WelcomeScreen
         'IconPictureBox2
         '
         Me.IconPictureBox2.BackColor = System.Drawing.SystemColors.Highlight
-        Me.IconPictureBox2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(214, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.IconPictureBox2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.IconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.PenToSquare
-        Me.IconPictureBox2.IconColor = System.Drawing.Color.FromArgb(CType(CType(214, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.IconPictureBox2.IconColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.IconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconPictureBox2.IconSize = 213
         Me.IconPictureBox2.Location = New System.Drawing.Point(49, 27)
@@ -212,9 +212,9 @@ Partial Class WelcomeScreen
         'IconPictureBox3
         '
         Me.IconPictureBox3.BackColor = System.Drawing.SystemColors.Highlight
-        Me.IconPictureBox3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(214, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.IconPictureBox3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.IconPictureBox3.IconChar = FontAwesome.Sharp.IconChar.QuestionCircle
-        Me.IconPictureBox3.IconColor = System.Drawing.Color.FromArgb(CType(CType(214, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.IconPictureBox3.IconColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.IconPictureBox3.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconPictureBox3.IconSize = 213
         Me.IconPictureBox3.Location = New System.Drawing.Point(40, 41)
